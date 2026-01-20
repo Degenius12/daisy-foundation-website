@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 120 45% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 45% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 45% 11%;
+
+    --primary: 94 31% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 71 51% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 85 23% 95%;
+    --muted-foreground: 94 31% 22%;
+
+    --accent: 40 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 85 17% 81%;
+    --input: 85 17% 81%;
+    --ring: 94 31% 22%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}

@@ -1,0 +1,131 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Users, Briefcase, Clock, Target } from "lucide-react";
+import { formatNumber } from "@/lib/utils/formatting";
+
+export function Impact() {
+  const metrics = [
+    {
+      icon: Users,
+      value: 3200,
+      label: "Families Served",
+      suffix: "+",
+      color: "text-daisy-forest-700",
+    },
+    {
+      icon: Briefcase,
+      value: 85,
+      label: "Local Partners",
+      suffix: "",
+      color: "text-daisy-bloom-600",
+    },
+    {
+      icon: Clock,
+      value: 14500,
+      label: "Volunteer Hours",
+      suffix: "+",
+      color: "text-purple-600",
+    },
+    {
+      icon: Target,
+      value: 12,
+      label: "Active Programs",
+      suffix: "",
+      color: "text-green-600",
+    },
+  ];
+
+  return (
+    <section id="impact" className="py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Our Impact
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Together, we&apos;re building stronger families and brighter futures for children
+            across our community.
+          </p>
+        </div>
+
+        {/* Metrics Grid */}
+        <div className="mx-auto mt-16 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {metrics.map((metric) => (
+            <Card key={metric.label} className="text-center">
+              <CardContent className="pt-6">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                  <metric.icon className={`h-8 w-8 ${metric.color}`} aria-hidden="true" />
+                </div>
+                <p className="mt-4 text-4xl font-bold text-gray-900">
+                  {formatNumber(metric.value)}
+                  {metric.suffix}
+                </p>
+                <p className="mt-2 text-sm font-medium text-gray-600">{metric.label}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Success Story */}
+        <div className="mx-auto mt-20 max-w-4xl">
+          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-forest-50 to-daisy-bloom-50 p-8 lg:p-12">
+            <h3 className="text-2xl font-bold text-gray-900">Success Story</h3>
+            <blockquote className="mt-6">
+              <p className="text-lg leading-8 text-gray-700">
+                &ldquo;When I became a single mother, I didn&apos;t know how I would afford quality
+                childcare while working full-time. The Bloom Scholarship program gave my
+                children access to an amazing pre-K program at no cost. Today, they&apos;re
+                thriving in elementary school, and I&apos;ve completed job training to advance
+                my career. This foundation changed our lives.&rdquo;
+              </p>
+            </blockquote>
+            <div className="mt-6">
+              <p className="font-semibold text-gray-900">Maria Rodriguez</p>
+              <p className="text-sm text-gray-600">Bloom Scholarships, 2023</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Allocation Transparency */}
+        <div className="mx-auto mt-20 max-w-3xl">
+          <h3 className="text-center text-xl font-bold text-gray-900">
+            Where Your Donations Go
+          </h3>
+          <div className="mt-8 space-y-4">
+            <div>
+              <div className="flex items-center justify-between text-sm mb-2">
+                <span className="font-medium text-gray-700">Programs & Direct Support</span>
+                <span className="font-semibold text-daisy-forest-700">78%</span>
+              </div>
+              <div className="h-3 w-full rounded-full bg-gray-200">
+                <div className="h-3 rounded-full bg-daisy-forest-700" style={{ width: "78%" }} />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between text-sm mb-2">
+                <span className="font-medium text-gray-700">Operations & Administration</span>
+                <span className="font-semibold text-blue-600">14%</span>
+              </div>
+              <div className="h-3 w-full rounded-full bg-gray-200">
+                <div className="h-3 rounded-full bg-blue-600" style={{ width: "14%" }} />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between text-sm mb-2">
+                <span className="font-medium text-gray-700">Fundraising & Outreach</span>
+                <span className="font-semibold text-purple-600">8%</span>
+              </div>
+              <div className="h-3 w-full rounded-full bg-gray-200">
+                <div className="h-3 rounded-full bg-purple-600" style={{ width: "8%" }} />
+              </div>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-sm text-gray-500">
+            Updated quarterly based on actual expenses
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
