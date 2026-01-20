@@ -23,14 +23,14 @@ export function MissionValues() {
   ];
 
   return (
-    <section id="mission" className="py-24 bg-white">
+    <section id="mission" className="py-24 bg-gradient-to-br from-white via-daisy-sunshine-50 to-daisy-coral-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Mission Statement */}
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Our Mission
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-700">
             We believe every child deserves a strong start in life. Inspired by
             Grandmother Daisy&apos;s legacy of compassion and care, we provide quality early
             childhood education support to families who need it most.
@@ -39,8 +39,8 @@ export function MissionValues() {
 
         {/* Daisy's Story */}
         <div className="mx-auto mt-16 max-w-3xl">
-          <div className="relative rounded-2xl bg-daisy-forest-50 p-8 lg:p-12">
-            <div className="absolute -top-4 -left-4 text-6xl text-daisy-bloom-400 opacity-50">
+          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-teal-light/20 to-daisy-lavender-light/20 p-8 lg:p-12 border-2 border-daisy-teal-light shadow-daisy-lg">
+            <div className="absolute -top-4 -left-4 text-6xl text-daisy-coral opacity-70">
               &ldquo;
             </div>
             <p className="text-base leading-7 text-gray-700">

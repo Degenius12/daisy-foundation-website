@@ -39,35 +39,46 @@ export function Events() {
   ];
 
   return (
-    <section id="events" className="py-24 bg-gray-50">
+    <section id="events" className="py-24 bg-gradient-to-br from-daisy-coral-light/10 via-daisy-sunshine-50 to-daisy-sky-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Upcoming Events
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-700">
             Join us for volunteer opportunities, fundraising events, and community
             gatherings. Everyone is welcome!
           </p>
         </div>
 
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 lg:grid-cols-3">
-          {events.map((event) => (
-            <Card
-              key={event.id}
-              className="flex flex-col hover:shadow-lg transition-shadow"
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between mb-2">
-                  <Calendar className="h-5 w-5 text-daisy-forest-700" aria-hidden="true" />
-                  {event.isFeatured && (
-                    <Badge variant="secondary">Featured</Badge>
-                  )}
-                </div>
-                <CardTitle className="text-xl" data-testid="event-title">
-                  {event.title}
-                </CardTitle>
-              </CardHeader>
+          {events.map((event, index) => {
+            const cardColors = [
+              "border-daisy-coral hover:border-daisy-coral-deep",
+              "border-daisy-lavender hover:border-daisy-lavender-deep",
+              "border-daisy-teal hover:border-daisy-teal-deep",
+            ];
+            const badgeColors = [
+              "bg-daisy-coral text-white",
+              "bg-daisy-lavender text-white",
+              "bg-daisy-teal text-white",
+            ];
+            return (
+              <Card
+                key={event.id}
+                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index]}`}
+              >
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-2">
+                    <Calendar className="h-5 w-5 text-daisy-forest-700" aria-hidden="true" />
+                    {event.isFeatured && (
+                      <Badge className={badgeColors[index]}>Featured</Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-xl text-daisy-forest-700" data-testid="event-title">
+                    {event.title}
+                  </CardTitle>
+                </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <div className="space-y-3 flex-1">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -93,14 +104,15 @@ export function Events() {
                 </Button>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-base text-gray-600">Want to volunteer or host an event?</p>
+          <p className="text-base text-gray-700 font-medium">Want to volunteer or host an event?</p>
           <a
             href="#contact"
-            className="mt-2 inline-block font-semibold text-daisy-forest-700 hover:text-daisy-forest-800"
+            className="mt-2 inline-block font-semibold text-daisy-forest-700 hover:text-daisy-teal hover:scale-105 transition-all"
           >
             Get in touch with our team →
           </a>

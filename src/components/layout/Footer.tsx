@@ -50,11 +50,11 @@ export function Footer() {
           {/* About Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Daisy Foundation</h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-white/90 text-sm mb-4">
               Honoring Grandmother Daisy&apos;s legacy by providing quality early childhood
               education support to families in need.
             </p>
-            <div className="flex items-center gap-2 text-sm text-gray-400">
+            <div className="flex items-center gap-2 text-sm text-white/80">
               <Heart className="h-4 w-4" aria-hidden="true" />
               <span>Every child deserves a strong start</span>
             </div>
@@ -65,27 +65,27 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#mission" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#mission" className="text-white/90 hover:text-white transition-colors">
                   Mission & Values
                 </a>
               </li>
               <li>
-                <a href="#programs" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#programs" className="text-white/90 hover:text-white transition-colors">
                   Our Programs
                 </a>
               </li>
               <li>
-                <a href="#impact" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#impact" className="text-white/90 hover:text-white transition-colors">
                   Our Impact
                 </a>
               </li>
               <li>
-                <a href="#donate" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#donate" className="text-white/90 hover:text-white transition-colors">
                   Donate
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#contact" className="text-white/90 hover:text-white transition-colors">
                   Contact Us
                 </a>
               </li>
@@ -95,7 +95,7 @@ export function Footer() {
           {/* Newsletter Signup */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-white/90 text-sm mb-4">
               Get updates on our programs and impact stories.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
@@ -136,18 +136,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-700 pt-8">
+        <div className="mt-12 border-t border-white/20 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white/80">
               © {new Date().getFullYear()} Daisy Foundation. All rights reserved.
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-white/70">
               Co-created with{" "}
               <a
                 href="https://claude.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-daisy-bloom-400 hover:text-daisy-bloom-300 transition-colors"
+                className="text-daisy-sunshine-light hover:text-white transition-colors font-semibold"
               >
                 Claude Code
               </a>

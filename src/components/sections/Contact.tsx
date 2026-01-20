@@ -63,13 +63,13 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-24 bg-gradient-to-br from-white via-daisy-teal-light/10 to-daisy-lavender-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Get in Touch
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-700">
             Have questions about our programs? Want to volunteer? We&apos;d love to hear from
             you.
           </p>
@@ -233,9 +233,9 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-daisy-bloom-50 p-6">
-              <h4 className="font-semibold text-gray-900 mb-2">Office Hours</h4>
-              <p className="text-sm text-gray-600">
+            <div className="rounded-lg bg-gradient-to-br from-daisy-sunshine-100 to-daisy-coral-light/30 p-6 border-2 border-daisy-sunshine-300 shadow-daisy-md">
+              <h4 className="font-semibold text-daisy-forest-700 mb-2">Office Hours</h4>
+              <p className="text-sm text-gray-700">
                 Monday - Friday: 9:00 AM - 5:00 PM
                 <br />
                 Saturday: 10:00 AM - 2:00 PM

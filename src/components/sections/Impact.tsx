@@ -35,13 +35,13 @@ export function Impact() {
   ];
 
   return (
-    <section id="impact" className="py-24 bg-white">
+    <section id="impact" className="py-24 bg-gradient-to-br from-daisy-lavender-light/10 via-white to-daisy-sky-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Our Impact
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-700">
             Together, we&apos;re building stronger families and brighter futures for children
             across our community.
           </p>
@@ -49,26 +49,34 @@ export function Impact() {
 
         {/* Metrics Grid */}
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {metrics.map((metric) => (
-            <Card key={metric.label} className="text-center">
-              <CardContent className="pt-6">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
-                  <metric.icon className={`h-8 w-8 ${metric.color}`} aria-hidden="true" />
-                </div>
-                <p className="mt-4 text-4xl font-bold text-gray-900">
-                  {formatNumber(metric.value)}
-                  {metric.suffix}
-                </p>
-                <p className="mt-2 text-sm font-medium text-gray-600">{metric.label}</p>
-              </CardContent>
-            </Card>
-          ))}
+          {metrics.map((metric, index) => {
+            const bgColors = [
+              "bg-daisy-teal-light/20",
+              "bg-daisy-coral-light/20",
+              "bg-daisy-lavender-light/20",
+              "bg-daisy-forest-100",
+            ];
+            return (
+              <Card key={metric.label} className="text-center border-2 hover:shadow-daisy-lg hover:scale-105 transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${bgColors[index]} shadow-daisy-sm`}>
+                    <metric.icon className={`h-8 w-8 ${metric.color}`} aria-hidden="true" />
+                  </div>
+                  <p className="mt-4 text-4xl font-bold text-daisy-forest-700">
+                    {formatNumber(metric.value)}
+                    {metric.suffix}
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-gray-700">{metric.label}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* Success Story */}
         <div className="mx-auto mt-20 max-w-4xl">
-          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-forest-50 to-daisy-bloom-50 p-8 lg:p-12">
-            <h3 className="text-2xl font-bold text-gray-900">Success Story</h3>
+          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 via-daisy-coral-light/20 to-daisy-lavender-light/20 p-8 lg:p-12 border-2 border-daisy-sunshine-300 shadow-daisy-lg">
+            <h3 className="text-2xl font-bold text-daisy-forest-700">Success Story</h3>
             <blockquote className="mt-6">
               <p className="text-lg leading-8 text-gray-700">
                 &ldquo;When I became a single mother, I didn&apos;t know how I would afford quality
@@ -87,7 +95,7 @@ export function Impact() {
 
         {/* Allocation Transparency */}
         <div className="mx-auto mt-20 max-w-3xl">
-          <h3 className="text-center text-xl font-bold text-gray-900">
+          <h3 className="text-center text-xl font-bold text-daisy-forest-700">
             Where Your Donations Go
           </h3>
           <div className="mt-8 space-y-4">
@@ -97,31 +105,31 @@ export function Impact() {
                 <span className="font-semibold text-daisy-forest-700">78%</span>
               </div>
               <div className="h-3 w-full rounded-full bg-gray-200">
-                <div className="h-3 rounded-full bg-daisy-forest-700" style={{ width: "78%" }} />
+                <div className="h-3 rounded-full bg-daisy-forest-700 shadow-daisy-sm" style={{ width: "78%" }} />
               </div>
             </div>
 
             <div>
               <div className="flex items-center justify-between text-sm mb-2">
                 <span className="font-medium text-gray-700">Operations & Administration</span>
-                <span className="font-semibold text-blue-600">14%</span>
+                <span className="font-semibold text-daisy-teal-deep">14%</span>
               </div>
               <div className="h-3 w-full rounded-full bg-gray-200">
-                <div className="h-3 rounded-full bg-blue-600" style={{ width: "14%" }} />
+                <div className="h-3 rounded-full bg-daisy-teal shadow-daisy-sm" style={{ width: "14%" }} />
               </div>
             </div>
 
             <div>
               <div className="flex items-center justify-between text-sm mb-2">
                 <span className="font-medium text-gray-700">Fundraising & Outreach</span>
-                <span className="font-semibold text-purple-600">8%</span>
+                <span className="font-semibold text-daisy-lavender-deep">8%</span>
               </div>
               <div className="h-3 w-full rounded-full bg-gray-200">
-                <div className="h-3 rounded-full bg-purple-600" style={{ width: "8%" }} />
+                <div className="h-3 rounded-full bg-daisy-lavender shadow-daisy-sm" style={{ width: "8%" }} />
               </div>
             </div>
           </div>
-          <p className="mt-6 text-center text-sm text-gray-500">
+          <p className="mt-6 text-center text-sm text-gray-600">
             Updated quarterly based on actual expenses
           </p>
         </div>

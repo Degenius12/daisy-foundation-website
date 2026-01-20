@@ -91,13 +91,13 @@ export function Donate() {
   const allocation = calculateAllocation(selectedAmount);
 
   return (
-    <section id="donate" className="py-24 bg-white">
+    <section id="donate" className="py-24 bg-gradient-to-br from-daisy-sunshine-50 via-white to-daisy-forest-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Make a Difference Today
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-700">
             Your donation directly supports families in need. Choose an amount below or
             enter a custom contribution.
           </p>
@@ -196,9 +196,9 @@ export function Donate() {
 
           {/* Selected Amount Display */}
           {selectedAmount >= 10 && (
-            <div className="mb-8 rounded-lg bg-daisy-forest-50 p-6">
+            <div className="mb-8 rounded-lg bg-gradient-to-br from-daisy-teal-light/20 to-daisy-lavender-light/20 p-6 border-2 border-daisy-teal-light shadow-daisy-md">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-lg font-medium text-gray-900">
+                <span className="text-lg font-medium text-daisy-forest-700">
                   Your {frequency} donation
                 </span>
                 <span className="text-3xl font-bold text-daisy-forest-700" data-testid="selected-amount">
@@ -208,20 +208,20 @@ export function Donate() {
 
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Programs & Direct Support (78%)</span>
-                  <span className="font-semibold text-gray-900" data-testid="allocation-programs">
+                  <span className="text-gray-700">Programs & Direct Support (78%)</span>
+                  <span className="font-semibold text-daisy-forest-700" data-testid="allocation-programs">
                     {formatCurrency(allocation.programs)}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Operations & Admin (14%)</span>
-                  <span className="font-semibold text-gray-900" data-testid="allocation-operations">
+                  <span className="text-gray-700">Operations & Admin (14%)</span>
+                  <span className="font-semibold text-daisy-teal-deep" data-testid="allocation-operations">
                     {formatCurrency(allocation.operations)}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Fundraising & Outreach (8%)</span>
-                  <span className="font-semibold text-gray-900" data-testid="allocation-fundraising">
+                  <span className="text-gray-700">Fundraising & Outreach (8%)</span>
+                  <span className="font-semibold text-daisy-lavender-deep" data-testid="allocation-fundraising">
                     {formatCurrency(allocation.fundraising)}
                   </span>
                 </div>
@@ -255,7 +255,7 @@ export function Donate() {
           </Button>
 
           {/* Employer Matching */}
-          <p className="mt-6 text-center text-sm text-gray-600">
+          <p className="mt-6 text-center text-sm text-gray-700">
             Does your employer match donations? Check if your company participates in
             matching gift programs to double your impact!
           </p>
