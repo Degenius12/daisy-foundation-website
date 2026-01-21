@@ -7,8 +7,7 @@ import { Button } from "@/components/ui/button";
 const navigationLinks = [
   { name: "Mission", href: "#mission" },
   { name: "Programs", href: "#programs" },
-  { name: "Impact", href: "#impact" },
-  { name: "Events", href: "#events" },
+  { name: "Board", href: "#board" },
   { name: "Contact", href: "#contact" },
 ];
 

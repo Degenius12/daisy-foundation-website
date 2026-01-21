@@ -91,15 +91,14 @@ export function Donate() {
   const allocation = calculateAllocation(selectedAmount);
 
   return (
-    <section id="donate" className="py-24 bg-gradient-to-br from-daisy-sunshine-50 via-white to-daisy-forest-50">
+    <section id="donate" className="py-24 bg-gradient-to-br from-daisy-sunshine-50 via-daisy-sunshine-100 to-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
-            Make a Difference Today
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-6xl">
+            Donate
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
-            Your donation directly supports families in need. Choose an amount below or
-            enter a custom contribution.
+          <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
+            Your gift directly supports families building brighter futures.
           </p>
         </div>
 
@@ -109,29 +108,29 @@ export function Donate() {
             {tiers.map((tier) => (
               <Card
                 key={tier.amount}
-                className={`cursor-pointer transition-all hover:shadow-md ${
+                className={`cursor-pointer transition-all hover:shadow-xl hover:scale-105 rounded-2xl ${
                   selectedAmount === tier.amount && !customAmount
-                    ? "border-2 border-daisy-forest-700 shadow-md"
-                    : ""
+                    ? "border-3 border-daisy-sunshine-500 shadow-xl bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200"
+                    : "border-2 border-daisy-sunshine-300 bg-gradient-to-br from-white to-daisy-sunshine-50"
                 }`}
                 onClick={() => handleTierClick(tier.amount)}
                 data-testid={`tier-${tier.name.toLowerCase()}`}
               >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
-                    <CardTitle className="text-2xl font-bold">
+                    <CardTitle className="text-2xl font-bold text-daisy-sunshine-700">
                       {formatCurrency(tier.amount)}
                     </CardTitle>
                     {tier.popular && (
-                      <Badge variant="secondary">Popular</Badge>
+                      <Badge className="bg-daisy-sunshine-500 text-white">Popular</Badge>
                     )}
                   </div>
-                  <p className="text-sm font-semibold text-daisy-forest-700">
+                  <p className="text-sm font-bold text-gray-900">
                     {tier.name}
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-600">{tier.description}</p>
+                  <p className="text-sm text-gray-700">{tier.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -153,7 +152,7 @@ export function Donate() {
                 value={customAmount}
                 onChange={(e) => handleCustomAmountChange(e.target.value)}
                 placeholder="Enter amount"
-                className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-lg ring-offset-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-daisy-forest-700 focus-visible:ring-offset-2"
+                className="flex h-12 w-full rounded-md border-2 border-daisy-sunshine-300 bg-white px-3 py-2 text-lg ring-offset-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-daisy-sunshine-600 focus-visible:ring-offset-2"
                 data-testid="custom-amount"
               />
             </div>
@@ -166,10 +165,10 @@ export function Donate() {
             <div className="flex gap-4">
               <button
                 onClick={() => setFrequency("one-time")}
-                className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${
+                className={`flex-1 rounded-xl border-2 px-4 py-3 text-sm font-semibold transition-all ${
                   frequency === "one-time"
-                    ? "border-daisy-forest-700 bg-daisy-forest-50 text-daisy-forest-700"
-                    : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                    ? "border-daisy-sunshine-500 bg-daisy-sunshine-100 text-daisy-sunshine-800 shadow-md"
+                    : "border-daisy-sunshine-300 bg-white text-gray-700 hover:border-daisy-sunshine-400"
                 }`}
                 data-testid="frequency-one-time"
               >
@@ -177,16 +176,16 @@ export function Donate() {
               </button>
               <button
                 onClick={() => setFrequency("monthly")}
-                className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${
+                className={`flex-1 rounded-xl border-2 px-4 py-3 text-sm font-semibold transition-all ${
                   frequency === "monthly"
-                    ? "border-daisy-forest-700 bg-daisy-forest-50 text-daisy-forest-700"
-                    : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                    ? "border-daisy-sunshine-500 bg-daisy-sunshine-100 text-daisy-sunshine-800 shadow-md"
+                    : "border-daisy-sunshine-300 bg-white text-gray-700 hover:border-daisy-sunshine-400"
                 }`}
                 data-testid="frequency-monthly"
               >
                 Monthly donation
                 {frequency === "monthly" && (
-                  <Badge className="ml-2" variant="secondary" data-testid="recurring-badge">
+                  <Badge className="ml-2 bg-daisy-sunshine-500 text-white" data-testid="recurring-badge">
                     Recurring
                   </Badge>
                 )}
@@ -196,32 +195,32 @@ export function Donate() {
 
           {/* Selected Amount Display */}
           {selectedAmount >= 10 && (
-            <div className="mb-8 rounded-lg bg-gradient-to-br from-daisy-teal-light/20 to-daisy-lavender-light/20 p-6 border-2 border-daisy-teal-light shadow-daisy-md">
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-lg font-medium text-daisy-forest-700">
+            <div className="mb-8 rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200 p-8 border-3 border-daisy-sunshine-400 shadow-xl">
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xl font-semibold text-gray-900">
                   Your {frequency} donation
                 </span>
-                <span className="text-3xl font-bold text-daisy-forest-700" data-testid="selected-amount">
+                <span className="text-4xl font-bold text-daisy-sunshine-700" data-testid="selected-amount">
                   {formatCurrency(selectedAmount)}
                 </span>
               </div>
 
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Programs & Direct Support (78%)</span>
-                  <span className="font-semibold text-daisy-forest-700" data-testid="allocation-programs">
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between items-center bg-white/50 rounded-lg p-3">
+                  <span className="font-medium text-gray-800">Programs & Direct Support (78%)</span>
+                  <span className="font-bold text-daisy-sunshine-700 text-lg" data-testid="allocation-programs">
                     {formatCurrency(allocation.programs)}
                   </span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Operations & Admin (14%)</span>
-                  <span className="font-semibold text-daisy-teal-deep" data-testid="allocation-operations">
+                <div className="flex justify-between items-center bg-white/50 rounded-lg p-3">
+                  <span className="font-medium text-gray-800">Operations & Admin (14%)</span>
+                  <span className="font-bold text-gray-700 text-lg" data-testid="allocation-operations">
                     {formatCurrency(allocation.operations)}
                   </span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Fundraising & Outreach (8%)</span>
-                  <span className="font-semibold text-daisy-lavender-deep" data-testid="allocation-fundraising">
+                <div className="flex justify-between items-center bg-white/50 rounded-lg p-3">
+                  <span className="font-medium text-gray-800">Fundraising & Outreach (8%)</span>
+                  <span className="font-bold text-gray-700 text-lg" data-testid="allocation-fundraising">
                     {formatCurrency(allocation.fundraising)}
                   </span>
                 </div>

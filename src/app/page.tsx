@@ -2,8 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { MissionValues } from "@/components/sections/MissionValues";
 import { Programs } from "@/components/sections/Programs";
-import { Impact } from "@/components/sections/Impact";
-import { Events } from "@/components/sections/Events";
+import { Board } from "@/components/sections/Board";
 import { Donate } from "@/components/sections/Donate";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
@@ -24,8 +23,7 @@ export default function Home() {
         <Hero />
         <MissionValues />
         <Programs />
-        <Impact />
-        <Events />
+        <Board />
         <Donate />
         <Contact />
       </main>

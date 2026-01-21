@@ -66,12 +66,11 @@ export function Contact() {
     <section id="contact" className="py-24 bg-gradient-to-br from-white via-daisy-teal-light/10 to-daisy-lavender-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
-            Get in Touch
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-6xl">
+            Contact Us
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
-            Have questions about our programs? Want to volunteer? We&apos;d love to hear from
-            you.
+          <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
+            Have questions? Want to volunteer? We&apos;d love to hear from you.
           </p>
         </div>
 
