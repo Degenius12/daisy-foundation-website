@@ -66,7 +66,7 @@ export function Programs() {
     <section id="programs" className="py-24 bg-gradient-to-br from-daisy-forest-50 via-white to-daisy-teal-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-4xl">
             Our Programs
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-700">
@@ -110,7 +110,7 @@ export function Programs() {
           </p>
           <a
             href="#contact"
-            className="mt-2 inline-block font-semibold text-daisy-forest-700 hover:text-daisy-forest-800"
+            className="mt-2 inline-block font-semibold text-daisy-sunshine-700 hover:text-daisy-sunshine-800"
           >
             Contact us to get started →
           </a>

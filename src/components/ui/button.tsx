@@ -9,16 +9,16 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-daisy-forest-700 text-white hover:bg-daisy-forest-600 hover:scale-105 active:scale-95 shadow-daisy-md hover:shadow-daisy-lg",
+          "bg-daisy-sunshine-600 text-white hover:bg-daisy-sunshine-700 hover:scale-105 active:scale-95 shadow-daisy-md hover:shadow-daisy-lg font-semibold",
         secondary:
-          "bg-daisy-teal text-white hover:bg-daisy-teal-deep hover:scale-105 active:scale-95 shadow-daisy-md hover:shadow-daisy-lg",
+          "bg-daisy-forest-700 text-white hover:bg-daisy-forest-600 hover:scale-105 active:scale-95 shadow-daisy-md hover:shadow-daisy-lg",
         accent:
-          "bg-daisy-sunshine-400 text-gray-900 hover:bg-daisy-sunshine-light hover:scale-105 active:scale-95 shadow-daisy-md hover:shadow-daisy-lg font-semibold",
+          "bg-daisy-teal text-white hover:bg-daisy-teal-deep hover:scale-105 active:scale-95 shadow-daisy-md hover:shadow-daisy-lg",
         outline:
-          "border-2 border-daisy-forest-700 text-daisy-forest-700 hover:bg-daisy-forest-50 hover:border-daisy-forest-600 active:bg-daisy-forest-100",
+          "border-2 border-daisy-sunshine-600 text-daisy-sunshine-700 hover:bg-daisy-sunshine-50 hover:border-daisy-sunshine-700 active:bg-daisy-sunshine-100",
         ghost:
-          "hover:bg-daisy-forest-50 hover:text-daisy-forest-700 active:bg-daisy-forest-100",
-        link: "text-daisy-forest-700 underline-offset-4 hover:underline hover:text-daisy-teal",
+          "hover:bg-daisy-sunshine-50 hover:text-daisy-sunshine-700 active:bg-daisy-sunshine-100",
+        link: "text-daisy-sunshine-700 underline-offset-4 hover:underline hover:text-daisy-sunshine-600",
       },
       size: {
         default: "h-10 px-4 py-2",

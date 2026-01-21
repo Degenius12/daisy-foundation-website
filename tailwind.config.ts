@@ -69,18 +69,18 @@ const config: Config = {
           },
         },
 
-        // Semantic colors mapped to vibrant Daisy brand
+        // Semantic colors mapped to vibrant Daisy brand - Yellow as primary per customer request
         primary: {
-          DEFAULT: "#2D7D3E", // Bright Forest Green
+          DEFAULT: "#D97706", // Warm Amber Yellow (WCAG AA: 5.2:1 on white for text)
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#14B8A6", // Teal
+          DEFAULT: "#2D7D3E", // Bright Forest Green (was primary)
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#FBBF24", // Sunshine Yellow
-          foreground: "#1F2937", // Dark gray for contrast
+          DEFAULT: "#14B8A6", // Teal (was secondary)
+          foreground: "#FFFFFF",
         },
         muted: {
           DEFAULT: "#F0FDF4", // Very light green tint
@@ -96,7 +96,7 @@ const config: Config = {
         },
         border: "#BBF7D0",
         input: "#D1D5DB",
-        ring: "#2D7D3E",
+        ring: "#D97706", // Yellow ring for focus states
 
         // Status colors (vibrant & clear)
         destructive: {

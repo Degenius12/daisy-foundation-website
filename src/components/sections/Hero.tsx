@@ -41,8 +41,8 @@ export function Hero() {
           <div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Help every family feel{" "}
-              <span className="text-daisy-forest-700">supported</span> — and every
-              child feel <span className="text-daisy-coral">seen</span>
+              <span className="text-daisy-sunshine-700">supported</span> — and every
+              child feel <span className="text-daisy-sunshine-600">seen</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-700">
               Every child deserves quality early childhood education. We bridge the gap
@@ -86,7 +86,7 @@ export function Hero() {
             <Card className="border-2 border-daisy-sunshine-300 shadow-daisy-xl bg-gradient-to-br from-white to-daisy-sunshine-50">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-2xl text-daisy-forest-700">This Month&apos;s Focus</CardTitle>
+                  <CardTitle className="text-2xl text-daisy-sunshine-700">This Month&apos;s Focus</CardTitle>
                   <span className="rounded-full bg-daisy-sunshine-400 px-3 py-1 text-xs font-semibold text-gray-900 shadow-daisy-sm">
                     Active
                   </span>
@@ -106,7 +106,7 @@ export function Hero() {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span className="font-medium text-gray-700">Progress</span>
-                    <span className="font-semibold text-daisy-forest-700">
+                    <span className="font-semibold text-daisy-sunshine-700">
                       {Math.round(progress)}%
                     </span>
                   </div>

@@ -27,14 +27,33 @@ export function MissionValues() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Mission Statement */}
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-4xl">
             Our Mission
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
-            We believe every child deserves a strong start in life. Inspired by
-            Grandmother Daisy&apos;s legacy of compassion and care, we provide quality early
-            childhood education support to families who need it most.
-          </p>
+          <div className="mt-6 space-y-4 text-lg leading-8 text-gray-700">
+            <p>
+              Inspired by my grandmother Daisy—Jamaican-born, a devoted nurse aide, and a loving
+              child caregiver in Miami—we carry forward her legacy of patience, warmth, and compassion.
+            </p>
+            <p>
+              Daisy&apos;s Nonprofit Inc. exists to ensure every child feels safe, seen, and supported
+              through access to quality early childhood education.
+            </p>
+            <p>
+              We support mothers, teen parents, and families by subsidizing childcare tuition and
+              reducing the burden of affordability. We also provide educational enrichment, job
+              training, and career support to help parents build stability and brighter futures.
+            </p>
+            <p>
+              With a strong early education foundation and empowered families, we believe children
+              can thrive academically, socially, and emotionally for life.
+            </p>
+            <p className="font-semibold">
+              Daisy Foundation is a nonprofit dedicated to creating safe, healthy, and opportunity-rich
+              communities. We partner with families, schools, and local organizations to meet urgent
+              needs and build long-term pathways for success.
+            </p>
+          </div>
         </div>
 
         {/* Daisy's Story */}
@@ -70,8 +89,8 @@ export function MissionValues() {
                 key={value.title}
                 className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-daisy-forest-100">
-                  <value.icon className="h-6 w-6 text-daisy-forest-700" aria-hidden="true" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-daisy-sunshine-100">
+                  <value.icon className="h-6 w-6 text-daisy-sunshine-700" aria-hidden="true" />
                 </div>
                 <h4 className="mt-6 text-lg font-semibold text-gray-900">
                   {value.title}

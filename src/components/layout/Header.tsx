@@ -35,8 +35,17 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-daisy-forest-700">Daisy Foundation</span>
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="-m-1.5 p-1.5 flex items-center gap-3 hover:opacity-80 transition-opacity"
+          >
+            <img
+              src="/images/logo.png"
+              alt="Daisy Foundation Logo"
+              className="h-12 w-auto"
+            />
+            <span className="text-2xl font-bold text-daisy-sunshine-700 hidden sm:inline">Daisy Foundation</span>
           </button>
         </div>
 
@@ -65,7 +74,7 @@ export function Header() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-daisy-forest-700 transition-colors"
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-daisy-sunshine-700 transition-colors"
             >
               {item.name}
             </a>
