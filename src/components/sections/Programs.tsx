@@ -123,7 +123,7 @@ export function Programs() {
               Want to partner with Daisy Foundation?
             </h3>
             <p className="text-lg text-gray-700 mb-6">
-              We collaborate with schools, businesses, and nonprofits. Let's build something meaningful.
+              We collaborate with schools, businesses, and nonprofits. Let&apos;s build something meaningful.
             </p>
             <Button size="lg" asChild>
               <a href="#contact">Become a Partner</a>

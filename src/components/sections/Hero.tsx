@@ -38,7 +38,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 text-xl md:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
-            Honoring Grandmother Daisy's legacy by creating safe, healthy communities
+            Honoring Grandmother Daisy&apos;s legacy by creating safe, healthy communities
             where families thrive together.
           </p>
 

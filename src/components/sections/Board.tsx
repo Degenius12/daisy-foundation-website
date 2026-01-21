@@ -43,7 +43,7 @@ export function Board() {
             Our Board
           </h2>
           <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
-            Dedicated leaders committed to honoring Daisy's legacy.
+            Dedicated leaders committed to honoring Daisy&apos;s legacy.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export function Board() {
                   {boardMembers[0].title}
                 </p>
                 <blockquote className="text-lg md:text-xl italic text-gray-700">
-                  "{boardMembers[0].quote}"
+                  &ldquo;{boardMembers[0].quote}&rdquo;
                 </blockquote>
               </CardContent>
             </Card>

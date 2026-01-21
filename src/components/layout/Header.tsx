@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -39,9 +40,11 @@ export function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="-m-1.5 p-1.5 flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img
+            <Image
               src="/images/logo.png"
               alt="Daisy Foundation Logo"
+              width={48}
+              height={48}
               className="h-12 w-auto"
             />
             <span className="text-2xl font-bold text-daisy-sunshine-700 hidden sm:inline">Daisy Foundation</span>
