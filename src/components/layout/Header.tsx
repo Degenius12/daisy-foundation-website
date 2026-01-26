@@ -44,9 +44,9 @@ export function Header() {
             <Image
               src="/images/Logo.svg"
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-              width={1125}
-              height={450}
-              className="h-[420px] w-auto md:h-[480px]"
+              width={375}
+              height={150}
+              className="h-[150px] w-auto"
               priority
             />
           </button>
