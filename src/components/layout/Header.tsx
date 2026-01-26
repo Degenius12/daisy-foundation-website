@@ -38,16 +38,17 @@ export function Header() {
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="-m-1.5 p-1.5 flex items-center gap-3 hover:opacity-80 transition-opacity"
+            className="-m-1.5 p-1.5 hover:opacity-80 transition-opacity"
+            aria-label="Daisy Foundation - Return to top"
           >
             <Image
               src="/images/Logo.svg"
-              alt="Daisy Foundation Logo"
-              width={80}
-              height={80}
-              className="h-20 w-auto"
+              alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
+              width={300}
+              height={120}
+              className="h-28 w-auto md:h-32"
+              priority
             />
-            <span className="text-2xl font-bold text-daisy-sunshine-700 hidden sm:inline">Daisy Foundation</span>
           </button>
         </div>
 
