@@ -36,7 +36,7 @@ export function Board() {
   ];
 
   return (
-    <section id="board" className="py-24 bg-gradient-to-br from-white via-daisy-sunshine-50 to-daisy-coral-light/10">
+    <section id="board" className="py-24 bg-gradient-to-br from-white via-daisy-sunshine-50 to-daisy-forest-100/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-6xl">
@@ -72,11 +72,11 @@ export function Board() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {boardMembers.slice(1).map((member, index) => {
               const colors = [
-                "border-daisy-coral bg-gradient-to-br from-white to-daisy-coral-light/20",
+                "border-daisy-forest-400 bg-gradient-to-br from-white to-daisy-forest-100/20",
                 "border-daisy-sunshine-300 bg-gradient-to-br from-white to-daisy-sunshine-50",
                 "border-daisy-lavender bg-gradient-to-br from-white to-daisy-lavender-light/20",
                 "border-daisy-teal bg-gradient-to-br from-white to-daisy-teal-light/20",
-                "border-daisy-coral bg-gradient-to-br from-white to-daisy-coral-light/20",
+                "border-daisy-forest-400 bg-gradient-to-br from-white to-daisy-forest-100/20",
                 "border-daisy-sunshine-300 bg-gradient-to-br from-white to-daisy-sunshine-50",
               ];
               return (

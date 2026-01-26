@@ -27,7 +27,7 @@ export function Hero() {
     <section className="relative bg-gradient-to-br from-daisy-sunshine-50 via-white to-daisy-sunshine-100 py-20 lg:py-32">
       {/* Soft decorative circles */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-daisy-sunshine-300/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-daisy-coral-light/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-48 h-48 bg-daisy-forest-200/20 rounded-full blur-3xl"></div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
@@ -57,7 +57,7 @@ export function Hero() {
             {values.map((value, index) => {
               const colors = [
                 { bg: "bg-daisy-sunshine-100", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-700" },
-                { bg: "bg-daisy-coral-light/30", border: "border-daisy-coral", icon: "text-daisy-coral-deep" },
+                { bg: "bg-daisy-forest-100", border: "border-daisy-forest-400", icon: "text-daisy-forest-700" },
                 { bg: "bg-daisy-sunshine-100", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-600" },
               ];
               return (

@@ -59,7 +59,7 @@ export function MissionValues() {
             {values.map((value, index) => {
               const colors = [
                 { bg: "bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200", icon: "text-daisy-sunshine-700", border: "border-daisy-sunshine-400" },
-                { bg: "bg-gradient-to-br from-daisy-coral-light/40 to-daisy-coral-light/60", icon: "text-daisy-coral-deep", border: "border-daisy-coral" },
+                { bg: "bg-gradient-to-br from-daisy-forest-100 to-daisy-forest-200", icon: "text-daisy-forest-700", border: "border-daisy-forest-400" },
                 { bg: "bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200", icon: "text-daisy-sunshine-600", border: "border-daisy-sunshine-400" },
               ];
               return (

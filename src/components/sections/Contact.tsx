@@ -232,7 +232,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-gradient-to-br from-daisy-sunshine-100 to-daisy-coral-light/30 p-6 border-2 border-daisy-sunshine-300 shadow-daisy-md">
+            <div className="rounded-lg bg-gradient-to-br from-daisy-sunshine-100 to-daisy-forest-100/30 p-6 border-2 border-daisy-sunshine-300 shadow-daisy-md">
               <h4 className="font-semibold text-daisy-forest-700 mb-2">Office Hours</h4>
               <p className="text-sm text-gray-700">
                 Monday - Friday: 9:00 AM - 5:00 PM

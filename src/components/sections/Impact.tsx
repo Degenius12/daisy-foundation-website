@@ -52,9 +52,9 @@ export function Impact() {
           {metrics.map((metric, index) => {
             const bgColors = [
               "bg-daisy-teal-light/20",
-              "bg-daisy-coral-light/20",
-              "bg-daisy-lavender-light/20",
+              "bg-daisy-sunshine-200",
               "bg-daisy-forest-100",
+              "bg-daisy-forest-200",
             ];
             return (
               <Card key={metric.label} className="text-center border-2 hover:shadow-daisy-lg hover:scale-105 transition-all duration-300">
@@ -75,7 +75,7 @@ export function Impact() {
 
         {/* Success Story */}
         <div className="mx-auto mt-20 max-w-4xl">
-          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 via-daisy-coral-light/20 to-daisy-lavender-light/20 p-8 lg:p-12 border-2 border-daisy-sunshine-300 shadow-daisy-lg">
+          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 via-daisy-forest-100/30 to-daisy-teal-light/20 p-8 lg:p-12 border-2 border-daisy-sunshine-300 shadow-daisy-lg">
             <h3 className="text-2xl font-bold text-daisy-forest-700">Success Story</h3>
             <blockquote className="mt-6">
               <p className="text-lg leading-8 text-gray-700">

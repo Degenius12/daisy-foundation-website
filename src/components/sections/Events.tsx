@@ -39,7 +39,7 @@ export function Events() {
   ];
 
   return (
-    <section id="events" className="py-24 bg-gradient-to-br from-daisy-coral-light/10 via-daisy-sunshine-50 to-daisy-sky-light/10">
+    <section id="events" className="py-24 bg-gradient-to-br from-daisy-forest-100/10 via-daisy-sunshine-50 to-daisy-teal-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
@@ -54,13 +54,13 @@ export function Events() {
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 lg:grid-cols-3">
           {events.map((event, index) => {
             const cardColors = [
-              "border-daisy-coral hover:border-daisy-coral-deep",
-              "border-daisy-lavender hover:border-daisy-lavender-deep",
+              "border-daisy-forest-400 hover:border-daisy-forest-600",
+              "border-daisy-sunshine-300 hover:border-daisy-sunshine-500",
               "border-daisy-teal hover:border-daisy-teal-deep",
             ];
             const badgeColors = [
-              "bg-daisy-coral text-white",
-              "bg-daisy-lavender text-white",
+              "bg-daisy-forest-600 text-white",
+              "bg-daisy-sunshine-500 text-white",
               "bg-daisy-teal text-white",
             ];
             return (
