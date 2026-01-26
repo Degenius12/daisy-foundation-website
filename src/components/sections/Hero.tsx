@@ -34,7 +34,7 @@ export function Hero() {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
             Every child deserves{" "}
-            <span className="text-daisy-sunshine-600 block mt-2">love, support & opportunity</span>
+            <span className="text-daisy-forest-600 block mt-2">love, support & opportunity</span>
           </h1>
 
           <p className="mt-8 text-xl md:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
@@ -44,10 +44,10 @@ export function Hero() {
 
           {/* CTAs */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="xl" className="text-lg shadow-lg" asChild>
+            <Button size="xl" className="text-lg shadow-lg bg-daisy-forest-600 hover:bg-daisy-forest-700" asChild>
               <a href="#donate">Support Our Mission</a>
             </Button>
-            <Button size="xl" variant="outline" className="text-lg" asChild>
+            <Button size="xl" variant="outline" className="text-lg border-daisy-forest-600 text-daisy-forest-600 hover:bg-daisy-forest-50" asChild>
               <a href="#programs">See What We Do</a>
             </Button>
           </div>

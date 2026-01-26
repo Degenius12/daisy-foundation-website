@@ -24,7 +24,7 @@ export function MissionValues() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Mission Statement */}
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
             Our Mission
           </h2>
           <div className="mt-10 space-y-6 text-lg md:text-xl leading-relaxed text-gray-700">
@@ -45,7 +45,7 @@ export function MissionValues() {
               With a strong early education foundation and empowered families, we believe children
               can thrive academically, socially, and emotionally for life.
             </p>
-            <p className="text-xl md:text-2xl font-semibold text-daisy-sunshine-700 mt-8">
+            <p className="text-xl md:text-2xl font-semibold text-daisy-forest-700 mt-8">
               Daisy Foundation is a nonprofit dedicated to creating safe, healthy, and opportunity-rich
               communities. We partner with families, schools, and local organizations to meet urgent
               needs and build long-term pathways for success.

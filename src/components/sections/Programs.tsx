@@ -75,7 +75,7 @@ export function Programs() {
     <section id="programs" className="py-24 bg-gradient-to-br from-daisy-sunshine-50 via-white to-daisy-sunshine-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-sunshine-700 sm:text-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
             What We Do
           </h2>
           <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
