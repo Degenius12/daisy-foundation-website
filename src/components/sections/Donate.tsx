@@ -240,7 +240,7 @@ export function Donate() {
             onClick={handleDonate}
             disabled={isLoading || selectedAmount < 10}
             size="lg"
-            className="w-full"
+            className="w-full bg-daisy-forest-600 hover:bg-daisy-forest-700"
             data-testid="donate-button"
           >
             {isLoading ? (

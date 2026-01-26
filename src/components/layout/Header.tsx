@@ -85,7 +85,7 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button asChild>
+          <Button asChild className="bg-daisy-forest-600 hover:bg-daisy-forest-700">
             <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
               Donate Now
             </a>
@@ -108,7 +108,7 @@ export function Header() {
               </a>
             ))}
             <div className="pt-4">
-              <Button asChild className="w-full">
+              <Button asChild className="w-full bg-daisy-forest-600 hover:bg-daisy-forest-700">
                 <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
                   Donate Now
                 </a>
