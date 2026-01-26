@@ -46,7 +46,7 @@ export function Header() {
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
               width={950}
               height={380}
-              className="h-[280px] w-auto transform scale-140 origin-left"
+              className="h-[280px] w-auto transform scale-[1.75] origin-left"
               priority
             />
           </button>
