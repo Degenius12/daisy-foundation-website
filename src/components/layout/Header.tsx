@@ -41,7 +41,7 @@ export function Header() {
             className="-m-1.5 p-1.5 flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/Logo.svg"
               alt="Daisy Foundation Logo"
               width={48}
               height={48}
