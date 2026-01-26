@@ -33,7 +33,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between py-1 px-2 lg:px-4" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-2 lg:px-4" aria-label="Global">
         <div className="flex lg:flex-1">
           <button
             type="button"
@@ -44,9 +44,9 @@ export function Header() {
             <Image
               src="/images/Logo.svg"
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-              width={400}
-              height={160}
-              className="h-24 w-auto md:h-28"
+              width={1125}
+              height={450}
+              className="h-[420px] w-auto md:h-[480px]"
               priority
             />
           </button>
