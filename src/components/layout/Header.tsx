@@ -43,9 +43,9 @@ export function Header() {
             <Image
               src="/images/Logo.svg"
               alt="Daisy Foundation Logo"
-              width={48}
-              height={48}
-              className="h-12 w-auto"
+              width={80}
+              height={80}
+              className="h-20 w-auto"
             />
             <span className="text-2xl font-bold text-daisy-sunshine-700 hidden sm:inline">Daisy Foundation</span>
           </button>
