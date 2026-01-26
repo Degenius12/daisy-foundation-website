@@ -32,7 +32,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-gray-200/30">
+    <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-2 lg:px-4" aria-label="Global">
         <div className="flex lg:flex-1">
           <button
