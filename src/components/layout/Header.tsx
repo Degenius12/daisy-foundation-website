@@ -45,7 +45,7 @@ export function Header() {
               alt="Daisy's Foundation - In Her Name"
               width={600}
               height={1000}
-              className="h-[360px] w-auto md:h-[400px] lg:h-[480px]"
+              className="h-[240px] w-auto md:h-[280px] lg:h-[320px]"
               quality={100}
               unoptimized
               priority
