@@ -32,7 +32,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b-2 border-vintage-beige-200 bg-vintage-cream-100/95 backdrop-blur supports-[backdrop-filter]:bg-vintage-cream-100/80 shadow-vintage-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-8 py-1" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-2 lg:px-4 py-0" aria-label="Global">
         <div className="flex lg:flex-1">
           <button
             type="button"
@@ -45,7 +45,9 @@ export function Header() {
               alt="Daisy's Foundation - In Her Name"
               width={600}
               height={1000}
-              className="h-72 w-auto md:h-80 lg:h-96"
+              className="h-[360px] w-auto md:h-[400px] lg:h-[480px]"
+              quality={100}
+              unoptimized
               priority
             />
           </button>
