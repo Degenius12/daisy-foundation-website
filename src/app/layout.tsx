@@ -1,27 +1,30 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora, Parisienne } from "next/font/google";
+import { Playfair_Display, Montserrat, Allura } from "next/font/google";
 import "./globals.css";
 
-// Vintage typography system
+// Montserrat - Primary sans-serif for body and headings
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+// Allura - Elegant script for logo and decorative text
+const allura = Allura({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-allura",
+  display: "swap",
+});
+
+// Playfair Display - Accent serif for quotes and special text
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const parisienne = Parisienne({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-parisienne",
-  display: "swap",
+  weight: ["400"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -69,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${lora.variable} ${parisienne.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${allura.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

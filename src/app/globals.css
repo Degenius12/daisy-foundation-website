@@ -146,10 +146,17 @@
   @apply right-0;
 }
 
-/* Script text utility */
+/* Script text utility - Allura for logo and decorative text */
 .script-text {
   @apply font-script text-vintage-brown-500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em; /* Increased for Allura's elegance */
+}
+
+/* Accent text utility - Playfair Display for quotes and special text */
+.accent-text {
+  @apply font-accent text-vintage-brown-600;
+  font-style: italic;
+  letter-spacing: 0.01em;
 }
 
 /* Vintage badge styling */
@@ -176,4 +183,8 @@
 
 .prose-vintage a {
   @apply text-vintage-gold-400 hover:text-vintage-gold-600 underline;
+}
+
+.prose-vintage blockquote {
+  @apply font-accent italic; /* Use Playfair for quotes */
 }

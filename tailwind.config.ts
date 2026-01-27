@@ -125,9 +125,10 @@ const config: Config = {
         sm: "0.25rem",
       },
       fontFamily: {
-        sans: ["var(--font-lora)", "Georgia", "serif"],
-        heading: ["var(--font-playfair)", "Georgia", "serif"],
-        script: ["var(--font-parisienne)", "cursive"],
+        sans: ["var(--font-montserrat)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "system-ui", "sans-serif"],
+        heading: ["var(--font-montserrat)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "system-ui", "sans-serif"],
+        script: ["var(--font-allura)", "Brush Script MT", "cursive"],
+        accent: ["var(--font-playfair)", "Georgia", "Garamond", "serif"],
       },
       fontSize: {
         // Responsive typography
