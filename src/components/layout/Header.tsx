@@ -40,7 +40,7 @@ export function Header() {
             aria-label="Daisy's Foundation - Return to top"
           >
             <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto">
-              <title>Daisy's Foundation - In Her Name</title>
+              <title>Daisy&apos;s Foundation - In Her Name</title>
 
               {/* Small daisy icon on left */}
               <g transform="translate(25, 40)">
@@ -58,7 +58,7 @@ export function Header() {
 
               {/* "Daisy's" text in script font */}
               <text x="55" y="45" fontFamily="var(--font-allura), Allura, cursive" fontSize="36" fill="#6B5744" fontWeight="400">
-                Daisy's
+                Daisy&apos;s
               </text>
 
               {/* "In Her Name" tagline below */}
