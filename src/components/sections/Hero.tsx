@@ -1,79 +1,155 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Users, Sparkles } from "lucide-react";
-
 export function Hero() {
-  const values = [
-    {
-      icon: Heart,
-      title: "Love & Care",
-      description: "Every family deserves support",
-    },
-    {
-      icon: Users,
-      title: "Community",
-      description: "We build together",
-    },
-    {
-      icon: Sparkles,
-      title: "Hope",
-      description: "Brighter futures for all",
-    },
-  ];
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <section className="relative bg-gradient-to-br from-daisy-sunshine-50 via-white to-daisy-sunshine-100 py-20 lg:py-32">
-      {/* Soft decorative circles */}
-      <div className="absolute top-10 left-10 w-40 h-40 bg-daisy-sunshine-300/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-daisy-forest-200/20 rounded-full blur-3xl"></div>
+    <section className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
+      {/* Subtle paper texture overlay */}
+      <div className="absolute inset-0 opacity-30 bg-[url('/images/textures/paper-texture.png')] bg-repeat"></div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      {/* Decorative daisy clusters in corners */}
+      <div className="absolute top-8 left-8 opacity-20 pointer-events-none">
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Large daisy cluster - top left */}
+          <g transform="translate(40, 40)">
+            {/* Center daisy */}
+            <ellipse cx="0" cy="-15" rx="6" ry="15" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="0" cy="15" rx="6" ry="15" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="-15" cy="0" rx="15" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="15" cy="0" rx="15" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="-11" cy="-11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(-45 -11 -11)" />
+            <ellipse cx="11" cy="-11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(45 11 -11)" />
+            <ellipse cx="-11" cy="11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(45 -11 11)" />
+            <ellipse cx="11" cy="11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(-45 11 11)" />
+            <circle r="8" fill="#C9A961" stroke="#A68952" strokeWidth="1.5" />
+          </g>
+          {/* Smaller daisies around */}
+          <g transform="translate(100, 20)">
+            <ellipse cx="0" cy="-8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="0" cy="8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="-8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <circle r="4" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
+          </g>
+          <g transform="translate(20, 100)">
+            <ellipse cx="0" cy="-8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="0" cy="8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="-8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <circle r="4" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
+          </g>
+        </svg>
+      </div>
+
+      <div className="absolute bottom-8 right-8 opacity-20 pointer-events-none">
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Large daisy cluster - bottom right */}
+          <g transform="translate(140, 140)">
+            {/* Center daisy */}
+            <ellipse cx="0" cy="-15" rx="6" ry="15" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="0" cy="15" rx="6" ry="15" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="-15" cy="0" rx="15" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="15" cy="0" rx="15" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
+            <ellipse cx="-11" cy="-11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(-45 -11 -11)" />
+            <ellipse cx="11" cy="-11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(45 11 -11)" />
+            <ellipse cx="-11" cy="11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(45 -11 11)" />
+            <ellipse cx="11" cy="11" rx="13" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" transform="rotate(-45 11 11)" />
+            <circle r="8" fill="#C9A961" stroke="#A68952" strokeWidth="1.5" />
+          </g>
+          {/* Smaller daisies around */}
+          <g transform="translate(80, 160)">
+            <ellipse cx="0" cy="-8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="0" cy="8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="-8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <circle r="4" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
+          </g>
+          <g transform="translate(160, 80)">
+            <ellipse cx="0" cy="-8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="0" cy="8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="-8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <ellipse cx="8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+            <circle r="4" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
+          </g>
+        </svg>
+      </div>
+
+      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <div className="text-center">
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
-            Every child deserves{" "}
-            <span className="text-daisy-forest-600 block mt-2">love, support & opportunity</span>
+          {/* Main Tagline - "In Her Name" */}
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-vintage-brown-600 leading-tight tracking-tight">
+            In Her Name
           </h1>
 
-          <p className="mt-8 text-xl md:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
-            Honoring Grandmother Daisy&apos;s legacy by creating safe, healthy communities
-            where families thrive together.
+          {/* Decorative divider with single daisy */}
+          <div className="flex items-center justify-center my-8">
+            <div className="h-px w-20 bg-vintage-gold-400"></div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="mx-4"
+            >
+              <g transform="translate(20, 20)">
+                <ellipse cx="0" cy="-8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+                <ellipse cx="0" cy="8" rx="3" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+                <ellipse cx="-8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+                <ellipse cx="8" cy="0" rx="8" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
+                <ellipse cx="-6" cy="-6" rx="7" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" transform="rotate(-45 -6 -6)" />
+                <ellipse cx="6" cy="-6" rx="7" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" transform="rotate(45 6 -6)" />
+                <ellipse cx="-6" cy="6" rx="7" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" transform="rotate(45 -6 6)" />
+                <ellipse cx="6" cy="6" rx="7" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" transform="rotate(-45 6 6)" />
+                <circle r="4" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
+              </g>
+            </svg>
+            <div className="h-px w-20 bg-vintage-gold-400"></div>
+          </div>
+
+          {/* Subtitle */}
+          <p className="text-2xl md:text-3xl font-heading italic text-vintage-brown-500 leading-relaxed">
+            Rooted in love. Growing in community.
+          </p>
+
+          {/* Mission intro about Grandmother Daisy */}
+          <p className="mt-8 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto">
+            Grandmother Daisy believed every child deserves to be seen, heard, and cherished.
+            Her home was a sanctuary where favorite meals were always ready, where listening ears
+            were always available, and where love was abundant. Today, we honor her legacy by
+            supporting families with quality early childhood education, nurturing the next
+            generation just as she nurtured us.
           </p>
 
           {/* CTAs */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="xl" className="text-lg shadow-lg bg-daisy-forest-600 hover:bg-daisy-forest-700" asChild>
-              <a href="#donate">Support Our Mission</a>
-            </Button>
-            <Button size="xl" variant="outline" className="text-lg border-daisy-forest-600 text-daisy-forest-600 hover:bg-daisy-forest-50" asChild>
-              <a href="#programs">See What We Do</a>
-            </Button>
-          </div>
-
-          {/* Three Values - Warmer, Friendlier */}
-          <div className="mt-20 grid gap-8 sm:grid-cols-3 max-w-4xl mx-auto">
-            {values.map((value, index) => {
-              const colors = [
-                { bg: "bg-daisy-sunshine-100", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-700" },
-                { bg: "bg-daisy-forest-100", border: "border-daisy-forest-400", icon: "text-daisy-forest-700" },
-                { bg: "bg-daisy-sunshine-100", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-600" },
-              ];
-              return (
-                <Card key={value.title} className={`border-2 ${colors[index].border} ${colors[index].bg} shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300`}>
-                  <CardContent className="pt-8 pb-8 text-center">
-                    <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md`}>
-                      <value.icon className={`h-8 w-8 ${colors[index].icon}`} aria-hidden="true" />
-                    </div>
-                    <h3 className="mt-4 text-lg font-bold text-gray-900">
-                      {value.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-gray-600">{value.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              type="button"
+              onClick={() => scrollToSection("donate")}
+              className="vintage-button text-lg px-8 py-3"
+            >
+              Support Our Mission
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection("story")}
+              className="vintage-button-outline text-lg px-8 py-3"
+            >
+              Learn About Daisy
+            </button>
           </div>
         </div>
       </div>
