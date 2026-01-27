@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navigationLinks = [
@@ -39,41 +40,14 @@ export function Header() {
             className="hover:opacity-80 transition-opacity flex items-center gap-2"
             aria-label="Daisy's Foundation - Return to top"
           >
-            <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto">
-              <title>Daisy&apos;s Foundation - In Her Name</title>
-
-              {/* Small daisy icon on left */}
-              <g transform="translate(25, 40)">
-                <ellipse cx="0" cy="-10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95"/>
-                <ellipse cx="0" cy="10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95"/>
-                <ellipse cx="-10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95"/>
-                <ellipse cx="10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95"/>
-                <ellipse cx="-7" cy="-7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95" transform="rotate(-45 -7 -7)"/>
-                <ellipse cx="7" cy="-7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95" transform="rotate(45 7 -7)"/>
-                <ellipse cx="-7" cy="7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95" transform="rotate(45 -7 7)"/>
-                <ellipse cx="7" cy="7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.2" opacity="0.95" transform="rotate(-45 7 7)"/>
-                <circle r="5" fill="#C9A961" stroke="#A68952" strokeWidth="1.2"/>
-                <circle r="3.5" fill="#D9B978" opacity="0.7"/>
-              </g>
-
-              {/* "Daisy's" text in script font */}
-              <text x="55" y="45" fontFamily="var(--font-allura), Allura, cursive" fontSize="36" fill="#6B5744" fontWeight="400">
-                Daisy&apos;s
-              </text>
-
-              {/* "In Her Name" tagline below */}
-              <text x="58" y="58" fontFamily="var(--font-playfair), Playfair Display, serif" fontSize="10" fill="#A68952" fontWeight="500" letterSpacing="2">
-                IN HER NAME
-              </text>
-
-              {/* Small decorative leaf accent on right */}
-              <ellipse cx="155" cy="38" rx="4" ry="8" fill="#D4DED0" stroke="#B8C9B0" strokeWidth="1" opacity="0.6" transform="rotate(-30 155 38)"/>
-
-              {/* Foundation text */}
-              <text x="145" y="45" fontFamily="var(--font-montserrat), Montserrat, sans-serif" fontSize="18" fill="#8B6F47" fontWeight="400">
-                Foundation
-              </text>
-            </svg>
+            <Image
+              src="/images/logo/daisys-logo-horizontal.svg"
+              alt="Daisy's Foundation - In Her Name"
+              width={280}
+              height={80}
+              className="h-12 w-auto"
+              priority
+            />
           </button>
         </div>
 
