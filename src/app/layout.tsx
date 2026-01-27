@@ -1,24 +1,33 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Playfair_Display, Lora, Parisienne } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+// Vintage typography system
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-playfair",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-lora",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const parisienne = Parisienne({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-parisienne",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Daisy Foundation | Supporting Early Childhood Education",
+  title: "Daisy's Foundation | In Her Name",
   description:
-    "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training. Every child deserves quality education.",
+    "Rooted in love. Growing in community. Honoring Grandmother Daisy's legacy through programs that nurture families and build thriving communities.",
   keywords: [
     "nonprofit",
     "early childhood education",
@@ -27,24 +36,26 @@ export const metadata: Metadata = {
     "educational support",
     "Miami nonprofits",
     "family support services",
+    "community programs",
+    "grandmother daisy legacy",
   ],
-  authors: [{ name: "Daisy Foundation" }],
-  creator: "Daisy Foundation",
-  publisher: "Daisy Foundation",
+  authors: [{ name: "Daisy's Foundation" }],
+  creator: "Daisy's Foundation",
+  publisher: "Daisy's Foundation",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://daisysfoundation.com",
-    title: "Daisy Foundation | Supporting Early Childhood Education",
+    title: "Daisy's Foundation | In Her Name",
     description:
-      "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
-    siteName: "Daisy Foundation",
+      "Rooted in love. Growing in community. Honoring Grandmother Daisy's legacy through programs that nurture families and build thriving communities.",
+    siteName: "Daisy's Foundation",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daisy Foundation | Supporting Early Childhood Education",
+    title: "Daisy's Foundation | In Her Name",
     description:
-      "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
+      "Rooted in love. Growing in community. Honoring Grandmother Daisy's legacy through programs that nurture families.",
   },
   robots: {
     index: true,
@@ -58,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${lora.variable} ${parisienne.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

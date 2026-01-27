@@ -10,115 +10,114 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Daisy Foundation Brand Colors - Bright & Cheerful for Daycare
-        daisy: {
-          // Vibrant Greens (nature, growth, safety)
-          forest: {
-            DEFAULT: "#2D7D3E", // Bright Forest Green - Primary brand color (WCAG AA: 4.6:1 on white)
-            50: "#F0FDF4",
-            100: "#DCFCE7",
-            200: "#BBF7D0",
-            300: "#86EFAC",
-            400: "#4ADE80",
-            500: "#22C55E",
-            600: "#16A34A",
-            700: "#2D7D3E", // Base color - vibrant green
-            800: "#166534",
-            900: "#14532D",
-            950: "#052E16",
+        // Vintage Botanical Palette - Cream, Beige, Brown, Gold
+        vintage: {
+          // Cream backgrounds (lightest tones)
+          cream: {
+            50: "#FDFCFA",
+            100: "#FAF8F3",
+            200: "#F5F3ED",
+            300: "#F0EDE5",
+            DEFAULT: "#F5F3ED",
           },
-          // Playful Blue-Green (calm, trust, freshness)
-          teal: {
-            light: "#5EEAD4",
-            DEFAULT: "#14B8A6", // Teal - playful accent
-            deep: "#0D9488",
+          // Beige tones (sections, subtle backgrounds)
+          beige: {
+            100: "#F0EBE3",
+            200: "#E8E1D5",
+            300: "#DFD6C8",
+            400: "#D4C4B0",
+            DEFAULT: "#E8E1D5",
           },
-          // Warm Sunshine Yellow (energy, joy, optimism)
-          sunshine: {
-            DEFAULT: "#FBBF24", // Sunshine Yellow - Primary accent (WCAG AAA: 8.4:1 on black)
-            light: "#FDE047",
-            warm: "#F59E0B",
-            50: "#FFFBEB",
-            100: "#FEF3C7",
-            200: "#FDE68A",
-            300: "#FCD34D",
-            400: "#FBBF24", // Base Sunshine
-            500: "#F59E0B",
-            600: "#D97706",
-            700: "#B45309",
-            800: "#92400E",
-            900: "#78350F",
+          // Brown (text, borders, strong accents)
+          brown: {
+            300: "#A6907E",
+            400: "#8B6F47",
+            500: "#6B5744",
+            600: "#5A4637",
+            700: "#4A3628",
+            DEFAULT: "#6B5744", // WCAG AA: 5.8:1 on cream backgrounds
           },
-          // Coral Pink (warmth, care, compassion)
-          coral: {
-            light: "#FCA5A5",
-            DEFAULT: "#F87171", // Coral - secondary accent
-            deep: "#EF4444",
+          // Gold accents (primary actions, highlights)
+          gold: {
+            300: "#D9B978",
+            400: "#C9A961",
+            500: "#B89968",
+            600: "#A68952",
+            DEFAULT: "#C9A961",
           },
-          // Soft Purple (creativity, imagination)
-          lavender: {
-            light: "#DDD6FE",
-            DEFAULT: "#A78BFA", // Lavender accent
-            deep: "#8B5CF6",
-          },
-          // Sky Blue (peace, serenity, trust)
-          sky: {
-            light: "#BAE6FD",
-            DEFAULT: "#38BDF8", // Sky Blue
-            deep: "#0284C7",
+          // Sage green (foliage accents, nature elements)
+          sage: {
+            100: "#E8EDE5",
+            200: "#D4DED0",
+            300: "#B8C9B0",
+            400: "#9AB58D",
+            DEFAULT: "#B8C9B0",
           },
         },
 
-        // Semantic colors mapped to vibrant Daisy brand - Yellow as primary per customer request
+        // Legacy daisy colors (keep for backwards compatibility during transition)
+        daisy: {
+          forest: {
+            DEFAULT: "#6B5744",
+            600: "#6B5744",
+            700: "#5A4637",
+          },
+          sunshine: {
+            DEFAULT: "#C9A961",
+            400: "#C9A961",
+          },
+        },
+
+        // Semantic colors mapped to vintage palette
         primary: {
-          DEFAULT: "#D97706", // Warm Amber Yellow (WCAG AA: 5.2:1 on white for text)
-          foreground: "#FFFFFF",
+          DEFAULT: "#C9A961", // Vintage gold
+          foreground: "#FDFCFA",
         },
         secondary: {
-          DEFAULT: "#2D7D3E", // Bright Forest Green (was primary)
-          foreground: "#FFFFFF",
+          DEFAULT: "#6B5744", // Vintage brown
+          foreground: "#FAF8F3",
         },
         accent: {
-          DEFAULT: "#14B8A6", // Teal (was secondary)
-          foreground: "#FFFFFF",
+          DEFAULT: "#B8C9B0", // Sage green
+          foreground: "#4A3628",
         },
         muted: {
-          DEFAULT: "#F0FDF4", // Very light green tint
-          foreground: "#166534",
+          DEFAULT: "#F5F3ED", // Cream
+          foreground: "#6B5744",
         },
         card: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#1F2937",
+          DEFAULT: "#FDFCFA", // Lightest cream
+          foreground: "#4A3628",
         },
         popover: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#1F2937",
+          DEFAULT: "#FDFCFA",
+          foreground: "#4A3628",
         },
-        border: "#BBF7D0",
-        input: "#D1D5DB",
-        ring: "#D97706", // Yellow ring for focus states
+        border: "#D4C4B0", // Light beige borders
+        input: "#E8E1D5", // Beige input backgrounds
+        ring: "#C9A961", // Gold focus rings
 
-        // Status colors (vibrant & clear)
+        // Status colors (adjusted for vintage palette)
         destructive: {
-          DEFAULT: "#EF4444", // Bright red for errors
-          foreground: "#FFFFFF",
+          DEFAULT: "#C85A54", // Muted red for errors
+          foreground: "#FDFCFA",
         },
         success: {
-          DEFAULT: "#22C55E", // Bright green for success
-          foreground: "#FFFFFF",
+          DEFAULT: "#7A9B6F", // Muted green for success
+          foreground: "#FDFCFA",
         },
         warning: {
-          DEFAULT: "#F59E0B", // Warm orange for warnings
-          foreground: "#FFFFFF",
+          DEFAULT: "#D9A048", // Warm amber for warnings
+          foreground: "#FDFCFA",
         },
         info: {
-          DEFAULT: "#38BDF8", // Sky blue for info
-          foreground: "#FFFFFF",
+          DEFAULT: "#7A9FB5", // Muted blue for info
+          foreground: "#FDFCFA",
         },
 
         // Backgrounds
-        background: "#FFFFFF",
-        foreground: "#1F2937", // Softer dark gray instead of near-black
+        background: "#FAF8F3", // Warm cream instead of white
+        foreground: "#4A3628", // Dark brown for text
       },
       borderRadius: {
         lg: "0.75rem",
@@ -126,8 +125,9 @@ const config: Config = {
         sm: "0.25rem",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        sans: ["var(--font-lora)", "Georgia", "serif"],
+        heading: ["var(--font-playfair)", "Georgia", "serif"],
+        script: ["var(--font-parisienne)", "cursive"],
       },
       fontSize: {
         // Responsive typography
@@ -144,12 +144,14 @@ const config: Config = {
         "caption": ["0.75rem", { lineHeight: "1.5", fontWeight: "400" }], // 12px
       },
       boxShadow: {
-        // Daisy-themed shadows - softer, colorful
-        "daisy-sm": "0 1px 3px 0 rgba(45, 125, 62, 0.12), 0 1px 2px -1px rgba(45, 125, 62, 0.08)",
-        "daisy-md": "0 4px 6px -1px rgba(45, 125, 62, 0.12), 0 2px 4px -2px rgba(45, 125, 62, 0.08)",
-        "daisy-lg": "0 10px 15px -3px rgba(45, 125, 62, 0.12), 0 4px 6px -4px rgba(45, 125, 62, 0.08)",
-        "daisy-xl": "0 20px 25px -5px rgba(45, 125, 62, 0.15), 0 8px 10px -6px rgba(45, 125, 62, 0.08)",
-        "daisy-glow": "0 0 20px rgba(251, 191, 36, 0.3)", // Sunshine glow effect
+        // Vintage shadows - soft brown tints
+        "vintage-sm": "0 1px 3px 0 rgba(107, 87, 68, 0.10), 0 1px 2px -1px rgba(107, 87, 68, 0.06)",
+        "vintage-md": "0 4px 6px -1px rgba(107, 87, 68, 0.12), 0 2px 4px -2px rgba(107, 87, 68, 0.08)",
+        "vintage-lg": "0 10px 15px -3px rgba(107, 87, 68, 0.15), 0 4px 6px -4px rgba(107, 87, 68, 0.10)",
+        "vintage-xl": "0 20px 25px -5px rgba(107, 87, 68, 0.18), 0 8px 10px -6px rgba(107, 87, 68, 0.12)",
+        "vintage-glow": "0 0 20px rgba(201, 169, 97, 0.25)", // Gold glow effect
+        // Legacy daisy shadows (for backwards compatibility)
+        "daisy-lg": "0 10px 15px -3px rgba(107, 87, 68, 0.15), 0 4px 6px -4px rgba(107, 87, 68, 0.10)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
@@ -178,12 +180,13 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        // Daisy-themed gradients - vibrant & playful
-        "daisy-forest": "linear-gradient(135deg, #2D7D3E 0%, #22C55E 100%)",
-        "daisy-teal": "linear-gradient(135deg, #14B8A6 0%, #5EEAD4 100%)",
-        "daisy-sunshine": "linear-gradient(135deg, #F59E0B 0%, #FDE047 100%)",
-        "daisy-hero": "linear-gradient(135deg, #2D7D3E 0%, #14B8A6 50%, #38BDF8 100%)",
-        "daisy-warm": "linear-gradient(135deg, #FBBF24 0%, #F87171 100%)",
+        // Vintage botanical gradients - warm and elegant
+        "vintage-cream": "linear-gradient(135deg, #FDFCFA 0%, #F5F3ED 100%)",
+        "vintage-beige": "linear-gradient(135deg, #F5F3ED 0%, #E8E1D5 100%)",
+        "vintage-gold": "linear-gradient(135deg, #C9A961 0%, #B89968 100%)",
+        "vintage-warm": "linear-gradient(135deg, #C9A961 0%, #D9B978 100%)",
+        "vintage-footer": "linear-gradient(180deg, #E8E1D5 0%, #6B5744 100%)",
+        "vintage-paper": "linear-gradient(135deg, #FAF8F3 0%, #F5F3ED 50%, #F0EBE3 100%)",
       },
     },
   },

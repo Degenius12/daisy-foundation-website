@@ -79,3 +79,101 @@
   clip: auto;
   white-space: normal;
 }
+
+/* ===== Vintage Botanical Utilities ===== */
+
+/* Vintage border styles */
+.vintage-border {
+  @apply border-2 border-vintage-beige-300 rounded-2xl shadow-vintage-md;
+}
+
+.vintage-border-heavy {
+  @apply border-3 border-vintage-brown-400 rounded-3xl shadow-vintage-lg;
+}
+
+/* Vintage card styling */
+.vintage-card {
+  @apply bg-vintage-cream-50 border-2 border-vintage-beige-200 rounded-2xl p-6 md:p-8;
+  @apply shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300;
+  box-shadow:
+    0 4px 6px -1px rgba(107, 87, 68, 0.12),
+    0 2px 4px -2px rgba(107, 87, 68, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.vintage-card:hover {
+  @apply -translate-y-1;
+}
+
+/* Vintage button styling */
+.vintage-button {
+  @apply bg-gradient-to-r from-vintage-gold-400 to-vintage-gold-500;
+  @apply border-2 border-vintage-gold-600 text-vintage-cream-50;
+  @apply px-6 py-3 rounded-full font-semibold font-heading;
+  @apply shadow-vintage-md hover:shadow-vintage-lg;
+  @apply transition-all duration-200;
+}
+
+.vintage-button:hover {
+  @apply bg-gradient-to-r from-vintage-gold-500 to-vintage-gold-600;
+  @apply -translate-y-0.5;
+}
+
+.vintage-button-outline {
+  @apply bg-transparent border-2 border-vintage-brown-400;
+  @apply text-vintage-brown-600 hover:bg-vintage-beige-100;
+  @apply px-6 py-3 rounded-full font-semibold font-heading;
+  @apply transition-all duration-200;
+}
+
+/* Decorative dividers */
+.daisy-divider {
+  @apply relative text-center my-12;
+}
+
+.daisy-divider::before,
+.daisy-divider::after {
+  content: '';
+  @apply absolute top-1/2 w-[35%] h-0.5;
+  background: linear-gradient(to right, transparent, #C9A961, transparent);
+}
+
+.daisy-divider::before {
+  @apply left-0;
+}
+
+.daisy-divider::after {
+  @apply right-0;
+}
+
+/* Script text utility */
+.script-text {
+  @apply font-script text-vintage-brown-500;
+  letter-spacing: 0.02em;
+}
+
+/* Vintage badge styling */
+.vintage-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  @apply bg-vintage-beige-200 text-vintage-brown-600 border border-vintage-beige-300;
+}
+
+/* Prose styling for vintage content */
+.prose-vintage {
+  @apply text-vintage-brown-500;
+}
+
+.prose-vintage h1,
+.prose-vintage h2,
+.prose-vintage h3,
+.prose-vintage h4 {
+  @apply font-heading text-vintage-brown-600;
+}
+
+.prose-vintage p {
+  @apply leading-relaxed;
+}
+
+.prose-vintage a {
+  @apply text-vintage-gold-400 hover:text-vintage-gold-600 underline;
+}
