@@ -1,0 +1,50 @@
+<svg width="1400" height="60" viewBox="0 0 1400 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Horizontal daisy border for section tops -->
+
+  <!-- Repeating pattern of daisies and leaves -->
+  <!-- Left cluster -->
+  <g transform="translate(100, 30)">
+    <ellipse cx="0" cy="-10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="0" cy="10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="-10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="-7" cy="-7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95" transform="rotate(-45 -7 -7)"/>
+    <ellipse cx="7" cy="-7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95" transform="rotate(45 7 -7)"/>
+    <circle r="5" fill="#C9A961" stroke="#A68952" stroke-width="1"/>
+  </g>
+
+  <!-- Center daisy -->
+  <g transform="translate(700, 30)">
+    <ellipse cx="0" cy="-12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95"/>
+    <ellipse cx="0" cy="12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95"/>
+    <ellipse cx="-12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95"/>
+    <ellipse cx="12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95"/>
+    <ellipse cx="-9" cy="-9" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95" transform="rotate(-45 -9 -9)"/>
+    <ellipse cx="9" cy="-9" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95" transform="rotate(45 9 -9)"/>
+    <ellipse cx="-9" cy="9" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95" transform="rotate(45 -9 9)"/>
+    <ellipse cx="9" cy="9" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.2" opacity="0.95" transform="rotate(-45 9 9)"/>
+    <circle r="6" fill="#C9A961" stroke="#A68952" stroke-width="1.2"/>
+    <circle r="4" fill="#D9B978" opacity="0.7"/>
+  </g>
+
+  <!-- Right cluster -->
+  <g transform="translate(1300, 30)">
+    <ellipse cx="0" cy="-10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="0" cy="10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="-10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95"/>
+    <ellipse cx="-7" cy="-7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95" transform="rotate(-45 -7 -7)"/>
+    <ellipse cx="7" cy="-7" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" stroke-width="1" opacity="0.95" transform="rotate(45 7 -7)"/>
+    <circle r="5" fill="#C9A961" stroke="#A68952" stroke-width="1"/>
+  </g>
+
+  <!-- Connecting leaves and vines -->
+  <path d="M50 30 Q200 35 350 30 Q500 25 650 30 Q800 35 950 30 Q1100 25 1250 30 Q1350 35 1400 30"
+        stroke="#B8C9B0" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Small leaves -->
+  <ellipse cx="250" cy="28" rx="6" ry="12" fill="#D4DED0" stroke="#B8C9B0" stroke-width="1" opacity="0.6" transform="rotate(30 250 28)"/>
+  <ellipse cx="450" cy="32" rx="6" ry="12" fill="#D4DED0" stroke="#B8C9B0" stroke-width="1" opacity="0.6" transform="rotate(-30 450 32)"/>
+  <ellipse cx="950" cy="28" rx="6" ry="12" fill="#D4DED0" stroke="#B8C9B0" stroke-width="1" opacity="0.6" transform="rotate(-30 950 28)"/>
+  <ellipse cx="1150" cy="32" rx="6" ry="12" fill="#D4DED0" stroke="#B8C9B0" stroke-width="1" opacity="0.6" transform="rotate(30 1150 32)"/>
+</svg>

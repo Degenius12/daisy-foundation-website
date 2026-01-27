@@ -1,0 +1,57 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Daisy cluster for right corner decoration (mirrored) -->
+
+  <!-- Leaves/stems in background (sage green) -->
+  <path d="M150 180 Q140 150 150 120 Q160 150 150 180" fill="#B8C9B0" stroke="#9AB58D" stroke-width="2" opacity="0.8"/>
+  <path d="M120 190 Q125 160 110 140 Q115 170 120 190" fill="#B8C9B0" stroke="#9AB58D" stroke-width="2" opacity="0.8"/>
+  <path d="M100 185 Q90 155 100 130 Q110 155 100 185" fill="#B8C9B0" stroke="#9AB58D" stroke-width="2" opacity="0.8"/>
+
+  <!-- Curved stem -->
+  <path d="M120 190 Q115 160 110 130 Q105 100 100 70" stroke="#8B6F47" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Large daisy (bottom left) -->
+  <g transform="translate(90, 150)">
+    <ellipse cx="0" cy="-15" rx="6" ry="14" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="0" cy="15" rx="6" ry="14" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="-15" cy="0" rx="14" ry="6" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="15" cy="0" rx="14" ry="6" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="-11" cy="-11" rx="6" ry="14" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(-45 -11 -11)"/>
+    <ellipse cx="11" cy="-11" rx="6" ry="14" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(45 11 -11)"/>
+    <ellipse cx="-11" cy="11" rx="6" ry="14" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(45 -11 11)"/>
+    <ellipse cx="11" cy="11" rx="6" ry="14" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(-45 11 11)"/>
+    <circle r="8" fill="#C9A961" stroke="#A68952" stroke-width="1.5"/>
+    <circle r="6" fill="#D9B978" opacity="0.7"/>
+  </g>
+
+  <!-- Medium daisy (middle) -->
+  <g transform="translate(130, 110)">
+    <ellipse cx="0" cy="-12" rx="5" ry="11" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="0" cy="12" rx="5" ry="11" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="-12" cy="0" rx="11" ry="5" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="12" cy="0" rx="11" ry="5" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="-9" cy="-9" rx="5" ry="11" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(-45 -9 -9)"/>
+    <ellipse cx="9" cy="-9" rx="5" ry="11" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(45 9 -9)"/>
+    <ellipse cx="-9" cy="9" rx="5" ry="11" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(45 -9 9)"/>
+    <ellipse cx="9" cy="9" rx="5" ry="11" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(-45 9 9)"/>
+    <circle r="7" fill="#C9A961" stroke="#A68952" stroke-width="1.5"/>
+    <circle r="5" fill="#D9B978" opacity="0.7"/>
+  </g>
+
+  <!-- Small daisy (top) -->
+  <g transform="translate(110, 60)">
+    <ellipse cx="0" cy="-10" rx="4" ry="9" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="0" cy="10" rx="4" ry="9" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="-10" cy="0" rx="9" ry="4" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="10" cy="0" rx="9" ry="4" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95"/>
+    <ellipse cx="-7" cy="-7" rx="4" ry="9" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(-45 -7 -7)"/>
+    <ellipse cx="7" cy="-7" rx="4" ry="9" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(45 7 -7)"/>
+    <ellipse cx="-7" cy="7" rx="4" ry="9" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(45 -7 7)"/>
+    <ellipse cx="7" cy="7" rx="4" ry="9" fill="#FDFCFA" stroke="#6B5744" stroke-width="1.5" opacity="0.95" transform="rotate(-45 7 7)"/>
+    <circle r="5" fill="#C9A961" stroke="#A68952" stroke-width="1.5"/>
+    <circle r="3.5" fill="#D9B978" opacity="0.7"/>
+  </g>
+
+  <!-- Additional small leaves -->
+  <ellipse cx="150" cy="140" rx="8" ry="16" fill="#D4DED0" stroke="#B8C9B0" stroke-width="1.5" opacity="0.7" transform="rotate(-20 150 140)"/>
+  <ellipse cx="80" cy="170" rx="8" ry="16" fill="#D4DED0" stroke="#B8C9B0" stroke-width="1.5" opacity="0.7" transform="rotate(30 80 170)"/>
+</svg>
