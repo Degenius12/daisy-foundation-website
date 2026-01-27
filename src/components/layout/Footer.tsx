@@ -44,48 +44,96 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-daisy-forest-700 via-daisy-teal to-daisy-forest-800 text-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <footer className="relative bg-gradient-to-b from-vintage-beige-300 to-vintage-brown-500">
+      {/* Decorative daisy border across top */}
+      <div className="absolute top-0 left-0 right-0 h-8 overflow-hidden">
+        <svg
+          width="100%"
+          height="32"
+          viewBox="0 0 1200 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          {/* Repeating daisy pattern */}
+          {[...Array(15)].map((_, i) => (
+            <g key={i} transform={`translate(${i * 80 + 40}, 16)`}>
+              <ellipse cx="0" cy="-6" rx="2" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="0.8" opacity="0.9"/>
+              <ellipse cx="0" cy="6" rx="2" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="0.8" opacity="0.9"/>
+              <ellipse cx="-6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#6B5744" strokeWidth="0.8" opacity="0.9"/>
+              <ellipse cx="6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#6B5744" strokeWidth="0.8" opacity="0.9"/>
+              <circle r="3" fill="#C9A961" stroke="#A68952" strokeWidth="0.8"/>
+            </g>
+          ))}
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 pt-20">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Daisy Foundation</h3>
-            <p className="text-white/90 text-sm mb-4">
+            <h3 className="text-xl font-heading font-semibold mb-4 text-vintage-cream-50">
+              <span className="script-text text-3xl">Daisy&apos;s</span> Foundation
+            </h3>
+            <p className="text-vintage-cream-100 text-sm mb-4 leading-relaxed">
               Honoring Grandmother Daisy&apos;s legacy by providing quality early childhood
               education support to families in need.
             </p>
-            <div className="flex items-center gap-2 text-sm text-white/80">
-              <Heart className="h-4 w-4" aria-hidden="true" />
-              <span>Every child deserves a strong start</span>
+            <div className="flex items-center gap-2 text-sm text-vintage-cream-200">
+              <Heart className="h-4 w-4 text-vintage-gold-400" aria-hidden="true" />
+              <span className="accent-text text-vintage-cream-100">Every child deserves a strong start</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-heading font-semibold mb-4 text-vintage-cream-50">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#mission" className="text-white/90 hover:text-white transition-colors">
+                <a
+                  href="#story"
+                  className="text-vintage-cream-100 hover:text-vintage-gold-400 transition-colors inline-block"
+                >
+                  The Story of Daisy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#mission"
+                  className="text-vintage-cream-100 hover:text-vintage-gold-400 transition-colors inline-block"
+                >
                   Mission & Values
                 </a>
               </li>
               <li>
-                <a href="#programs" className="text-white/90 hover:text-white transition-colors">
+                <a
+                  href="#programs"
+                  className="text-vintage-cream-100 hover:text-vintage-gold-400 transition-colors inline-block"
+                >
                   Our Programs
                 </a>
               </li>
               <li>
-                <a href="#impact" className="text-white/90 hover:text-white transition-colors">
+                <a
+                  href="#impact"
+                  className="text-vintage-cream-100 hover:text-vintage-gold-400 transition-colors inline-block"
+                >
                   Our Impact
                 </a>
               </li>
               <li>
-                <a href="#donate" className="text-white/90 hover:text-white transition-colors">
+                <a
+                  href="#donate"
+                  className="text-vintage-cream-100 hover:text-vintage-gold-400 transition-colors inline-block"
+                >
                   Donate
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/90 hover:text-white transition-colors">
+                <a
+                  href="#contact"
+                  className="text-vintage-cream-100 hover:text-vintage-gold-400 transition-colors inline-block"
+                >
                   Contact Us
                 </a>
               </li>
@@ -94,8 +142,8 @@ export function Footer() {
 
           {/* Newsletter Signup */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
-            <p className="text-white/90 text-sm mb-4">
+            <h3 className="text-lg font-heading font-semibold mb-4 text-vintage-cream-50">Stay Connected</h3>
+            <p className="text-vintage-cream-100 text-sm mb-4 leading-relaxed">
               Get updates on our programs and impact stories.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
@@ -107,13 +155,13 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={status === "loading"}
-                  className="bg-white text-gray-900"
+                  className="bg-vintage-cream-50 border-vintage-beige-300 text-vintage-brown-600 placeholder:text-vintage-brown-300 focus:border-vintage-gold-400 focus:ring-vintage-gold-400"
                   data-testid="newsletter-email"
                 />
                 <Button
                   type="submit"
                   disabled={status === "loading"}
-                  variant="secondary"
+                  className="bg-vintage-gold-500 hover:bg-vintage-gold-600 text-vintage-cream-50 border-2 border-vintage-gold-600"
                   data-testid="newsletter-submit"
                 >
                   <Mail className="h-4 w-4" aria-hidden="true" />
@@ -122,13 +170,20 @@ export function Footer() {
               </div>
 
               {status === "success" && (
-                <Alert variant="success" data-testid="newsletter-success">
+                <Alert
+                  variant="default"
+                  className="bg-vintage-cream-50/20 border-vintage-gold-400 text-vintage-cream-50"
+                  data-testid="newsletter-success"
+                >
                   <AlertDescription>{message}</AlertDescription>
                 </Alert>
               )}
 
               {status === "error" && (
-                <Alert variant="destructive">
+                <Alert
+                  variant="destructive"
+                  className="bg-red-900/20 border-red-400 text-vintage-cream-50"
+                >
                   <AlertDescription>{message}</AlertDescription>
                 </Alert>
               )}
@@ -136,18 +191,22 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/20 pt-8">
+        <div className="mt-12 border-t border-vintage-cream-50/20 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-sm text-white/80">
-              © {new Date().getFullYear()} Daisy Foundation. All rights reserved.
+            <p className="text-sm text-vintage-cream-200 text-center sm:text-left">
+              © {new Date().getFullYear()} Daisy&apos;s Foundation{" "}
+              <span className="text-vintage-gold-400">· In Her Name</span>
+              <br className="sm:hidden" />
+              <span className="hidden sm:inline"> · </span>
+              All rights reserved.
             </p>
-            <p className="text-xs text-white/70">
+            <p className="text-xs text-vintage-cream-300">
               Co-created with{" "}
               <a
                 href="https://claude.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-daisy-sunshine-light hover:text-white transition-colors font-semibold"
+                className="text-vintage-gold-400 hover:text-vintage-gold-300 transition-colors font-semibold"
               >
                 Claude Code
               </a>
