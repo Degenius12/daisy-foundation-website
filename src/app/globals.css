@@ -88,7 +88,7 @@
 }
 
 .vintage-border-heavy {
-  @apply border-3 border-vintage-brown-400 rounded-3xl shadow-vintage-lg;
+  @apply border-4 border-vintage-brown-400 rounded-3xl shadow-vintage-lg;
 }
 
 /* Vintage card styling */
