@@ -146,10 +146,10 @@
   @apply right-0;
 }
 
-/* Script text utility - Allura for logo and decorative text */
+/* Script text utility - Parisienne for logo and decorative text (matches logo) */
 .script-text {
   @apply font-script text-vintage-brown-500;
-  letter-spacing: 0.03em; /* Increased for Allura's elegance */
+  letter-spacing: 0.02em;
 }
 
 /* Accent text utility - Playfair Display for quotes and special text */

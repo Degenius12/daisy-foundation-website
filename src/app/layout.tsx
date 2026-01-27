@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat, Allura } from "next/font/google";
+import { Playfair_Display, Montserrat, Parisienne } from "next/font/google";
 import "./globals.css";
 
-// Montserrat - Primary sans-serif for body and headings
+// Montserrat - Primary sans-serif for body text
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
@@ -10,20 +10,20 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
-// Allura - Elegant script for logo and decorative text
-const allura = Allura({
+// Parisienne - Elegant script for logo and decorative text (matches logo)
+const parisienne = Parisienne({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-allura",
+  variable: "--font-parisienne",
   display: "swap",
 });
 
-// Playfair Display - Accent serif for quotes and special text
+// Playfair Display - Primary serif for headings and accents (matches logo)
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
@@ -72,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${allura.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${parisienne.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

@@ -126,8 +126,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-montserrat)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "system-ui", "sans-serif"],
-        heading: ["var(--font-montserrat)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "system-ui", "sans-serif"],
-        script: ["var(--font-allura)", "Brush Script MT", "cursive"],
+        heading: ["var(--font-playfair)", "Georgia", "Garamond", "serif"],
+        script: ["var(--font-parisienne)", "Brush Script MT", "cursive"],
         accent: ["var(--font-playfair)", "Georgia", "Garamond", "serif"],
       },
       fontSize: {
