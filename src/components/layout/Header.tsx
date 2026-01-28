@@ -31,13 +31,13 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b-2 border-vintage-beige-200 bg-vintage-cream-100/95 backdrop-blur supports-[backdrop-filter]:bg-vintage-cream-100/80 shadow-vintage-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-2 lg:px-4 py-0" aria-label="Global">
-        <div className="flex lg:flex-1">
+    <header className="sticky top-0 z-40 w-full border-b border-vintage-beige-200 bg-vintage-cream-100/95 backdrop-blur supports-[backdrop-filter]:bg-vintage-cream-100/80 shadow-vintage-sm">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-1 lg:px-2 py-0 h-auto" aria-label="Global">
+        <div className="flex lg:flex-1 -my-1">
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="hover:opacity-80 transition-opacity flex items-center gap-2"
+            className="hover:opacity-80 transition-opacity flex items-center"
             aria-label="Daisy's Foundation - Return to top"
           >
             <Image
@@ -45,7 +45,7 @@ export function Header() {
               alt="Daisy's Foundation - In Her Name"
               width={600}
               height={1000}
-              className="h-[180px] w-auto md:h-[210px] lg:h-[240px]"
+              className="h-[240px] w-auto md:h-[280px] lg:h-[320px]"
               quality={100}
               unoptimized
               priority
