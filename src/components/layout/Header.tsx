@@ -32,12 +32,12 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-vintage-beige-200 bg-vintage-cream-100/95 backdrop-blur supports-[backdrop-filter]:bg-vintage-cream-100/80 shadow-vintage-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-1 lg:px-2 py-0 h-auto" aria-label="Global">
-        <div className="flex lg:flex-1 -my-1">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-1 py-0 overflow-hidden max-h-[25vh]" aria-label="Global">
+        <div className="flex lg:flex-1">
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="hover:opacity-80 transition-opacity flex items-center"
+            className="hover:opacity-80 transition-opacity -my-4"
             aria-label="Daisy's Foundation - Return to top"
           >
             <Image
@@ -45,7 +45,7 @@ export function Header() {
               alt="Daisy's Foundation - In Her Name"
               width={600}
               height={1000}
-              className="h-[240px] w-auto md:h-[280px] lg:h-[320px]"
+              className="h-[360px] w-auto md:h-[420px] lg:h-[480px]"
               quality={100}
               unoptimized
               priority
