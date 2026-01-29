@@ -52,6 +52,16 @@ export function Programs() {
 
   return (
     <section id="programs" className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
+      {/* Daisy photo background with gradient overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/programs-daisies.jpg')]"></div>
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-100/93 via-vintage-cream-200/90 to-vintage-beige-100/87"></div>
+      </div>
+
+      {/* Repeating daisy pattern background */}
+      <div className="absolute inset-0 opacity-10 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
+
       {/* Subtle decorative daisies in background */}
       <div className="absolute top-20 left-10 opacity-10 pointer-events-none hidden lg:block">
         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

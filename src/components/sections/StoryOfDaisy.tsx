@@ -3,6 +3,16 @@
 export function StoryOfDaisy() {
   return (
     <section id="story" className="relative bg-vintage-beige-100 py-20 lg:py-32 overflow-hidden">
+      {/* Daisy photo background with gradient overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/story-daisies.jpg')]"></div>
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-vintage-beige-100/92 via-vintage-beige-200/88 to-vintage-cream-200/90"></div>
+      </div>
+
+      {/* Repeating daisy pattern background */}
+      <div className="absolute inset-0 opacity-12 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
+
       {/* Decorative daisy cluster in corner */}
       <div className="absolute top-12 right-12 opacity-15 pointer-events-none hidden lg:block">
         <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">

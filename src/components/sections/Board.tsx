@@ -36,6 +36,16 @@ export function Board() {
 
   return (
     <section id="board" className="relative bg-vintage-beige-50 py-20 lg:py-32 overflow-hidden">
+      {/* Daisy photo background with gradient overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/board-daisies.jpg')]"></div>
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-vintage-beige-50/94 via-vintage-cream-100/91 to-vintage-beige-100/88"></div>
+      </div>
+
+      {/* Repeating daisy pattern background */}
+      <div className="absolute inset-0 opacity-8 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
+
       {/* Decorative daisy pattern in background */}
       <div className="absolute top-40 right-20 opacity-10 pointer-events-none hidden lg:block">
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">

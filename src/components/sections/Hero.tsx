@@ -17,8 +17,15 @@ export function Hero() {
 
   return (
     <section className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
-      {/* Subtle paper texture overlay */}
-      <div className="absolute inset-0 opacity-30 bg-[url('/images/textures/paper-texture.png')] bg-repeat"></div>
+      {/* Daisy photo background with gradient overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/hero-daisies.jpg')]"></div>
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-50/95 via-vintage-cream-100/90 to-vintage-beige-200/85"></div>
+      </div>
+
+      {/* Repeating daisy pattern background */}
+      <div className="absolute inset-0 opacity-15 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
 
       {/* Decorative daisy clusters in corners */}
       <div className="absolute top-8 left-8 opacity-20 pointer-events-none">

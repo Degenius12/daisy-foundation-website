@@ -20,8 +20,10 @@ export function MissionValues() {
   ];
 
   return (
-    <section id="mission" className="py-24 bg-gradient-to-br from-white via-daisy-sunshine-50 to-daisy-sunshine-100">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="mission" className="relative py-24 bg-gradient-to-br from-white via-daisy-sunshine-50 to-daisy-sunshine-100 overflow-hidden">
+      {/* Repeating daisy pattern background */}
+      <div className="absolute inset-0 opacity-8 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Mission Statement */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">

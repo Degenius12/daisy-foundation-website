@@ -1,0 +1,67 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seamless repeating daisy pattern for backgrounds -->
+  <defs>
+    <!-- Single daisy component -->
+    <g id="daisy">
+      <ellipse cx="0" cy="-6" rx="2" ry="6" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" opacity="0.6"/>
+      <ellipse cx="0" cy="6" rx="2" ry="6" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" opacity="0.6"/>
+      <ellipse cx="-6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" opacity="0.6"/>
+      <ellipse cx="6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" opacity="0.6"/>
+      <ellipse cx="-4" cy="-4" rx="5" ry="2" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" transform="rotate(-45 -4 -4)" opacity="0.6"/>
+      <ellipse cx="4" cy="-4" rx="5" ry="2" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" transform="rotate(45 4 -4)" opacity="0.6"/>
+      <ellipse cx="-4" cy="4" rx="5" ry="2" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" transform="rotate(45 -4 4)" opacity="0.6"/>
+      <ellipse cx="4" cy="4" rx="5" ry="2" fill="#FDFCFA" stroke="#D4C4B0" stroke-width="0.5" transform="rotate(-45 4 4)" opacity="0.6"/>
+      <circle r="2.5" fill="#E8E1D5" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <!-- Scattered daisies across the tile (positioned to create seamless repeat) -->
+
+  <!-- Top left quadrant -->
+  <use href="#daisy" transform="translate(30, 30)"/>
+  <use href="#daisy" transform="translate(70, 60) rotate(25)"/>
+
+  <!-- Top right quadrant -->
+  <use href="#daisy" transform="translate(130, 40) rotate(-15)"/>
+  <use href="#daisy" transform="translate(170, 70) rotate(40)"/>
+
+  <!-- Bottom left quadrant -->
+  <use href="#daisy" transform="translate(45, 130) rotate(60)"/>
+  <use href="#daisy" transform="translate(20, 170) rotate(-30)"/>
+
+  <!-- Bottom right quadrant -->
+  <use href="#daisy" transform="translate(140, 140) rotate(15)"/>
+  <use href="#daisy" transform="translate(165, 185) rotate(-45)"/>
+
+  <!-- Center daisies -->
+  <use href="#daisy" transform="translate(100, 100) rotate(90)"/>
+  <use href="#daisy" transform="translate(85, 145) rotate(-60)"/>
+
+  <!-- Edge daisies for seamless tiling -->
+  <!-- Left edge -->
+  <use href="#daisy" transform="translate(5, 95) rotate(30)"/>
+
+  <!-- Right edge (will connect to left edge of next tile) -->
+  <use href="#daisy" transform="translate(195, 95) rotate(30)"/>
+
+  <!-- Top edge -->
+  <use href="#daisy" transform="translate(95, 5) rotate(-20)"/>
+
+  <!-- Bottom edge (will connect to top edge of next tile) -->
+  <use href="#daisy" transform="translate(95, 195) rotate(-20)"/>
+
+  <!-- Corner daisies for seamless corners -->
+  <use href="#daisy" transform="translate(5, 5) rotate(45)"/>
+  <use href="#daisy" transform="translate(195, 5) rotate(45)"/>
+  <use href="#daisy" transform="translate(5, 195) rotate(45)"/>
+  <use href="#daisy" transform="translate(195, 195) rotate(45)"/>
+
+  <!-- Additional scattered smaller daisies for density -->
+  <g opacity="0.4">
+    <use href="#daisy" transform="translate(55, 85) scale(0.6) rotate(120)"/>
+    <use href="#daisy" transform="translate(115, 55) scale(0.7) rotate(-80)"/>
+    <use href="#daisy" transform="translate(160, 120) scale(0.5) rotate(100)"/>
+    <use href="#daisy" transform="translate(35, 155) scale(0.6) rotate(-100)"/>
+    <use href="#daisy" transform="translate(125, 175) scale(0.55) rotate(50)"/>
+  </g>
+</svg>
