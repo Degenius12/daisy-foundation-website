@@ -21,7 +21,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-field-banner.png')]"></div>
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-50/95 via-vintage-cream-100/90 to-vintage-beige-200/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-50/60 via-vintage-cream-100/50 to-vintage-beige-200/55"></div>
       </div>
 
       {/* Repeating daisy pattern background */}
