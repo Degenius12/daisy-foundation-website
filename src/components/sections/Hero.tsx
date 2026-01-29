@@ -20,8 +20,8 @@ export function Hero() {
       {/* Daisy field banner background with gradient overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-field-banner.png')]"></div>
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-50/60 via-vintage-cream-100/50 to-vintage-beige-200/55"></div>
+        {/* Gradient overlay for readability - reduced opacity to show daisies */}
+        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-50/40 via-vintage-cream-100/35 to-vintage-beige-200/40"></div>
       </div>
 
       {/* Repeating daisy pattern background */}
@@ -97,7 +97,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <div className="text-center">
           {/* Main Tagline - "In Her Name" */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-vintage-brown-600 leading-tight tracking-tight">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-vintage-brown-600 leading-tight tracking-tight [text-shadow:_2px_2px_8px_rgb(250_248_243_/_80%),_0_0_12px_rgb(250_248_243_/_60%)]">
             In Her Name
           </h1>
 
@@ -128,12 +128,12 @@ export function Hero() {
           </div>
 
           {/* Subtitle */}
-          <p className="text-2xl md:text-3xl font-heading italic text-vintage-brown-500 leading-relaxed">
+          <p className="text-2xl md:text-3xl font-heading italic text-vintage-brown-500 leading-relaxed [text-shadow:_1px_1px_6px_rgb(250_248_243_/_70%),_0_0_8px_rgb(250_248_243_/_50%)]">
             Rooted in love. Growing in community.
           </p>
 
           {/* Mission intro about Grandmother Daisy */}
-          <p className="mt-8 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto">
+          <p className="mt-8 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto [text-shadow:_1px_1px_4px_rgb(250_248_243_/_70%),_0_0_6px_rgb(250_248_243_/_50%)]">
             Grandmother Daisy believed every child deserves to be seen, heard, and cherished.
             Her home was a sanctuary where favorite meals were always ready, where listening ears
             were always available, and where love was abundant. Today, we honor her legacy by

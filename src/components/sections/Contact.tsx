@@ -66,7 +66,7 @@ export function Contact() {
     <section id="contact" className="py-24 bg-gradient-to-br from-white via-daisy-teal-light/10 to-daisy-lavender-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
             Contact Us
           </h2>
           <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">

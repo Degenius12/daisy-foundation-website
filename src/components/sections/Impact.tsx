@@ -39,7 +39,7 @@ export function Impact() {
     <section id="impact" className="py-24 bg-gradient-to-br from-daisy-lavender-light/10 via-white to-daisy-sky-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
+          <h2 className="text-3xl font-heading font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Our Impact
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-700">

@@ -26,7 +26,7 @@ export function MissionValues() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Mission Statement */}
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
             Our Mission
           </h2>
           <div className="mt-10 space-y-6 text-lg md:text-xl leading-relaxed text-gray-700">

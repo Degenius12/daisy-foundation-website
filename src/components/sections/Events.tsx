@@ -42,7 +42,7 @@ export function Events() {
     <section id="events" className="py-24 bg-gradient-to-br from-daisy-forest-100/10 via-daisy-sunshine-50 to-daisy-teal-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
+          <h2 className="text-3xl font-heading font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
             Upcoming Events
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-700">
