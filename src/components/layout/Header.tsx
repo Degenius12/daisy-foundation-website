@@ -43,11 +43,10 @@ export function Header() {
             <Image
               src="/images/logo/daisys-logo-horizontal.svg"
               alt="Daisy's Foundation - In Her Name"
-              width={600}
-              height={1000}
+              width={216}
+              height={360}
               className="h-[360px] w-auto md:h-[420px] lg:h-[480px]"
-              quality={100}
-              unoptimized
+              quality={90}
               priority
             />
           </button>
