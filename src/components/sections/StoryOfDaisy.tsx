@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image';
+
 export function StoryOfDaisy() {
   return (
     <section id="story" className="relative bg-vintage-beige-100 py-20 lg:py-32 overflow-hidden">
@@ -68,32 +70,16 @@ export function StoryOfDaisy() {
               <div className="absolute -inset-4 bg-vintage-beige-300 border-4 border-vintage-brown-400 shadow-vintage-lg transform rotate-2"></div>
               <div className="relative bg-vintage-cream-50 p-3 border-2 border-vintage-brown-300 shadow-vintage-md">
                 <div className="relative w-80 h-96 md:w-96 md:h-[480px]">
-                  {/* Placeholder for Grandmother Daisy's photo */}
-                  <div className="w-full h-full bg-vintage-beige-200 flex items-center justify-center border border-vintage-brown-200">
-                    <div className="text-center p-8">
-                      <svg
-                        width="80"
-                        height="80"
-                        viewBox="0 0 80 80"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="mx-auto mb-4"
-                      >
-                        <g transform="translate(40, 40)">
-                          <ellipse cx="0" cy="-12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-                          <ellipse cx="0" cy="12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-                          <ellipse cx="-12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-                          <ellipse cx="12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-                          <circle r="6" fill="#C9A961" stroke="#A68952" strokeWidth="2" />
-                        </g>
-                      </svg>
-                      <p className="text-sm font-heading text-vintage-brown-400 italic">
-                        Grandmother Daisy
-                      </p>
-                      <p className="text-xs text-vintage-brown-300 mt-2">
-                        Photo to be added
-                      </p>
-                    </div>
+                  {/* Founder Portrait - Grandmother Daisy */}
+                  <div className="relative w-full h-full overflow-hidden">
+                    <Image
+                      src="/images/photos/team/founder-portrait.png"
+                      alt="Grandmother Daisy - Beloved matriarch and foundation inspiration"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 320px, 384px"
+                      priority
+                    />
                   </div>
                 </div>
               </div>

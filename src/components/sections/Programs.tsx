@@ -1,10 +1,12 @@
 "use client";
 
+import Image from 'next/image';
 import { Heart, GraduationCap, Users, Sprout } from "lucide-react";
 
 export function Programs() {
   const programs = [
     {
+      image: "/images/photos/programs/family-support.png",
       icon: Heart,
       title: "Healthy Beginnings",
       category: "Wellness",
@@ -16,6 +18,7 @@ export function Programs() {
       ],
     },
     {
+      image: "/images/photos/programs/youth-empowerment.png",
       icon: GraduationCap,
       title: "Bloom Scholarships",
       category: "Education",
@@ -27,6 +30,7 @@ export function Programs() {
       ],
     },
     {
+      image: "/images/photos/programs/elder-outreach.png",
       icon: Users,
       title: "Hands & Hearts",
       category: "Community",
@@ -38,6 +42,7 @@ export function Programs() {
       ],
     },
     {
+      image: null,
       icon: Sprout,
       title: "Green Daisy",
       category: "Environment",
@@ -137,6 +142,21 @@ export function Programs() {
                   </g>
                 </svg>
               </div>
+
+              {/* Program photo */}
+              {program.image && (
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image
+                    src={program.image}
+                    alt={`${program.title} - ${program.category} program`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  {/* Subtle overlay for text readability on subsequent content */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-vintage-cream-50/30"></div>
+                </div>
+              )}
 
               <div className="p-8">
                 {/* Icon and category badge */}
