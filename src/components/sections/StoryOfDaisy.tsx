@@ -12,26 +12,6 @@ export function StoryOfDaisy() {
         <div className="absolute inset-0 bg-gradient-to-br from-vintage-beige-100/92 via-vintage-beige-200/88 to-vintage-cream-200/90"></div>
       </div>
 
-      {/* Repeating daisy pattern background */}
-      <div className="absolute inset-0 opacity-12 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
-
-      {/* Decorative daisy cluster in corner */}
-      <div className="absolute top-12 right-12 opacity-15 pointer-events-none hidden lg:block">
-        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(60, 60)">
-            {/* Large decorative daisy */}
-            <ellipse cx="0" cy="-20" rx="8" ry="20" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-            <ellipse cx="0" cy="20" rx="8" ry="20" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-            <ellipse cx="-20" cy="0" rx="20" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-            <ellipse cx="20" cy="0" rx="20" ry="8" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" />
-            <ellipse cx="-14" cy="-14" rx="16" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" transform="rotate(-45 -14 -14)" />
-            <ellipse cx="14" cy="-14" rx="16" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" transform="rotate(45 14 -14)" />
-            <ellipse cx="-14" cy="14" rx="16" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" transform="rotate(45 -14 14)" />
-            <ellipse cx="14" cy="14" rx="16" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="2" transform="rotate(-45 14 14)" />
-            <circle r="10" fill="#C9A961" stroke="#A68952" strokeWidth="2" />
-          </g>
-        </svg>
-      </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
@@ -41,22 +21,7 @@ export function StoryOfDaisy() {
           </h2>
           <div className="mt-6 flex items-center justify-center">
             <div className="h-px w-16 bg-vintage-gold-400"></div>
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mx-3"
-            >
-              <g transform="translate(16, 16)">
-                <ellipse cx="0" cy="-6" rx="2" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <ellipse cx="0" cy="6" rx="2" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <ellipse cx="-6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <ellipse cx="6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <circle r="3" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-              </g>
-            </svg>
+            <div className="mx-3 h-2 w-2 rounded-full bg-vintage-gold-500"></div>
             <div className="h-px w-16 bg-vintage-gold-400"></div>
           </div>
         </div>
@@ -83,18 +48,6 @@ export function StoryOfDaisy() {
                   </div>
                 </div>
               </div>
-              {/* Decorative corner accent */}
-              <div className="absolute -bottom-6 -right-6 opacity-30">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g transform="translate(30, 30)">
-                    <ellipse cx="0" cy="-10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-                    <ellipse cx="0" cy="10" rx="4" ry="10" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-                    <ellipse cx="-10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-                    <ellipse cx="10" cy="0" rx="10" ry="4" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-                    <circle r="5" fill="#C9A961" stroke="#A68952" strokeWidth="1.5" />
-                  </g>
-                </svg>
-              </div>
             </div>
           </div>
 
@@ -110,15 +63,7 @@ export function StoryOfDaisy() {
               {/* Decorative divider */}
               <div className="flex items-center my-6">
                 <div className="h-px flex-1 bg-vintage-beige-300"></div>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-4">
-                  <g transform="translate(12, 12)">
-                    <ellipse cx="0" cy="-5" rx="2" ry="5" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="0" cy="5" rx="2" ry="5" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="-5" cy="0" rx="5" ry="2" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="5" cy="0" rx="5" ry="2" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <circle r="2" fill="#6B5744" />
-                  </g>
-                </svg>
+                <div className="mx-4 h-1.5 w-1.5 rounded-full bg-vintage-gold-500"></div>
                 <div className="h-px flex-1 bg-vintage-beige-300"></div>
               </div>
 
@@ -132,15 +77,7 @@ export function StoryOfDaisy() {
               {/* Decorative divider */}
               <div className="flex items-center my-6">
                 <div className="h-px flex-1 bg-vintage-beige-300"></div>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-4">
-                  <g transform="translate(12, 12)">
-                    <ellipse cx="0" cy="-5" rx="2" ry="5" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="0" cy="5" rx="2" ry="5" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="-5" cy="0" rx="5" ry="2" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="5" cy="0" rx="5" ry="2" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <circle r="2" fill="#6B5744" />
-                  </g>
-                </svg>
+                <div className="mx-4 h-1.5 w-1.5 rounded-full bg-vintage-gold-500"></div>
                 <div className="h-px flex-1 bg-vintage-beige-300"></div>
               </div>
 
@@ -154,15 +91,7 @@ export function StoryOfDaisy() {
               {/* Decorative divider */}
               <div className="flex items-center my-6">
                 <div className="h-px flex-1 bg-vintage-beige-300"></div>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-4">
-                  <g transform="translate(12, 12)">
-                    <ellipse cx="0" cy="-5" rx="2" ry="5" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="0" cy="5" rx="2" ry="5" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="-5" cy="0" rx="5" ry="2" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <ellipse cx="5" cy="0" rx="5" ry="2" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                    <circle r="2" fill="#6B5744" />
-                  </g>
-                </svg>
+                <div className="mx-4 h-1.5 w-1.5 rounded-full bg-vintage-gold-500"></div>
                 <div className="h-px flex-1 bg-vintage-beige-300"></div>
               </div>
 

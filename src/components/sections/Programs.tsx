@@ -64,33 +64,6 @@ export function Programs() {
         <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-100/93 via-vintage-cream-200/90 to-vintage-beige-100/87"></div>
       </div>
 
-      {/* Repeating daisy pattern background */}
-      <div className="absolute inset-0 opacity-10 bg-[url('/images/textures/daisy-pattern.svg')] bg-repeat [background-size:200px_200px]"></div>
-
-      {/* Subtle decorative daisies in background */}
-      <div className="absolute top-20 left-10 opacity-10 pointer-events-none hidden lg:block">
-        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(50, 50)">
-            <ellipse cx="0" cy="-12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <ellipse cx="0" cy="12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <ellipse cx="-12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <ellipse cx="12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <circle r="6" fill="#C9A961" stroke="#A68952" strokeWidth="1.5" />
-          </g>
-        </svg>
-      </div>
-
-      <div className="absolute bottom-20 right-10 opacity-10 pointer-events-none hidden lg:block">
-        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(50, 50)">
-            <ellipse cx="0" cy="-12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <ellipse cx="0" cy="12" rx="5" ry="12" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <ellipse cx="-12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <ellipse cx="12" cy="0" rx="12" ry="5" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1.5" />
-            <circle r="6" fill="#C9A961" stroke="#A68952" strokeWidth="1.5" />
-          </g>
-        </svg>
-      </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
@@ -99,24 +72,9 @@ export function Programs() {
             Our Programs
           </h2>
           <div className="mt-6 flex items-center justify-center">
-            <div className="h-px w-16 bg-vintage-gold-400"></div>
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mx-3"
-            >
-              <g transform="translate(16, 16)">
-                <ellipse cx="0" cy="-6" rx="2" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <ellipse cx="0" cy="6" rx="2" ry="6" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <ellipse cx="-6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <ellipse cx="6" cy="0" rx="6" ry="2" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                <circle r="3" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-              </g>
-            </svg>
-            <div className="h-px w-16 bg-vintage-gold-400"></div>
+            <div className="h-px w-24 bg-vintage-gold-400"></div>
+            <div className="mx-3 h-2 w-2 rounded-full bg-vintage-gold-500"></div>
+            <div className="h-px w-24 bg-vintage-gold-400"></div>
           </div>
           <p className="mt-6 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto">
             Honoring Grandmother Daisy&apos;s legacy by supporting families through education, wellness, community connection, and environmental stewardship.
@@ -130,19 +88,6 @@ export function Programs() {
               key={program.title}
               className="relative flex flex-col bg-vintage-cream-50 border-2 border-vintage-beige-300 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
-              {/* Decorative corner daisy */}
-              <div className="absolute top-3 right-3 opacity-20 pointer-events-none">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g transform="translate(20, 20)">
-                    <ellipse cx="0" cy="-7" rx="3" ry="7" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                    <ellipse cx="0" cy="7" rx="3" ry="7" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                    <ellipse cx="-7" cy="0" rx="7" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                    <ellipse cx="7" cy="0" rx="7" ry="3" fill="#FDFCFA" stroke="#6B5744" strokeWidth="1" />
-                    <circle r="4" fill="#C9A961" stroke="#A68952" strokeWidth="1" />
-                  </g>
-                </svg>
-              </div>
-
               {/* Program photo */}
               {program.image && (
                 <div className="relative h-56 w-full overflow-hidden">
@@ -183,22 +128,7 @@ export function Programs() {
                 <ul className="space-y-3 mb-6">
                   {program.bullets.map((bullet, index) => (
                     <li key={index} className="flex items-start gap-3 text-sm font-sans text-vintage-brown-600">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="flex-shrink-0 mt-0.5"
-                      >
-                        <g transform="translate(10, 10)">
-                          <ellipse cx="0" cy="-3" rx="1" ry="3" fill="#C9A961" stroke="#A68952" strokeWidth="0.5" />
-                          <ellipse cx="0" cy="3" rx="1" ry="3" fill="#C9A961" stroke="#A68952" strokeWidth="0.5" />
-                          <ellipse cx="-3" cy="0" rx="3" ry="1" fill="#C9A961" stroke="#A68952" strokeWidth="0.5" />
-                          <ellipse cx="3" cy="0" rx="3" ry="1" fill="#C9A961" stroke="#A68952" strokeWidth="0.5" />
-                          <circle r="1.5" fill="#6B5744" />
-                        </g>
-                      </svg>
+                      <div className="flex-shrink-0 mt-1.5 h-1.5 w-1.5 rounded-full bg-vintage-gold-500"></div>
                       <span>{bullet}</span>
                     </li>
                   ))}
