@@ -5,14 +5,6 @@ import Image from 'next/image';
 export function StoryOfDaisy() {
   return (
     <section id="story" className="relative bg-vintage-beige-100 py-20 lg:py-32 overflow-hidden">
-      {/* Daisy photo background with gradient overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/story-daisies.jpg')]"></div>
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vintage-beige-100/92 via-vintage-beige-200/88 to-vintage-cream-200/90"></div>
-      </div>
-
-
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-16">

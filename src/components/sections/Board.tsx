@@ -36,14 +36,7 @@ export function Board() {
 
   return (
     <section id="board" className="relative bg-vintage-beige-50 py-20 lg:py-32 overflow-hidden">
-      {/* Daisy photo background with gradient overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/board-daisies.jpg')]"></div>
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vintage-beige-50/94 via-vintage-cream-100/91 to-vintage-beige-100/88"></div>
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-vintage-brown-600 leading-tight">

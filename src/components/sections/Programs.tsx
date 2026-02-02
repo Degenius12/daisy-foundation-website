@@ -57,14 +57,6 @@ export function Programs() {
 
   return (
     <section id="programs" className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
-      {/* Daisy photo background with gradient overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/daisies/programs-daisies.jpg')]"></div>
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vintage-cream-100/93 via-vintage-cream-200/90 to-vintage-beige-100/87"></div>
-      </div>
-
-
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-16">
