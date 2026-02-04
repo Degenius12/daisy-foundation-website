@@ -34,7 +34,7 @@ export function Testimonials() {
     <section className="py-20 bg-daisy-cream-50 relative overflow-hidden">
       {/* Testimonial background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 pointer-events-none z-0"
         style={{ backgroundImage: "url('/images/photos/background/testimonial-bg.png')" }}
       ></div>
 
