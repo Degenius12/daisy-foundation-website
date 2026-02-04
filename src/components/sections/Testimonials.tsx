@@ -31,10 +31,10 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Testimonial background image - full opacity, no competing background */}
+    <section className="py-20 pb-32 relative overflow-hidden bg-daisy-cream-50">
+      {/* Subtle background texture */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-50"
         style={{ backgroundImage: "url('/images/photos/background/testimonial-bg.png')" }}
       ></div>
 
@@ -45,6 +45,12 @@ export function Testimonials() {
         <div className="absolute top-1/2 left-1/4 text-[100px] text-daisy-gold-400 float-daisy-delayed opacity-50">✿</div>
         <div className="absolute top-1/3 right-1/4 text-[80px] text-daisy-gold-400 float-daisy opacity-40">✿</div>
       </div>
+
+      {/* Decorative daisy border at bottom */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-contain bg-repeat-x bg-bottom pointer-events-none z-10"
+        style={{ backgroundImage: "url('/images/photos/decorative/daisy-border.png')" }}
+      ></div>
 
       <div className="relative max-w-6xl mx-auto px-6">
         {/* Section header with scroll animation */}
