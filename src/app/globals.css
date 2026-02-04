@@ -188,3 +188,245 @@
 .prose-vintage blockquote {
   @apply font-accent italic; /* Use Playfair for quotes */
 }
+
+/* Polaroid card styling */
+.polaroid-card {
+  @apply cursor-default;
+}
+
+.polaroid-card > div {
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    inset 0 0 40px rgba(0, 0, 0, 0.02);
+}
+
+/* ===== Scroll-Triggered Animation Utilities ===== */
+
+/* Stagger children animations */
+.stagger-children > * {
+  --stagger-delay: 0.1s;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: calc(var(--stagger-delay) * 1); }
+.stagger-children > *:nth-child(2) { animation-delay: calc(var(--stagger-delay) * 2); }
+.stagger-children > *:nth-child(3) { animation-delay: calc(var(--stagger-delay) * 3); }
+.stagger-children > *:nth-child(4) { animation-delay: calc(var(--stagger-delay) * 4); }
+.stagger-children > *:nth-child(5) { animation-delay: calc(var(--stagger-delay) * 5); }
+.stagger-children > *:nth-child(6) { animation-delay: calc(var(--stagger-delay) * 6); }
+.stagger-children > *:nth-child(7) { animation-delay: calc(var(--stagger-delay) * 7); }
+.stagger-children > *:nth-child(8) { animation-delay: calc(var(--stagger-delay) * 8); }
+
+/* Hover lift effect */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  @apply -translate-y-2;
+}
+
+/* Hover glow effect */
+.hover-glow {
+  @apply transition-shadow duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(201, 169, 97, 0.4);
+}
+
+/* Daisy petal rotation on hover */
+.daisy-spin {
+  @apply transition-transform duration-500;
+}
+
+.daisy-spin:hover {
+  transform: rotate(360deg);
+}
+
+/* Floating daisy decoration */
+.float-daisy {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-daisy-delayed {
+  animation: float 6s ease-in-out 3s infinite;
+}
+
+/* Shimmer text effect */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #C9A961 0%,
+    #D9B978 50%,
+    #C9A961 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Gradient border animation */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(#FAF8F3, #FAF8F3) padding-box,
+              linear-gradient(45deg, #C9A961, #D9B978, #C9A961) border-box;
+  border: 2px solid transparent;
+}
+
+/* Parallax-like depth effect */
+.parallax-subtle {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Entrance animations (apply with scroll trigger) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Pulsing CTA button */
+.pulse-cta {
+  animation: pulseGentle 2s ease-in-out infinite;
+}
+
+.pulse-cta:hover {
+  animation: none;
+}
+
+/* Typewriter cursor effect */
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Card hover tilt effect */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+}
+
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
+}
+
+/* Underline animation */
+.underline-animate {
+  position: relative;
+}
+
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A961, #D9B978);
+  transition: width 0.3s ease-out;
+}
+
+.underline-animate:hover::after {
+  width: 100%;
+}
+
+/* Icon bounce on hover */
+.icon-bounce:hover {
+  animation: bounceGentle 0.6s ease-in-out;
+}
+
+/* Number counter animation helper */
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reveal from bottom */
+.reveal-up {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.8s ease-out;
+}
+
+.reveal-up.visible {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Background pattern animation */
+.pattern-drift {
+  background-position: 0 0;
+  animation: drift 20s linear infinite;
+}
+
+@keyframes drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .animate-on-scroll-left,
+  .animate-on-scroll-right,
+  .animate-on-scroll-scale,
+  .float-daisy,
+  .float-daisy-delayed,
+  .pulse-cta,
+  .shimmer-text,
+  .pattern-drift {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .animate-on-scroll,
+  .animate-on-scroll-left,
+  .animate-on-scroll-right,
+  .animate-on-scroll-scale {
+    opacity: 1;
+    transform: none;
+  }
+}

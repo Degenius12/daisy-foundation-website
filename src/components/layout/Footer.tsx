@@ -45,11 +45,11 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden">
-      {/* Hero daisy field banner background */}
+      {/* Daisy footer background with green foliage */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-field-banner.png')]"></div>
-        {/* Dark overlay for white text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-vintage-brown-600/90 via-vintage-brown-500/88 to-vintage-brown-600/93"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/footer/daisy-footer.png')]"></div>
+        {/* Dark green overlay matching natural foliage for white text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/80 via-emerald-800/75 to-emerald-900/85"></div>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">

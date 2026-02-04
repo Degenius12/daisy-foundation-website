@@ -1,5 +1,7 @@
 "use client";
 
+import { Heart, Users, BookOpen } from "lucide-react";
+
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -16,62 +18,100 @@ export function Hero() {
   };
 
   return (
-    <section className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
-      {/* Daisy field banner background with gradient overlay */}
+    <section className="relative bg-daisy-cream-50 py-20 lg:py-28 overflow-hidden min-h-[85vh] flex items-center">
+      {/* Background image with warm golden overlay */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-field-banner.png')]"></div>
-        {/* Dark gradient overlay for white text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vintage-brown-600/55 via-vintage-brown-500/50 to-vintage-brown-600/60"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-hero-golden.png')] animate-fade-in"></div>
+        {/* Warm golden gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-daisy-cream-50/40 via-daisy-cream-50/20 to-daisy-cream-50/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-daisy-cream-50/50 via-transparent to-daisy-cream-50/30"></div>
       </div>
 
+      {/* Floating decorative daisies in background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 left-[10%] text-6xl text-daisy-gold-400/20 float-daisy">✿</div>
+        <div className="absolute top-40 right-[15%] text-4xl text-daisy-gold-400/15 float-daisy-delayed">✿</div>
+        <div className="absolute bottom-32 left-[20%] text-5xl text-daisy-gold-400/10 float-daisy">✿</div>
+        <div className="absolute bottom-48 right-[25%] text-3xl text-daisy-gold-400/15 float-daisy-delayed">✿</div>
+      </div>
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <div className="text-center">
-          {/* Main Tagline - "In Her Name" */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-white leading-tight tracking-tight [text-shadow:_2px_2px_12px_rgb(59_40_20_/_80%),_0_0_20px_rgb(59_40_20_/_50%)]">
-            In Her Name
+          {/* Decorative daisy with enhanced animation */}
+          <div className="text-4xl mb-6 animate-fade-in animate-float">✿</div>
+
+          {/* Main headline - Clear value proposition with staggered animation */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight tracking-tight [text-shadow:_2px_2px_12px_rgb(255_250_240_/_80%),_0_0_20px_rgb(255_250_240_/_60%)] animate-fade-in [animation-delay:200ms] [animation-fill-mode:backwards]">
+            <span className="text-daisy-earth-700 inline-block animate-slide-up [animation-delay:300ms] [animation-fill-mode:backwards]">Every child deserves a</span>
+            <br />
+            <span className="text-daisy-gold-500 inline-block animate-slide-up [animation-delay:500ms] [animation-fill-mode:backwards] [text-shadow:_2px_2px_8px_rgb(255_250_240_/_90%)]">
+              Grandmother Daisy
+            </span>
           </h1>
 
-          {/* Decorative divider */}
-          <div className="flex items-center justify-center my-8">
-            <div className="h-px w-32 bg-white/50"></div>
-            <div className="mx-4 h-2 w-2 rounded-full bg-vintage-gold-400"></div>
-            <div className="h-px w-32 bg-white/50"></div>
-          </div>
-
-          {/* Subtitle */}
-          <p className="text-2xl md:text-3xl font-heading italic text-white/90 leading-relaxed [text-shadow:_1px_1px_8px_rgb(59_40_20_/_70%),_0_0_12px_rgb(59_40_20_/_40%)]">
-            Rooted in love. Growing in community.
+          {/* Clear subtitle - What we do */}
+          <p className="mt-6 text-lg md:text-xl lg:text-2xl font-sans text-daisy-earth-600 max-w-2xl mx-auto leading-relaxed [text-shadow:_1px_1px_8px_rgb(255_250_240_/_80%)] animate-fade-in [animation-delay:700ms] [animation-fill-mode:backwards]">
+            Providing quality early childhood education to families who need it most.
+            Honoring a grandmother&apos;s legacy of love, one child at a time.
           </p>
 
-          {/* Mission intro about Grandmother Daisy */}
-          <p className="mt-8 text-lg md:text-xl font-sans leading-relaxed text-white/85 max-w-3xl mx-auto [text-shadow:_1px_1px_6px_rgb(59_40_20_/_60%),_0_0_10px_rgb(59_40_20_/_35%)]">
-            Grandmother Daisy believed every child deserves to be seen, heard, and cherished.
-            Her home was a sanctuary where favorite meals were always ready, where listening ears
-            were always available, and where love was abundant. Today, we honor her legacy by
-            supporting families with quality early childhood education, nurturing the next
-            generation just as she nurtured us.
-          </p>
-
-          {/* CTAs */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Three CTAs with staggered entrance */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               type="button"
               onClick={() => scrollToSection("donate")}
-              className="vintage-button text-lg px-8 py-3"
+              className="flex items-center gap-2 bg-daisy-sage-600 hover:bg-daisy-sage-700 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover-glow animate-scale-in [animation-delay:900ms] [animation-fill-mode:backwards]"
             >
-              Support Our Mission
+              <Heart className="w-5 h-5 icon-bounce" aria-hidden="true" />
+              Donate Now
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection("contact")}
+              className="flex items-center gap-2 bg-white/80 backdrop-blur-sm hover:bg-white text-daisy-earth-700 font-semibold text-lg px-8 py-4 rounded-full border-2 border-daisy-gold-400 shadow-md hover:shadow-lg transition-all hover-lift animate-scale-in [animation-delay:1000ms] [animation-fill-mode:backwards]"
+            >
+              <Users className="w-5 h-5 icon-bounce" aria-hidden="true" />
+              Volunteer
             </button>
             <button
               type="button"
               onClick={() => scrollToSection("story")}
-              className="vintage-button-outline text-lg px-8 py-3"
+              className="flex items-center gap-2 text-daisy-earth-600 hover:text-daisy-gold-600 font-semibold text-lg px-6 py-4 transition-colors underline-animate animate-fade-in [animation-delay:1100ms] [animation-fill-mode:backwards]"
             >
-              Learn About Daisy
+              <BookOpen className="w-5 h-5 icon-bounce" aria-hidden="true" />
+              Our Story
             </button>
+          </div>
+
+          {/* Decorative divider with animation */}
+          <div className="flex items-center justify-center my-10 animate-fade-in [animation-delay:1200ms] [animation-fill-mode:backwards]">
+            <div className="h-px w-16 bg-daisy-gold-400/50"></div>
+            <div className="mx-4 text-daisy-gold-500 animate-float">✿</div>
+            <div className="h-px w-16 bg-daisy-gold-400/50"></div>
+          </div>
+
+          {/* Mini impact bar - Social proof */}
+          <div className="inline-flex flex-wrap justify-center items-center gap-4 sm:gap-8 bg-white/70 backdrop-blur-sm px-6 py-4 rounded-full border border-daisy-gold-200 shadow-md animate-slide-up [animation-delay:1300ms] [animation-fill-mode:backwards] hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-2 text-daisy-earth-600">
+              <span className="text-xl font-bold text-daisy-gold-600">50+</span>
+              <span className="text-sm">Families Supported</span>
+            </div>
+            <div className="hidden sm:block text-daisy-gold-400">•</div>
+            <div className="flex items-center gap-2 text-daisy-earth-600">
+              <span className="text-xl font-bold text-daisy-gold-600">500+</span>
+              <span className="text-sm">Volunteer Hours</span>
+            </div>
+            <div className="hidden sm:block text-daisy-gold-400">•</div>
+            <div className="flex items-center gap-2 text-daisy-earth-600">
+              <span className="text-sm">Founded</span>
+              <span className="text-xl font-bold text-daisy-gold-600">2024</span>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom decorative wave/curve */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-daisy-cream-100 to-transparent"></div>
     </section>
   );
 }

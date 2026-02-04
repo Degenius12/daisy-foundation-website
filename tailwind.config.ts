@@ -63,9 +63,45 @@ const config: Config = {
             700: "#5A4637",
           },
           sunshine: {
+            50: "#FFFBEB",
+            100: "#FEF3C7",
+            200: "#FDE68A",
+            300: "#FCD34D",
+            400: "#FBBF24",
+            500: "#F59E0B",
+            600: "#D97706",
+            700: "#B45309",
             DEFAULT: "#C9A961",
-            400: "#C9A961",
           },
+        },
+
+        // NEW: Warmer daisy palette for full revision
+        "daisy-gold": {
+          300: "#FCD34D",
+          400: "#FBBF24",
+          500: "#F59E0B",
+          600: "#D97706",
+          DEFAULT: "#FBBF24",
+        },
+        "daisy-cream": {
+          50: "#FFFEF7",
+          100: "#FEF9E7",
+          200: "#FDF2D0",
+          DEFAULT: "#FFFEF7",
+        },
+        "daisy-sage": {
+          400: "#84CC16",
+          500: "#65A30D",
+          600: "#4D7C0F",
+          700: "#3F6212",
+          DEFAULT: "#4D7C0F",
+        },
+        "daisy-earth": {
+          400: "#A16207",
+          500: "#92400E",
+          600: "#854D0E",
+          700: "#713F12",
+          DEFAULT: "#854D0E",
         },
 
         // Semantic colors mapped to vintage palette
@@ -129,6 +165,7 @@ const config: Config = {
         heading: ["var(--font-playfair)", "Georgia", "Garamond", "serif"],
         script: ["var(--font-parisienne)", "Brush Script MT", "cursive"],
         accent: ["var(--font-playfair)", "Georgia", "Garamond", "serif"],
+        handwriting: ["var(--font-homemade-apple)", "Brush Script MT", "cursive"],
       },
       fontSize: {
         // Responsive typography
@@ -159,6 +196,15 @@ const config: Config = {
         "slide-up": "slideUp 0.5s ease-out",
         "slide-down": "slideDown 0.5s ease-out",
         "scale-in": "scaleIn 0.3s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "float-delayed": "float 6s ease-in-out 3s infinite",
+        "pulse-gentle": "pulseGentle 3s ease-in-out infinite",
+        "wiggle": "wiggle 1s ease-in-out",
+        "bounce-gentle": "bounceGentle 2s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
+        "shimmer": "shimmer 2s linear infinite",
+        "glow": "glow 2s ease-in-out infinite",
+        "wave": "wave 2.5s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -176,6 +222,40 @@ const config: Config = {
         scaleIn: {
           "0%": { transform: "scale(0.9)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        pulseGentle: {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.8", transform: "scale(1.02)" },
+        },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        bounceGentle: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(201, 169, 97, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(201, 169, 97, 0.5)" },
+        },
+        wave: {
+          "0%": { transform: "rotate(0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "60%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(0deg)" },
         },
       },
       backgroundImage: {

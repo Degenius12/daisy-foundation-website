@@ -1,7 +1,8 @@
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
+import { ImpactMetrics } from "@/components/sections/ImpactMetrics";
 import { StoryOfDaisy } from "@/components/sections/StoryOfDaisy";
-import { MissionValues } from "@/components/sections/MissionValues";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Programs } from "@/components/sections/Programs";
 import { Board } from "@/components/sections/Board";
 import { Donate } from "@/components/sections/Donate";
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-daisy-forest-700 focus:border-2 focus:border-daisy-forest-700 focus:rounded"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-daisy-sage-700 focus:border-2 focus:border-daisy-sage-700 focus:rounded"
       >
         Skip to main content
       </a>
@@ -22,8 +23,9 @@ export default function Home() {
 
       <main id="main-content">
         <Hero />
+        <ImpactMetrics />
         <StoryOfDaisy />
-        <MissionValues />
+        <Testimonials />
         <Programs />
         <Board />
         <Donate />

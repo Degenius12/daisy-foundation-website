@@ -2,11 +2,15 @@
 
 import Image from 'next/image';
 import { Heart, GraduationCap, Users, Sprout } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function Programs() {
+  const [headerRef, headerVisible] = useScrollAnimation<HTMLDivElement>();
+  const [gridRef, gridVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.05 });
+  const [partnerRef, partnerVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
   const programs = [
     {
-      image: "/images/photos/programs/family-support.png",
+      image: "/images/photos/programs/healthy-beginnings-new.png",
       icon: Heart,
       title: "Healthy Beginnings",
       category: "Wellness",
@@ -18,7 +22,7 @@ export function Programs() {
       ],
     },
     {
-      image: "/images/photos/programs/youth-empowerment.png",
+      image: "/images/photos/programs/bloom-scholarships-new.png",
       icon: GraduationCap,
       title: "Bloom Scholarships",
       category: "Education",
@@ -30,7 +34,7 @@ export function Programs() {
       ],
     },
     {
-      image: "/images/photos/programs/elder-outreach.png",
+      image: "/images/photos/programs/hands-hearts-new.png",
       icon: Users,
       title: "Hands & Hearts",
       category: "Community",
@@ -42,7 +46,7 @@ export function Programs() {
       ],
     },
     {
-      image: null,
+      image: "/images/photos/programs/green-daisy-new.png",
       icon: Sprout,
       title: "Green Daisy",
       category: "Environment",
@@ -58,36 +62,55 @@ export function Programs() {
   return (
     <section id="programs" className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section heading */}
-        <div className="text-center mb-16">
+        {/* Section heading with animation */}
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-700 ${
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-vintage-brown-600 leading-tight">
             Our Programs
           </h2>
           <div className="mt-6 flex items-center justify-center">
-            <div className="h-px w-24 bg-vintage-gold-400"></div>
-            <div className="mx-3 h-2 w-2 rounded-full bg-vintage-gold-500"></div>
-            <div className="h-px w-24 bg-vintage-gold-400"></div>
+            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
+              headerVisible ? "w-24" : "w-0"
+            }`}></div>
+            <span className={`mx-3 text-daisy-gold-500 text-xl transition-all duration-500 delay-400 ${
+              headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
+            }`}>✿</span>
+            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
+              headerVisible ? "w-24" : "w-0"
+            }`}></div>
           </div>
-          <p className="mt-6 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto">
+          <p className={`mt-6 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto transition-all duration-700 delay-500 ${
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}>
             Honoring Grandmother Daisy&apos;s legacy by supporting families through education, wellness, community connection, and environmental stewardship.
           </p>
         </div>
 
-        {/* Programs grid */}
-        <div className="mx-auto mt-16 grid max-w-6xl gap-8 sm:grid-cols-2">
-          {programs.map((program) => (
+        {/* Programs grid with staggered animations */}
+        <div
+          ref={gridRef}
+          className="mx-auto mt-16 grid max-w-6xl gap-8 sm:grid-cols-2"
+        >
+          {programs.map((program, index) => (
             <div
               key={program.title}
-              className="relative flex flex-col bg-vintage-cream-50 border-2 border-vintage-beige-300 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className={`relative flex flex-col bg-vintage-cream-50 border-2 border-vintage-beige-300 shadow-vintage-md hover:shadow-vintage-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group ${
+                gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
+              style={{ transitionDelay: gridVisible ? `${index * 150}ms` : "0ms" }}
             >
-              {/* Program photo */}
+              {/* Program photo with hover zoom */}
               {program.image && (
-                <div className="relative h-56 w-full overflow-hidden">
+                <div className="relative h-56 w-full overflow-hidden bg-vintage-beige-100">
                   <Image
                     src={program.image}
                     alt={`${program.title} - ${program.category} program`}
                     fill
-                    className="object-cover"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Subtle overlay for text readability on subsequent content */}
@@ -98,8 +121,8 @@ export function Programs() {
               <div className="p-8">
                 {/* Icon and category badge */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-vintage-gold-400 border-2 border-vintage-gold-600 shadow-vintage-sm">
-                    <program.icon className="h-7 w-7 text-vintage-brown-600" aria-hidden="true" />
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-vintage-gold-400 border-2 border-vintage-gold-600 shadow-vintage-sm group-hover:scale-110 group-hover:shadow-vintage-glow transition-all duration-300">
+                    <program.icon className="h-7 w-7 text-vintage-brown-600 group-hover:animate-bounce-gentle" aria-hidden="true" />
                   </div>
                   <span className="inline-flex items-center rounded-full bg-vintage-beige-200 border border-vintage-brown-300 px-3 py-1 text-xs font-semibold font-heading text-vintage-brown-600">
                     {program.category}
@@ -138,9 +161,14 @@ export function Programs() {
           ))}
         </div>
 
-        {/* Partnership callout */}
-        <div className="mt-20 text-center max-w-2xl mx-auto">
-          <div className="bg-vintage-beige-100 border-2 border-vintage-brown-300 shadow-vintage-lg p-10">
+        {/* Partnership callout with animation */}
+        <div
+          ref={partnerRef}
+          className={`mt-20 text-center max-w-2xl mx-auto transition-all duration-700 ${
+            partnerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          <div className="bg-vintage-beige-100 border-2 border-vintage-brown-300 shadow-vintage-lg p-10 hover:shadow-vintage-xl transition-shadow duration-300">
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-vintage-brown-600 mb-4">
               Partner With Us
             </h3>
@@ -149,7 +177,7 @@ export function Programs() {
             </p>
             <a
               href="#contact"
-              className="vintage-button text-base px-8 py-3"
+              className="vintage-button text-base px-8 py-3 hover-glow"
             >
               Become a Partner
             </a>
