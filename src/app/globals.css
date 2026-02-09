@@ -135,7 +135,7 @@
 .daisy-divider::after {
   content: '';
   @apply absolute top-1/2 w-[35%] h-0.5;
-  background: linear-gradient(to right, transparent, #C9A961, transparent);
+  background: linear-gradient(to right, transparent, #A8C49E, #C9A961, #A8C49E, transparent);
 }
 
 .daisy-divider::before {

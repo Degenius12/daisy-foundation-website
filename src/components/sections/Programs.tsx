@@ -60,7 +60,7 @@ export function Programs() {
   ];
 
   return (
-    <section id="programs" className="relative bg-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
+    <section id="programs" className="relative bg-gradient-to-b from-vintage-cream-100 via-vintage-sage-100/50 to-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading with animation */}
         <div
@@ -113,8 +113,6 @@ export function Programs() {
                     className="object-contain group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  {/* Subtle overlay for text readability on subsequent content */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-vintage-cream-50/30"></div>
                 </div>
               )}
 
@@ -143,7 +141,7 @@ export function Programs() {
                 <ul className="space-y-3 mb-6">
                   {program.bullets.map((bullet, index) => (
                     <li key={index} className="flex items-start gap-3 text-sm font-sans text-vintage-brown-600">
-                      <div className="flex-shrink-0 mt-1.5 h-1.5 w-1.5 rounded-full bg-vintage-gold-500"></div>
+                      <div className="flex-shrink-0 mt-1.5 h-1.5 w-1.5 rounded-full bg-vintage-sage-400"></div>
                       <span>{bullet}</span>
                     </li>
                   ))}

@@ -47,11 +47,12 @@ const config: Config = {
           },
           // Sage green (foliage accents, nature elements)
           sage: {
-            100: "#E8EDE5",
-            200: "#D4DED0",
-            300: "#B8C9B0",
-            400: "#9AB58D",
-            DEFAULT: "#B8C9B0",
+            100: "#E4EDDF",
+            200: "#CDDDC5",
+            300: "#A8C49E",
+            400: "#8AB87D",
+            500: "#6FA364",
+            DEFAULT: "#A8C49E",
           },
         },
 
@@ -114,7 +115,7 @@ const config: Config = {
           foreground: "#FAF8F3",
         },
         accent: {
-          DEFAULT: "#B8C9B0", // Sage green
+          DEFAULT: "#A8C49E", // Sage green
           foreground: "#4A3628",
         },
         muted: {

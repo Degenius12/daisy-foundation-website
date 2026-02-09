@@ -20,7 +20,7 @@ export function GradientImage({
   className = "",
   gradientFrom = "vintage-cream-50",
   gradientTo = "vintage-beige-300",
-  gradientOpacity = 0.7,
+  gradientOpacity = 0.35,
   priority = false,
 }: GradientImageProps) {
   return (

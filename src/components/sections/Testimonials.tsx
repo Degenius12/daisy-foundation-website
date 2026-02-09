@@ -34,7 +34,7 @@ export function Testimonials() {
     <section className="py-20 pb-32 relative overflow-hidden bg-daisy-cream-50">
       {/* Subtle background texture */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-50"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-65"
         style={{ backgroundImage: "url('/images/photos/background/testimonial-bg.png')" }}
       ></div>
 

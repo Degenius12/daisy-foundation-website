@@ -23,16 +23,16 @@ export function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-hero-golden.png')] animate-fade-in"></div>
         {/* Warm golden gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-daisy-cream-50/40 via-daisy-cream-50/20 to-daisy-cream-50/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-daisy-cream-50/50 via-transparent to-daisy-cream-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-daisy-cream-50/30 via-transparent to-daisy-cream-50/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-daisy-cream-50/35 via-transparent to-daisy-cream-50/20"></div>
       </div>
 
       {/* Floating decorative daisies in background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-[10%] text-6xl text-daisy-gold-400/20 float-daisy">✿</div>
         <div className="absolute top-40 right-[15%] text-4xl text-daisy-gold-400/15 float-daisy-delayed">✿</div>
-        <div className="absolute bottom-32 left-[20%] text-5xl text-daisy-gold-400/10 float-daisy">✿</div>
-        <div className="absolute bottom-48 right-[25%] text-3xl text-daisy-gold-400/15 float-daisy-delayed">✿</div>
+        <div className="absolute bottom-32 left-[20%] text-5xl text-vintage-sage-400/10 float-daisy">✿</div>
+        <div className="absolute bottom-48 right-[25%] text-3xl text-vintage-sage-400/15 float-daisy-delayed">✿</div>
       </div>
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
@@ -111,7 +111,7 @@ export function Hero() {
       </div>
 
       {/* Bottom decorative wave/curve */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-daisy-cream-100 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-vintage-sage-100 to-transparent"></div>
     </section>
   );
 }

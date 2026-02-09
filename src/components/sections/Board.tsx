@@ -35,7 +35,7 @@ export function Board() {
   ];
 
   return (
-    <section id="board" className="relative bg-vintage-beige-50 py-20 lg:py-32 overflow-hidden">
+    <section id="board" className="relative bg-gradient-to-br from-vintage-beige-100 to-vintage-sage-100/60 py-20 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-16">

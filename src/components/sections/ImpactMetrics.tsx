@@ -36,7 +36,7 @@ export function ImpactMetrics() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 bg-gradient-to-r from-daisy-gold-400/20 via-daisy-cream-100 to-daisy-gold-400/20 overflow-hidden"
+      className="py-16 bg-gradient-to-r from-vintage-sage-200/40 via-daisy-cream-100 to-vintage-sage-200/40 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section intro with animation */}
@@ -73,7 +73,7 @@ export function ImpactMetrics() {
                 transitionDelay: sectionVisible ? `${300 + index * 100}ms` : "0ms",
               }}
             >
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-daisy-gold-400/20 flex items-center justify-center mb-3 group-hover:bg-daisy-gold-400/30 transition-colors group-hover:scale-110 duration-300">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-vintage-sage-300/30 flex items-center justify-center mb-3 group-hover:bg-vintage-sage-300/50 transition-colors group-hover:scale-110 duration-300">
                 <metric.icon
                   className="w-6 h-6 md:w-7 md:h-7 text-daisy-gold-600 group-hover:animate-bounce-gentle"
                   aria-hidden="true"

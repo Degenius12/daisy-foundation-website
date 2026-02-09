@@ -87,9 +87,9 @@ export function StoryOfDaisy() {
 
               {/* Decorative divider */}
               <div className="flex items-center my-6">
-                <div className="h-px flex-1 bg-vintage-beige-300"></div>
+                <div className="h-px flex-1 bg-vintage-sage-300"></div>
                 <span className="mx-4 text-daisy-gold-500">✿</span>
-                <div className="h-px flex-1 bg-vintage-beige-300"></div>
+                <div className="h-px flex-1 bg-vintage-sage-300"></div>
               </div>
 
               <p className="text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600">
@@ -101,9 +101,9 @@ export function StoryOfDaisy() {
 
               {/* Decorative divider */}
               <div className="flex items-center my-6">
-                <div className="h-px flex-1 bg-vintage-beige-300"></div>
+                <div className="h-px flex-1 bg-vintage-sage-300"></div>
                 <span className="mx-4 text-daisy-gold-500">✿</span>
-                <div className="h-px flex-1 bg-vintage-beige-300"></div>
+                <div className="h-px flex-1 bg-vintage-sage-300"></div>
               </div>
 
               <p className="text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600">
@@ -115,9 +115,9 @@ export function StoryOfDaisy() {
 
               {/* Decorative divider */}
               <div className="flex items-center my-6">
-                <div className="h-px flex-1 bg-vintage-beige-300"></div>
+                <div className="h-px flex-1 bg-vintage-sage-300"></div>
                 <span className="mx-4 text-daisy-gold-500">✿</span>
-                <div className="h-px flex-1 bg-vintage-beige-300"></div>
+                <div className="h-px flex-1 bg-vintage-sage-300"></div>
               </div>
 
               <p className="text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600">
@@ -156,7 +156,7 @@ export function StoryOfDaisy() {
                     alt="A Black grandmother holding a young child"
                     width={224}
                     height={224}
-                    className="w-full h-full object-contain sepia-[0.1]"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
@@ -177,7 +177,7 @@ export function StoryOfDaisy() {
                     alt="A mother reading to children at a table"
                     width={224}
                     height={224}
-                    className="w-full h-full object-contain sepia-[0.1]"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
@@ -198,7 +198,7 @@ export function StoryOfDaisy() {
                     alt="Multiple generations of a Black family gathered together"
                     width={224}
                     height={224}
-                    className="w-full h-full object-contain sepia-[0.1]"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
