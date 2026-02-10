@@ -29,18 +29,20 @@ export function Hero() {
 
       {/* Floating decorative daisies in background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-[10%] text-6xl text-daisy-gold-400/25 float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute top-40 right-[15%] text-4xl text-daisy-gold-400/20 float-daisy-delayed" aria-hidden="true">✿</div>
-        <div className="absolute bottom-32 left-[20%] text-5xl text-vintage-sage-400/20 float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute bottom-48 right-[25%] text-3xl text-vintage-sage-400/20 float-daisy-delayed" aria-hidden="true">✿</div>
-        <div className="absolute top-1/3 left-[40%] text-7xl text-daisy-gold-400/8 float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute bottom-20 right-[35%] text-4xl text-vintage-sage-400/12 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute top-20 left-[10%] w-16 h-16 opacity-25 float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-40 right-[15%] w-10 h-10 opacity-20 float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-32 left-[20%] w-12 h-12 opacity-20 float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-48 right-[25%] w-8 h-8 opacity-20 float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-1/3 left-[40%] w-20 h-20 opacity-[0.08] float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-20 right-[35%] w-10 h-10 opacity-[0.12] float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
       </div>
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <div className="text-center">
           {/* Decorative daisy with enhanced animation */}
-          <div className="text-4xl mb-6 animate-fade-in animate-float">✿</div>
+          <div className="mb-6 animate-fade-in animate-float flex justify-center">
+            <img src="/images/decorative/daisy-single.svg" alt="" className="w-10 h-10" aria-hidden="true" />
+          </div>
 
           {/* Main headline - Clear value proposition with staggered animation */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight tracking-tight [text-shadow:_2px_2px_12px_rgb(255_250_240_/_80%),_0_0_20px_rgb(255_250_240_/_60%)] animate-fade-in [animation-delay:200ms] [animation-fill-mode:backwards]">
@@ -87,9 +89,7 @@ export function Hero() {
 
           {/* Decorative divider with animation */}
           <div className="flex items-center justify-center my-10 animate-fade-in [animation-delay:1200ms] [animation-fill-mode:backwards]">
-            <div className="h-px w-16 bg-daisy-gold-400/50"></div>
-            <div className="mx-4 text-daisy-gold-500 animate-float">✿</div>
-            <div className="h-px w-16 bg-daisy-gold-400/50"></div>
+            <img src="/images/decorative/floral-divider.svg" alt="" className="h-6 w-auto animate-float" aria-hidden="true" />
           </div>
 
           {/* Mini impact bar - Social proof */}

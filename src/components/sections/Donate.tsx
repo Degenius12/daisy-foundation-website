@@ -94,10 +94,10 @@ export function Donate() {
     <section id="donate" className="relative py-24 bg-gradient-to-br from-daisy-sunshine-50 via-daisy-sunshine-100 to-white overflow-hidden">
       {/* Floating decorative daisies */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-16 left-[5%] text-5xl text-daisy-gold-400/15 float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute top-24 right-[8%] text-4xl text-vintage-sage-400/12 float-daisy-delayed" aria-hidden="true">✿</div>
-        <div className="absolute bottom-20 left-[12%] text-3xl text-daisy-gold-400/10 float-daisy-delayed" aria-hidden="true">✿</div>
-        <div className="absolute bottom-32 right-[5%] text-6xl text-vintage-sage-400/8 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute top-16 left-[5%] w-12 h-12 opacity-[0.15] float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-24 right-[8%] w-10 h-10 opacity-[0.12] float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-20 left-[12%] w-8 h-8 opacity-10 float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-32 right-[5%] w-16 h-16 opacity-[0.08] float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -106,9 +106,7 @@ export function Donate() {
             Donate
           </h2>
           <div className="mt-4 flex items-center justify-center">
-            <div className="h-px w-12 bg-daisy-gold-400"></div>
-            <span className="mx-3 text-daisy-gold-500" aria-hidden="true">✿</span>
-            <div className="h-px w-12 bg-daisy-gold-400"></div>
+            <img src="/images/decorative/floral-divider.svg" alt="" className="h-6 w-auto" aria-hidden="true" />
           </div>
           <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
             Your gift directly supports families building brighter futures.

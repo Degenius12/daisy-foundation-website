@@ -63,10 +63,10 @@ export function Programs() {
     <section id="programs" className="relative bg-gradient-to-b from-vintage-cream-100 via-vintage-sage-100/50 to-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
       {/* Floating decorative daisies */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-16 left-[6%] text-5xl text-daisy-gold-400/12 float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute top-32 right-[4%] text-4xl text-vintage-sage-400/15 float-daisy-delayed" aria-hidden="true">✿</div>
-        <div className="absolute bottom-24 right-[10%] text-3xl text-daisy-gold-400/10 float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute bottom-40 left-[3%] text-6xl text-vintage-sage-400/8 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute top-16 left-[6%] w-12 h-12 opacity-[0.12] float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-32 right-[4%] w-10 h-10 opacity-[0.15] float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-24 right-[10%] w-8 h-8 opacity-10 float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-40 left-[3%] w-16 h-16 opacity-[0.08] float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -81,15 +81,14 @@ export function Programs() {
             Our Programs
           </h2>
           <div className="mt-6 flex items-center justify-center">
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
-              headerVisible ? "w-24" : "w-0"
-            }`}></div>
-            <span className={`mx-3 text-daisy-gold-500 text-xl transition-all duration-500 delay-400 ${
-              headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
-            }`}>✿</span>
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
-              headerVisible ? "w-24" : "w-0"
-            }`}></div>
+            <img
+              src="/images/decorative/floral-divider.svg"
+              alt=""
+              className={`h-6 w-48 transition-all duration-500 delay-300 ${
+                headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
+              }`}
+              aria-hidden="true"
+            />
           </div>
           <p className={`mt-6 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto transition-all duration-700 delay-500 ${
             headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"

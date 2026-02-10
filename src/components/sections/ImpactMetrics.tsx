@@ -49,15 +49,14 @@ export function ImpactMetrics() {
             Our Impact
           </p>
           <div className="flex justify-center items-center gap-3">
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
-              sectionVisible ? "w-12" : "w-0"
-            }`}></div>
-            <span className={`text-daisy-gold-500 text-xl transition-all duration-500 delay-400 ${
-              sectionVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
-            }`}>✿</span>
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
-              sectionVisible ? "w-12" : "w-0"
-            }`}></div>
+            <img
+              src="/images/decorative/floral-divider.svg"
+              alt=""
+              className={`h-6 w-40 transition-all duration-500 delay-300 ${
+                sectionVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
+              }`}
+              aria-hidden="true"
+            />
           </div>
         </div>
 

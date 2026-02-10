@@ -40,10 +40,10 @@ export function Testimonials() {
 
       {/* Animated decorative background daisies */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-10 left-10 text-[200px] text-daisy-gold-500 float-daisy">✿</div>
-        <div className="absolute bottom-10 right-10 text-[200px] text-daisy-gold-500 float-daisy-delayed">✿</div>
-        <div className="absolute top-1/2 left-1/4 text-[100px] text-daisy-gold-400 float-daisy-delayed opacity-50">✿</div>
-        <div className="absolute top-1/3 right-1/4 text-[80px] text-daisy-gold-400 float-daisy opacity-40">✿</div>
+        <div className="absolute top-10 left-10 w-48 h-48 float-daisy"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 float-daisy-delayed"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 float-daisy-delayed opacity-50"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-1/3 right-1/4 w-20 h-20 float-daisy opacity-40"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
       </div>
 
       {/* Decorative daisy border at bottom */}
@@ -64,15 +64,14 @@ export function Testimonials() {
             Voices from Our Community
           </h2>
           <div className="flex justify-center items-center gap-3 mb-4">
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-700 delay-300 ${
-              headerVisible ? "w-16" : "w-0"
-            }`}></div>
-            <span className={`text-daisy-gold-500 text-xl transition-all duration-500 delay-500 ${
-              headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
-            }`}>✿</span>
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-700 delay-300 ${
-              headerVisible ? "w-16" : "w-0"
-            }`}></div>
+            <img
+              src="/images/decorative/floral-divider.svg"
+              alt=""
+              className={`h-6 w-48 transition-all duration-500 delay-300 ${
+                headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
+              }`}
+              aria-hidden="true"
+            />
           </div>
           <p className={`text-daisy-earth-500 max-w-2xl mx-auto transition-all duration-700 delay-500 ${
             headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"

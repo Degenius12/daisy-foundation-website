@@ -38,9 +38,9 @@ export function Board() {
     <section id="board" className="relative bg-gradient-to-br from-vintage-beige-100 to-vintage-sage-100/60 py-20 lg:py-32 overflow-hidden">
       {/* Floating decorative daisies */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-12 right-12 text-4xl text-daisy-gold-400/15 hidden lg:block float-daisy" aria-hidden="true">✿</div>
-        <div className="absolute bottom-16 left-16 text-5xl text-vintage-sage-400/12 hidden lg:block float-daisy-delayed" aria-hidden="true">✿</div>
-        <div className="absolute top-1/2 right-[8%] text-3xl text-daisy-gold-400/10 hidden lg:block float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute top-12 right-12 w-10 h-10 opacity-[0.15] hidden lg:block float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute bottom-16 left-16 w-12 h-12 opacity-[0.12] hidden lg:block float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
+        <div className="absolute top-1/2 right-[8%] w-8 h-8 opacity-10 hidden lg:block float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-single.svg" alt="" className="w-full h-full" /></div>
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -50,9 +50,7 @@ export function Board() {
             Our Board
           </h2>
           <div className="mt-6 flex items-center justify-center">
-            <div className="h-px w-16 bg-vintage-gold-400"></div>
-            <span className="mx-3 text-daisy-gold-500 text-lg" aria-hidden="true">✿</span>
-            <div className="h-px w-16 bg-vintage-gold-400"></div>
+            <img src="/images/decorative/floral-divider.svg" alt="" className="h-6 w-auto" aria-hidden="true" />
           </div>
           <p className="mt-6 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto">
             Dedicated leaders carrying forward Daisy&apos;s vision of compassion, community, and care.

@@ -128,22 +128,9 @@
 
 /* Decorative dividers */
 .daisy-divider {
-  @apply relative text-center my-12;
-}
-
-.daisy-divider::before,
-.daisy-divider::after {
-  content: '';
-  @apply absolute top-1/2 w-[35%] h-0.5;
-  background: linear-gradient(to right, transparent, #A8C49E, #C9A961, #A8C49E, transparent);
-}
-
-.daisy-divider::before {
-  @apply left-0;
-}
-
-.daisy-divider::after {
-  @apply right-0;
+  @apply relative flex items-center justify-center my-12;
+  background: url('/images/decorative/floral-divider.svg') center / contain no-repeat;
+  min-height: 40px;
 }
 
 /* Script text utility - Parisienne for logo and decorative text (matches logo) */

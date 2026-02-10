@@ -12,10 +12,10 @@ export function StoryOfDaisy() {
   return (
     <section id="story" className="relative bg-vintage-beige-100 py-20 lg:py-32 overflow-hidden">
       {/* Decorative corner daisies with float animation */}
-      <div className="absolute top-8 left-8 text-6xl text-daisy-gold-400/20 hidden lg:block float-daisy">✿</div>
-      <div className="absolute top-8 right-8 text-6xl text-daisy-gold-400/20 hidden lg:block float-daisy-delayed">✿</div>
-      <div className="absolute bottom-8 left-8 text-6xl text-daisy-gold-400/20 hidden lg:block float-daisy-delayed">✿</div>
-      <div className="absolute bottom-8 right-8 text-6xl text-daisy-gold-400/20 hidden lg:block float-daisy">✿</div>
+      <div className="absolute top-8 left-8 w-24 h-24 opacity-20 hidden lg:block float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-cluster-left.svg" alt="" className="w-full h-full" /></div>
+      <div className="absolute top-8 right-8 w-24 h-24 opacity-20 hidden lg:block float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-cluster-right.svg" alt="" className="w-full h-full" /></div>
+      <div className="absolute bottom-8 left-8 w-24 h-24 opacity-20 hidden lg:block float-daisy-delayed" aria-hidden="true"><img src="/images/decorative/daisy-cluster-left.svg" alt="" className="w-full h-full" /></div>
+      <div className="absolute bottom-8 right-8 w-24 h-24 opacity-20 hidden lg:block float-daisy" aria-hidden="true"><img src="/images/decorative/daisy-cluster-right.svg" alt="" className="w-full h-full" /></div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading with animation */}
@@ -29,15 +29,14 @@ export function StoryOfDaisy() {
             The Story of Daisy
           </h2>
           <div className="mt-6 flex items-center justify-center">
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
-              headerVisible ? "w-16" : "w-0"
-            }`}></div>
-            <span className={`mx-3 text-daisy-gold-500 text-xl transition-all duration-500 delay-400 ${
-              headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
-            }`}>✿</span>
-            <div className={`h-px bg-daisy-gold-400 transition-all duration-500 delay-300 ${
-              headerVisible ? "w-16" : "w-0"
-            }`}></div>
+            <img
+              src="/images/decorative/floral-divider.svg"
+              alt=""
+              className={`h-6 w-48 transition-all duration-500 delay-300 ${
+                headerVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 rotate-180"
+              }`}
+              aria-hidden="true"
+            />
           </div>
         </div>
 
@@ -86,10 +85,8 @@ export function StoryOfDaisy() {
               </p>
 
               {/* Decorative divider */}
-              <div className="flex items-center my-6">
-                <div className="h-px flex-1 bg-vintage-sage-300"></div>
-                <span className="mx-4 text-daisy-gold-500">✿</span>
-                <div className="h-px flex-1 bg-vintage-sage-300"></div>
+              <div className="flex items-center justify-center my-6">
+                <img src="/images/decorative/floral-divider.svg" alt="" className="h-5 w-auto max-w-xs" aria-hidden="true" />
               </div>
 
               <p className="text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600">
@@ -100,10 +97,8 @@ export function StoryOfDaisy() {
               </p>
 
               {/* Decorative divider */}
-              <div className="flex items-center my-6">
-                <div className="h-px flex-1 bg-vintage-sage-300"></div>
-                <span className="mx-4 text-daisy-gold-500">✿</span>
-                <div className="h-px flex-1 bg-vintage-sage-300"></div>
+              <div className="flex items-center justify-center my-6">
+                <img src="/images/decorative/floral-divider.svg" alt="" className="h-5 w-auto max-w-xs" aria-hidden="true" />
               </div>
 
               <p className="text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600">
@@ -114,10 +109,8 @@ export function StoryOfDaisy() {
               </p>
 
               {/* Decorative divider */}
-              <div className="flex items-center my-6">
-                <div className="h-px flex-1 bg-vintage-sage-300"></div>
-                <span className="mx-4 text-daisy-gold-500">✿</span>
-                <div className="h-px flex-1 bg-vintage-sage-300"></div>
+              <div className="flex items-center justify-center my-6">
+                <img src="/images/decorative/floral-divider.svg" alt="" className="h-5 w-auto max-w-xs" aria-hidden="true" />
               </div>
 
               <p className="text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600">
@@ -150,8 +143,8 @@ export function StoryOfDaisy() {
             }`}
             style={{ transitionDelay: polaroidsVisible ? "0ms" : "0ms" }}>
               <div className="bg-white p-3 pb-16 relative">
-                <span className="absolute -top-3 -left-3 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
-                <span className="absolute -top-3 -right-3 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -top-3 -left-3 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -top-3 -right-3 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
                 <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden bg-vintage-beige-200">
                   <Image
                     src="/images/photos/polaroids/grandma-me.png"
@@ -164,7 +157,7 @@ export function StoryOfDaisy() {
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
                   Grandma &amp; Me
                 </p>
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
               </div>
             </figure>
 
@@ -174,8 +167,8 @@ export function StoryOfDaisy() {
             }`}
             style={{ transitionDelay: polaroidsVisible ? "150ms" : "0ms" }}>
               <div className="bg-white p-3 pb-16 relative">
-                <span className="absolute -top-3 -left-3 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
-                <span className="absolute -top-3 -right-3 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -top-3 -left-3 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -top-3 -right-3 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
                 <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden bg-vintage-beige-200">
                   <Image
                     src="/images/photos/polaroids/learning-together.png"
@@ -188,7 +181,7 @@ export function StoryOfDaisy() {
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
                   Learning Together
                 </p>
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
               </div>
             </figure>
 
@@ -198,8 +191,8 @@ export function StoryOfDaisy() {
             }`}
             style={{ transitionDelay: polaroidsVisible ? "300ms" : "0ms" }}>
               <div className="bg-white p-3 pb-16 relative">
-                <span className="absolute -top-3 -left-3 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
-                <span className="absolute -top-3 -right-3 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -top-3 -left-3 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -top-3 -right-3 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
                 <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden bg-vintage-beige-200">
                   <Image
                     src="/images/photos/polaroids/family-love.png"
@@ -212,7 +205,7 @@ export function StoryOfDaisy() {
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
                   Family Love
                 </p>
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <img src="/images/decorative/daisy-single.svg" alt="" className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-5 h-5 z-10 drop-shadow-sm" aria-hidden="true" />
               </div>
             </figure>
           </div>
