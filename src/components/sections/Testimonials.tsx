@@ -34,12 +34,12 @@ export function Testimonials() {
     <section className="py-20 pb-32 relative overflow-hidden bg-daisy-cream-50">
       {/* Subtle background texture */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-65"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-75"
         style={{ backgroundImage: "url('/images/photos/background/testimonial-bg.png')" }}
       ></div>
 
       {/* Animated decorative background daisies */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-10 left-10 text-[200px] text-daisy-gold-500 float-daisy">✿</div>
         <div className="absolute bottom-10 right-10 text-[200px] text-daisy-gold-500 float-daisy-delayed">✿</div>
         <div className="absolute top-1/2 left-1/4 text-[100px] text-daisy-gold-400 float-daisy-delayed opacity-50">✿</div>

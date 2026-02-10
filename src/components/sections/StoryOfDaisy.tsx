@@ -150,6 +150,8 @@ export function StoryOfDaisy() {
             }`}
             style={{ transitionDelay: polaroidsVisible ? "0ms" : "0ms" }}>
               <div className="bg-white p-3 pb-16 relative">
+                <span className="absolute -top-3 -left-3 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <span className="absolute -top-3 -right-3 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
                 <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden bg-vintage-beige-200">
                   <Image
                     src="/images/photos/polaroids/grandma-me.png"
@@ -162,6 +164,7 @@ export function StoryOfDaisy() {
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
                   Grandma &amp; Me
                 </p>
+                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
               </div>
             </figure>
 
@@ -171,6 +174,8 @@ export function StoryOfDaisy() {
             }`}
             style={{ transitionDelay: polaroidsVisible ? "150ms" : "0ms" }}>
               <div className="bg-white p-3 pb-16 relative">
+                <span className="absolute -top-3 -left-3 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <span className="absolute -top-3 -right-3 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
                 <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden bg-vintage-beige-200">
                   <Image
                     src="/images/photos/polaroids/learning-together.png"
@@ -183,6 +188,7 @@ export function StoryOfDaisy() {
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
                   Learning Together
                 </p>
+                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
               </div>
             </figure>
 
@@ -192,6 +198,8 @@ export function StoryOfDaisy() {
             }`}
             style={{ transitionDelay: polaroidsVisible ? "300ms" : "0ms" }}>
               <div className="bg-white p-3 pb-16 relative">
+                <span className="absolute -top-3 -left-3 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
+                <span className="absolute -top-3 -right-3 text-xl text-vintage-sage-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
                 <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden bg-vintage-beige-200">
                   <Image
                     src="/images/photos/polaroids/family-love.png"
@@ -204,6 +212,7 @@ export function StoryOfDaisy() {
                 <p className="absolute bottom-4 left-0 right-0 text-center font-handwriting text-lg md:text-xl text-vintage-brown-600">
                   Family Love
                 </p>
+                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xl text-daisy-gold-400 z-10 drop-shadow-sm" aria-hidden="true">✿</span>
               </div>
             </figure>
           </div>

@@ -91,12 +91,25 @@ export function Donate() {
   const allocation = calculateAllocation(selectedAmount);
 
   return (
-    <section id="donate" className="py-24 bg-gradient-to-br from-daisy-sunshine-50 via-daisy-sunshine-100 to-white">
+    <section id="donate" className="relative py-24 bg-gradient-to-br from-daisy-sunshine-50 via-daisy-sunshine-100 to-white overflow-hidden">
+      {/* Floating decorative daisies */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-16 left-[5%] text-5xl text-daisy-gold-400/15 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute top-24 right-[8%] text-4xl text-vintage-sage-400/12 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute bottom-20 left-[12%] text-3xl text-daisy-gold-400/10 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute bottom-32 right-[5%] text-6xl text-vintage-sage-400/8 float-daisy" aria-hidden="true">✿</div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
             Donate
           </h2>
+          <div className="mt-4 flex items-center justify-center">
+            <div className="h-px w-12 bg-daisy-gold-400"></div>
+            <span className="mx-3 text-daisy-gold-500" aria-hidden="true">✿</span>
+            <div className="h-px w-12 bg-daisy-gold-400"></div>
+          </div>
           <p className="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
             Your gift directly supports families building brighter futures.
           </p>

@@ -36,6 +36,13 @@ export function Board() {
 
   return (
     <section id="board" className="relative bg-gradient-to-br from-vintage-beige-100 to-vintage-sage-100/60 py-20 lg:py-32 overflow-hidden">
+      {/* Floating decorative daisies */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-12 right-12 text-4xl text-daisy-gold-400/15 hidden lg:block float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute bottom-16 left-16 text-5xl text-vintage-sage-400/12 hidden lg:block float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute top-1/2 right-[8%] text-3xl text-daisy-gold-400/10 hidden lg:block float-daisy" aria-hidden="true">✿</div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-16">
@@ -44,7 +51,7 @@ export function Board() {
           </h2>
           <div className="mt-6 flex items-center justify-center">
             <div className="h-px w-16 bg-vintage-gold-400"></div>
-            <div className="mx-3 h-2 w-2 rounded-full bg-vintage-gold-500"></div>
+            <span className="mx-3 text-daisy-gold-500 text-lg" aria-hidden="true">✿</span>
             <div className="h-px w-16 bg-vintage-gold-400"></div>
           </div>
           <p className="mt-6 text-lg md:text-xl font-sans leading-relaxed text-vintage-brown-600 max-w-3xl mx-auto">

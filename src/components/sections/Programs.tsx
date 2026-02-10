@@ -61,6 +61,14 @@ export function Programs() {
 
   return (
     <section id="programs" className="relative bg-gradient-to-b from-vintage-cream-100 via-vintage-sage-100/50 to-vintage-cream-100 py-20 lg:py-32 overflow-hidden">
+      {/* Floating decorative daisies */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-16 left-[6%] text-5xl text-daisy-gold-400/12 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute top-32 right-[4%] text-4xl text-vintage-sage-400/15 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute bottom-24 right-[10%] text-3xl text-daisy-gold-400/10 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute bottom-40 left-[3%] text-6xl text-vintage-sage-400/8 float-daisy-delayed" aria-hidden="true">✿</div>
+      </div>
+
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading with animation */}
         <div

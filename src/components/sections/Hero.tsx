@@ -23,16 +23,18 @@ export function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/photos/hero/daisy-hero-golden.png')] animate-fade-in"></div>
         {/* Warm golden gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-daisy-cream-50/30 via-transparent to-daisy-cream-50/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-daisy-cream-50/35 via-transparent to-daisy-cream-50/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-daisy-cream-50/20 via-transparent to-daisy-cream-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-daisy-cream-50/25 via-transparent to-daisy-cream-50/10"></div>
       </div>
 
       {/* Floating decorative daisies in background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-[10%] text-6xl text-daisy-gold-400/20 float-daisy">✿</div>
-        <div className="absolute top-40 right-[15%] text-4xl text-daisy-gold-400/15 float-daisy-delayed">✿</div>
-        <div className="absolute bottom-32 left-[20%] text-5xl text-vintage-sage-400/10 float-daisy">✿</div>
-        <div className="absolute bottom-48 right-[25%] text-3xl text-vintage-sage-400/15 float-daisy-delayed">✿</div>
+        <div className="absolute top-20 left-[10%] text-6xl text-daisy-gold-400/25 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute top-40 right-[15%] text-4xl text-daisy-gold-400/20 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute bottom-32 left-[20%] text-5xl text-vintage-sage-400/20 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute bottom-48 right-[25%] text-3xl text-vintage-sage-400/20 float-daisy-delayed" aria-hidden="true">✿</div>
+        <div className="absolute top-1/3 left-[40%] text-7xl text-daisy-gold-400/8 float-daisy" aria-hidden="true">✿</div>
+        <div className="absolute bottom-20 right-[35%] text-4xl text-vintage-sage-400/12 float-daisy-delayed" aria-hidden="true">✿</div>
       </div>
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
