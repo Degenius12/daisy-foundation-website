@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Heart, Users, Sparkles } from "lucide-react";
 
 export function MissionValues() {
@@ -20,8 +21,19 @@ export function MissionValues() {
   ];
 
   return (
-    <section id="mission" className="py-24 bg-gradient-to-br from-white via-daisy-sunshine-50 to-daisy-sunshine-100">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="mission" className="relative py-24 overflow-hidden">
+      {/* Background daisy photo */}
+      <Image
+        src="/images/backgrounds/hero-daisies.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        quality={80}
+      />
+      {/* Warm cream overlay */}
+      <div className="absolute inset-0 bg-cream-50/85" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         {/* Mission Statement */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
@@ -58,14 +70,14 @@ export function MissionValues() {
           <div className="grid gap-8 md:grid-cols-3">
             {values.map((value, index) => {
               const colors = [
-                { bg: "bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200", icon: "text-daisy-sunshine-700", border: "border-daisy-sunshine-400" },
-                { bg: "bg-gradient-to-br from-daisy-forest-100 to-daisy-forest-200", icon: "text-daisy-forest-700", border: "border-daisy-forest-400" },
-                { bg: "bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200", icon: "text-daisy-sunshine-600", border: "border-daisy-sunshine-400" },
+                { icon: "text-daisy-sunshine-700", border: "border-daisy-sunshine-400" },
+                { icon: "text-daisy-forest-700", border: "border-daisy-forest-400" },
+                { icon: "text-daisy-sunshine-600", border: "border-daisy-sunshine-400" },
               ];
               return (
                 <div
                   key={value.title}
-                  className={`relative overflow-hidden rounded-3xl border-3 ${colors[index].border} ${colors[index].bg} p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300`}
+                  className={`relative overflow-hidden rounded-3xl border-3 ${colors[index].border} bg-white/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300`}
                 >
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md">
                     <value.icon className={`h-7 w-7 ${colors[index].icon}`} aria-hidden="true" />

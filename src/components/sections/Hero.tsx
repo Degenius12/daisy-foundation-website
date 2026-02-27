@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Sparkles } from "lucide-react";
@@ -24,12 +25,20 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-daisy-sunshine-50 via-white to-daisy-sunshine-100 py-20 lg:py-32">
-      {/* Soft decorative circles */}
-      <div className="absolute top-10 left-10 w-40 h-40 bg-daisy-sunshine-300/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-daisy-forest-200/20 rounded-full blur-3xl"></div>
+    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
+      {/* Background daisy photo */}
+      <Image
+        src="/images/backgrounds/mission-daisies.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+        quality={85}
+      />
+      {/* Warm cream overlay for text readability */}
+      <div className="absolute inset-0 bg-cream-50/80" />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-32">
         <div className="text-center">
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
@@ -47,23 +56,23 @@ export function Hero() {
             <Button size="xl" className="text-lg shadow-lg bg-daisy-forest-600 hover:bg-daisy-forest-700" asChild>
               <a href="#donate">Support Our Mission</a>
             </Button>
-            <Button size="xl" variant="outline" className="text-lg border-daisy-forest-600 text-daisy-forest-600 hover:bg-daisy-forest-50" asChild>
+            <Button size="xl" variant="outline" className="text-lg border-daisy-forest-600 text-daisy-forest-600 hover:bg-daisy-forest-50 bg-white/70" asChild>
               <a href="#programs">See What We Do</a>
             </Button>
           </div>
 
-          {/* Three Values - Warmer, Friendlier */}
+          {/* Three Values */}
           <div className="mt-20 grid gap-8 sm:grid-cols-3 max-w-4xl mx-auto">
             {values.map((value, index) => {
               const colors = [
-                { bg: "bg-daisy-sunshine-100", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-700" },
-                { bg: "bg-daisy-forest-100", border: "border-daisy-forest-400", icon: "text-daisy-forest-700" },
-                { bg: "bg-daisy-sunshine-100", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-600" },
+                { bg: "bg-white/80 backdrop-blur-sm", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-700" },
+                { bg: "bg-white/80 backdrop-blur-sm", border: "border-daisy-forest-400", icon: "text-daisy-forest-700" },
+                { bg: "bg-white/80 backdrop-blur-sm", border: "border-daisy-sunshine-300", icon: "text-daisy-sunshine-600" },
               ];
               return (
                 <Card key={value.title} className={`border-2 ${colors[index].border} ${colors[index].bg} shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300`}>
                   <CardContent className="pt-8 pb-8 text-center">
-                    <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md`}>
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md">
                       <value.icon className={`h-8 w-8 ${colors[index].icon}`} aria-hidden="true" />
                     </div>
                     <h3 className="mt-4 text-lg font-bold text-gray-900">

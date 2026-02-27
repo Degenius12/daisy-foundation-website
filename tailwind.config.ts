@@ -116,6 +116,14 @@ const config: Config = {
           foreground: "#FFFFFF",
         },
 
+        // Warm cream for photo overlays
+        cream: {
+          50: "#FFFDF5",
+          100: "#FFF9E6",
+          200: "#FFF3CC",
+          300: "#FFEDAB",
+        },
+
         // Backgrounds
         background: "#FFFFFF",
         foreground: "#1F2937", // Softer dark gray instead of near-black

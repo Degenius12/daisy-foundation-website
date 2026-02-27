@@ -44,10 +44,11 @@ export function Header() {
             <Image
               src="/images/Logo.svg"
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-              width={950}
-              height={380}
-              className="h-[280px] w-auto transform scale-[1.75] origin-left"
+              width={180}
+              height={300}
+              className="h-24 w-auto py-2"
               priority
+              unoptimized
             />
           </button>
         </div>

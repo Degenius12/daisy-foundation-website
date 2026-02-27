@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -91,8 +92,18 @@ export function Donate() {
   const allocation = calculateAllocation(selectedAmount);
 
   return (
-    <section id="donate" className="py-24 bg-gradient-to-br from-daisy-sunshine-50 via-daisy-sunshine-100 to-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="donate" className="relative py-24 overflow-hidden">
+      {/* Background daisy photo */}
+      <Image
+        src="/images/backgrounds/donate-daisies.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        quality={80}
+      />
+      <div className="absolute inset-0 bg-cream-50/85" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-daisy-forest-700 sm:text-6xl">
             Donate
