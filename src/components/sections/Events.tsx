@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +12,8 @@ export function Events() {
       title: "Family Fun Day",
       date: new Date("2026-03-20"),
       location: "Central Park",
+      image: "/images/events/event-family-fun-day.png",
+      imageAlt: "Family enjoying an outdoor community festival with daisy-themed decorations",
       description:
         "Join us for games, food, and community fun. Bring the whole family for a day of activities, face painting, and getting to know your neighbors.",
       rsvpLink: "https://eventbrite.com/family-fun-day",
@@ -21,6 +24,8 @@ export function Events() {
       title: "Back to School Drive",
       date: new Date("2026-08-10"),
       location: "Community Center",
+      image: "/images/events/event-back-to-school.png",
+      imageAlt: "Volunteers distributing backpacks and school supplies to excited children at a community event",
       description:
         "Help us prepare students for the new school year. We're collecting backpacks, school supplies, and volunteers to help distribute them to families.",
       rsvpLink: "https://eventbrite.com/back-to-school",
@@ -31,6 +36,8 @@ export function Events() {
       title: "Community Garden Kickoff",
       date: new Date("2026-04-15"),
       location: "Green Daisy Garden Site",
+      image: "/images/events/event-garden-kickoff.png",
+      imageAlt: "Community members of all ages planting daisy seedlings in raised garden beds on a sunny spring day",
       description:
         "Launch our spring planting season! Learn about sustainable gardening, get your hands dirty, and help us grow fresh produce for local families.",
       rsvpLink: "https://eventbrite.com/garden-kickoff",
@@ -66,8 +73,17 @@ export function Events() {
             return (
               <Card
                 key={event.id}
-                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index]}`}
+                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index]} overflow-hidden`}
               >
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={event.image}
+                    alt={event.imageAlt}
+                    fill
+                    className="object-cover"
+                    quality={75}
+                  />
+                </div>
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <Calendar className="h-5 w-5 text-daisy-forest-700" aria-hidden="true" />

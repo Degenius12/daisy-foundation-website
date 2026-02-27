@@ -24,8 +24,8 @@ export function MissionValues() {
     <section id="mission" className="relative py-24 overflow-hidden">
       {/* Background daisy photo */}
       <Image
-        src="/images/backgrounds/hero-daisies.jpg"
-        alt=""
+        src="/images/mission/mission-community-hands.png"
+        alt="Diverse community members joining hands in a circle in a sunlit meadow filled with blooming daisy flowers"
         fill
         className="object-cover"
         quality={80}
@@ -62,6 +62,37 @@ export function MissionValues() {
               communities. We partner with families, schools, and local organizations to meet urgent
               needs and build long-term pathways for success.
             </p>
+          </div>
+
+          {/* Grandmother Daisy Photos */}
+          <div className="mt-12 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
+            <div className="relative h-64 overflow-hidden rounded-2xl shadow-lg border-3 border-daisy-sunshine-300">
+              <Image
+                src="/images/grandmother/grandmother-daisy-portrait.png"
+                alt="Portrait of Grandmother Daisy, a warm and dignified woman whose legacy of love inspires the foundation"
+                fill
+                className="object-cover"
+                quality={85}
+              />
+            </div>
+            <div className="relative h-64 overflow-hidden rounded-2xl shadow-lg border-3 border-daisy-forest-400">
+              <Image
+                src="/images/grandmother/grandmother-teaching.png"
+                alt="Grandmother sitting outdoors with young children, helping them press daisy flowers in a sunny garden"
+                fill
+                className="object-cover"
+                quality={80}
+              />
+            </div>
+            <div className="relative h-64 overflow-hidden rounded-2xl shadow-lg border-3 border-daisy-sunshine-300">
+              <Image
+                src="/images/grandmother/grandmother-planting-daisies.png"
+                alt="Grandmother kneeling in a garden with grandchildren, teaching them how to plant daisy seedlings"
+                fill
+                className="object-cover"
+                quality={80}
+              />
+            </div>
           </div>
         </div>
 

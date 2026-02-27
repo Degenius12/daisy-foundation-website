@@ -4,7 +4,7 @@ export function DaisyDivider() {
   return (
     <div className="relative h-24 md:h-32 overflow-hidden">
       <Image
-        src="/images/backgrounds/divider-daisies.jpg"
+        src="/images/hero/daisy-hero-golden.png"
         alt=""
         fill
         className="object-cover object-center"

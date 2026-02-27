@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -180,6 +181,15 @@ export function Contact() {
 
           {/* Contact Information */}
           <div className="space-y-8">
+            <div className="relative h-48 w-full overflow-hidden rounded-2xl shadow-lg mb-6">
+              <Image
+                src="/images/contact/contact-welcome.png"
+                alt="Friendly staff member at a bright nonprofit office desk with a vase of fresh daisies, ready to help"
+                fill
+                className="object-cover"
+                quality={80}
+              />
+            </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-6">
                 Contact Information

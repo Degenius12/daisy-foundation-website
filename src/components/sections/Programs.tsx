@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export function Programs() {
   const programs = [
     {
-      image: "/images/programs/programs-healthy.jpg",
+      image: "/images/programs/program-healthy-beginnings.png",
       title: "Healthy Beginnings",
       category: "Well-being",
       categoryColor: "bg-daisy-forest-200 text-daisy-forest-800 border-daisy-forest-400",
@@ -20,7 +20,7 @@ export function Programs() {
       ],
     },
     {
-      image: "/images/programs/programs-bloom.jpg",
+      image: "/images/programs/program-bloom-scholarships.png",
       title: "Bloom Scholarships",
       category: "Education",
       categoryColor: "bg-daisy-sunshine-100 text-daisy-sunshine-800 border-daisy-sunshine-400",
@@ -34,7 +34,7 @@ export function Programs() {
       ],
     },
     {
-      image: "/images/programs/programs-hands.jpg",
+      image: "/images/programs/program-hands-hearts.png",
       title: "Hands & Hearts",
       category: "Community",
       categoryColor: "bg-daisy-lavender-light/50 text-daisy-lavender-deep border-daisy-lavender",
@@ -48,7 +48,7 @@ export function Programs() {
       ],
     },
     {
-      image: "/images/programs/programs-green.jpg",
+      image: "/images/programs/program-green-daisy.png",
       title: "Green Daisy",
       category: "Sustainability",
       categoryColor: "bg-daisy-forest-100 text-daisy-forest-800 border-daisy-forest-400",

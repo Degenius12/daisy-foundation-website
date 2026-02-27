@@ -95,8 +95,8 @@ export function Donate() {
     <section id="donate" className="relative py-24 overflow-hidden">
       {/* Background daisy photo */}
       <Image
-        src="/images/backgrounds/donate-daisies.jpg"
-        alt=""
+        src="/images/donate/donate-giving-hands.png"
+        alt="Volunteer placing a care package into the hands of a grateful young mother at an outdoor community event"
         fill
         className="object-cover"
         quality={80}

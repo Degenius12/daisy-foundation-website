@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart } from "lucide-react";
 
 export function Board() {
   const boardMembers = [
@@ -40,8 +39,8 @@ export function Board() {
     <section id="board" className="relative py-24 overflow-hidden">
       {/* Subtle daisy background */}
       <Image
-        src="/images/backgrounds/divider-daisies.jpg"
-        alt=""
+        src="/images/board/board-team-photo.png"
+        alt="Board members standing together outdoors in front of a community garden with blooming daisy flowers"
         fill
         className="object-cover"
         quality={70}
@@ -63,8 +62,14 @@ export function Board() {
           <div className="mb-16">
             <Card className="border-3 border-daisy-sunshine-400 bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl overflow-hidden">
               <CardContent className="p-10 lg:p-12 text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg mb-6">
-                  <Heart className="h-10 w-10 text-daisy-sunshine-700" aria-hidden="true" />
+                <div className="mx-auto mb-6 relative h-28 w-28 overflow-hidden rounded-full border-4 border-daisy-sunshine-400 shadow-lg">
+                  <Image
+                    src="/images/board/founder-portrait.png"
+                    alt="Trisha Curtis-Cornelius, Founder and President of Daisy Foundation"
+                    fill
+                    className="object-cover"
+                    quality={85}
+                  />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">
                   {boardMembers[0].name}

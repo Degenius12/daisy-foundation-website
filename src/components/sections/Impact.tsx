@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Briefcase, Clock, Target } from "lucide-react";
 import { formatNumber } from "@/lib/utils/formatting";
@@ -77,18 +78,31 @@ export function Impact() {
         <div className="mx-auto mt-20 max-w-4xl">
           <div className="relative rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 via-daisy-forest-100/30 to-daisy-teal-light/20 p-8 lg:p-12 border-2 border-daisy-sunshine-300 shadow-daisy-lg">
             <h3 className="text-2xl font-bold text-daisy-forest-700">Success Story</h3>
-            <blockquote className="mt-6">
-              <p className="text-lg leading-8 text-gray-700">
-                &ldquo;When I became a single mother, I didn&apos;t know how I would afford quality
-                childcare while working full-time. The Bloom Scholarship program gave my
-                children access to an amazing pre-K program at no cost. Today, they&apos;re
-                thriving in elementary school, and I&apos;ve completed job training to advance
-                my career. This foundation changed our lives.&rdquo;
-              </p>
-            </blockquote>
-            <div className="mt-6">
-              <p className="font-semibold text-gray-900">Maria Rodriguez</p>
-              <p className="text-sm text-gray-600">Bloom Scholarships, 2023</p>
+            <div className="mt-6 flex flex-col md:flex-row gap-8 items-start">
+              <div className="relative h-32 w-32 flex-shrink-0 mx-auto md:mx-0 overflow-hidden rounded-full border-4 border-daisy-sunshine-300 shadow-lg">
+                <Image
+                  src="/images/impact/success-story-maria.png"
+                  alt="Maria Rodriguez, Bloom Scholarship recipient, standing proudly outside a preschool with her two children"
+                  fill
+                  className="object-cover"
+                  quality={85}
+                />
+              </div>
+              <div>
+                <blockquote>
+                  <p className="text-lg leading-8 text-gray-700">
+                    &ldquo;When I became a single mother, I didn&apos;t know how I would afford quality
+                    childcare while working full-time. The Bloom Scholarship program gave my
+                    children access to an amazing pre-K program at no cost. Today, they&apos;re
+                    thriving in elementary school, and I&apos;ve completed job training to advance
+                    my career. This foundation changed our lives.&rdquo;
+                  </p>
+                </blockquote>
+                <div className="mt-6">
+                  <p className="font-semibold text-gray-900">Maria Rodriguez</p>
+                  <p className="text-sm text-gray-600">Bloom Scholarships, 2023</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
