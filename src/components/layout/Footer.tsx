@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -44,8 +45,16 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-daisy-forest-700 via-daisy-teal to-daisy-forest-800 text-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <footer className="relative text-white overflow-hidden">
+      <Image
+        src="/images/footer/footer-community.png"
+        alt=""
+        fill
+        className="object-cover"
+        quality={75}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-daisy-forest-700/90 via-daisy-teal/85 to-daisy-forest-800/90" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* About Section */}
           <div>
