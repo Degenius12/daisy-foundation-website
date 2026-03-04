@@ -32,10 +32,10 @@ export function Header() {
   };
 
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4" aria-label="Global">
-        {/* Logo — left aligned, no extra padding */}
-        <div className="flex-shrink-0">
+    <header className="absolute top-0 left-0 right-0 z-40 w-full">
+      <div className="mx-auto max-w-7xl px-4">
+        {/* Logo — centered, overlays hero */}
+        <div className="flex justify-center">
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -47,75 +47,78 @@ export function Header() {
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
               width={240}
               height={208}
-              className="h-[270px] w-auto"
+              className="h-[270px] w-auto drop-shadow-lg"
               priority
               unoptimized
             />
           </button>
         </div>
 
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="sr-only">
-              {mobileMenuOpen ? "Close menu" : "Open menu"}
-            </span>
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
-        </div>
-
-        {/* Desktop navigation — right side */}
-        <div className="hidden lg:flex lg:items-center lg:gap-x-8">
-          {navigationLinks.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-daisy-sunshine-700 transition-colors"
+        {/* Nav bar — centered below logo */}
+        <nav className="flex items-center justify-center -mt-2" aria-label="Global">
+          {/* Mobile menu button */}
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {item.name}
-            </a>
-          ))}
-          <Button asChild className="bg-daisy-forest-600 hover:bg-daisy-forest-700">
-            <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
-              Donate Now
-            </a>
-          </Button>
-        </div>
-      </nav>
+              <span className="sr-only">
+                {mobileMenuOpen ? "Close menu" : "Open menu"}
+              </span>
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden">
-          <div className="space-y-1 px-4 pb-4 pt-2">
+          {/* Desktop navigation — centered */}
+          <div className="hidden lg:flex lg:items-center lg:gap-x-8">
             {navigationLinks.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="block rounded-md px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                className="text-sm font-semibold leading-6 text-white hover:text-daisy-sunshine-300 transition-colors drop-shadow-md"
               >
                 {item.name}
               </a>
             ))}
-            <div className="pt-4">
-              <Button asChild className="w-full bg-daisy-forest-600 hover:bg-daisy-forest-700">
-                <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
-                  Donate Now
+            <Button asChild className="bg-daisy-forest-600 hover:bg-daisy-forest-700 shadow-lg">
+              <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
+                Donate Now
+              </a>
+            </Button>
+          </div>
+        </nav>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-white/90 backdrop-blur rounded-lg mt-2 shadow-lg">
+            <div className="space-y-1 px-4 pb-4 pt-2">
+              {navigationLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="block rounded-md px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  {item.name}
                 </a>
-              </Button>
+              ))}
+              <div className="pt-4">
+                <Button asChild className="w-full bg-daisy-forest-600 hover:bg-daisy-forest-700">
+                  <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
+                    Donate Now
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }
