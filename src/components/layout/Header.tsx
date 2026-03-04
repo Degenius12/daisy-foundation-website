@@ -33,13 +33,13 @@ export function Header() {
 
   return (
     <>
-      {/* Logo banner — scrolls away naturally */}
+      {/* Logo banner — scrolls away, whitespace cropped */}
       <div className="w-full bg-white">
-        <div className="mx-auto flex max-w-7xl justify-center px-4 py-2">
+        <div className="mx-auto max-w-7xl px-4">
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity overflow-hidden h-[250px]"
             aria-label="Daisy Foundation - Return to top"
           >
             <Image
@@ -47,7 +47,7 @@ export function Header() {
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
               width={180}
               height={300}
-              className="h-[480px] w-auto"
+              className="h-[480px] w-auto -mt-[140px]"
               priority
               unoptimized
             />
