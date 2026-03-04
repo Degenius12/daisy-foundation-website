@@ -19,7 +19,7 @@ export function Header() {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
-      const headerOffset = 80;
+      const headerOffset = 60;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -32,93 +32,91 @@ export function Header() {
   };
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-40 w-full">
-      <div className="mx-auto max-w-7xl px-4">
-        {/* Logo — centered, overlays hero */}
-        <div className="flex justify-center">
+    <header className="w-full bg-daisy-sunshine-50/60">
+      {/* Logo — centered, tight */}
+      <div className="flex justify-center">
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="hover:opacity-80 transition-opacity"
+          aria-label="Daisy Foundation - Return to top"
+        >
+          <Image
+            src="/images/Logo.svg"
+            alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
+            width={240}
+            height={208}
+            className="h-[270px] w-auto"
+            priority
+            unoptimized
+          />
+        </button>
+      </div>
+
+      {/* Nav — slim centered bar directly under logo */}
+      <nav className="flex items-center justify-center px-4 pb-3" aria-label="Global">
+        {/* Mobile menu button */}
+        <div className="flex lg:hidden">
           <button
             type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="hover:opacity-80 transition-opacity"
-            aria-label="Daisy Foundation - Return to top"
+            className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <Image
-              src="/images/Logo.svg"
-              alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-              width={240}
-              height={208}
-              className="h-[270px] w-auto drop-shadow-lg"
-              priority
-              unoptimized
-            />
+            <span className="sr-only">
+              {mobileMenuOpen ? "Close menu" : "Open menu"}
+            </span>
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
           </button>
         </div>
 
-        {/* Nav bar — centered below logo */}
-        <nav className="flex items-center justify-center -mt-2" aria-label="Global">
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-md p-2.5 text-white"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        {/* Desktop navigation — centered */}
+        <div className="hidden lg:flex lg:items-center lg:gap-x-8">
+          {navigationLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-daisy-forest-600 transition-colors"
             >
-              <span className="sr-only">
-                {mobileMenuOpen ? "Close menu" : "Open menu"}
-              </span>
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
+              {item.name}
+            </a>
+          ))}
+          <Button asChild className="bg-daisy-forest-600 hover:bg-daisy-forest-700">
+            <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
+              Donate Now
+            </a>
+          </Button>
+        </div>
+      </nav>
 
-          {/* Desktop navigation — centered */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-8">
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden">
+          <div className="space-y-1 px-4 pb-4 pt-2">
             {navigationLinks.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-sm font-semibold leading-6 text-white hover:text-daisy-sunshine-300 transition-colors drop-shadow-md"
+                className="block rounded-md px-3 py-2 text-base font-semibold text-gray-900 hover:bg-white/50"
               >
                 {item.name}
               </a>
             ))}
-            <Button asChild className="bg-daisy-forest-600 hover:bg-daisy-forest-700 shadow-lg">
-              <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
-                Donate Now
-              </a>
-            </Button>
-          </div>
-        </nav>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-white/90 backdrop-blur rounded-lg mt-2 shadow-lg">
-            <div className="space-y-1 px-4 pb-4 pt-2">
-              {navigationLinks.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="block rounded-md px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  {item.name}
+            <div className="pt-4">
+              <Button asChild className="w-full bg-daisy-forest-600 hover:bg-daisy-forest-700">
+                <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
+                  Donate Now
                 </a>
-              ))}
-              <div className="pt-4">
-                <Button asChild className="w-full bg-daisy-forest-600 hover:bg-daisy-forest-700">
-                  <a href="#donate" onClick={(e) => handleNavClick(e, "#donate")}>
-                    Donate Now
-                  </a>
-                </Button>
-              </div>
+              </Button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }
