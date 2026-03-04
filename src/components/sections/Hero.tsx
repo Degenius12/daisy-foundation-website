@@ -25,7 +25,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden -mt-[270px]">
       {/* Background daisy photo */}
       <Image
         src="/images/hero/hero-community.png"
@@ -38,7 +38,7 @@ export function Hero() {
       {/* Warm cream overlay for text readability */}
       <div className="absolute inset-0 bg-cream-50/80" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[290px] pb-20 lg:pb-32">
         <div className="text-center">
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">

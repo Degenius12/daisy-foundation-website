@@ -32,8 +32,8 @@ export function Header() {
   };
 
   return (
-    <header className="w-full">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4" aria-label="Global">
+    <header className="relative z-10 w-full">
+      <nav className="mx-auto flex max-w-7xl items-center px-4" aria-label="Global">
         {/* Logo — left aligned */}
         <div className="flex-shrink-0">
           <button
@@ -72,8 +72,8 @@ export function Header() {
           </button>
         </div>
 
-        {/* Desktop navigation — beside logo, vertically centered */}
-        <div className="hidden lg:flex lg:items-center lg:gap-x-8">
+        {/* Desktop navigation — centered in remaining space */}
+        <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-center lg:gap-x-8">
           {navigationLinks.map((item) => (
             <a
               key={item.name}
