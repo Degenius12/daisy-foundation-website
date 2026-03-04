@@ -32,29 +32,28 @@ export function Header() {
   };
 
   return (
-    <header className="w-full bg-daisy-sunshine-50/60">
-      {/* Logo — centered, tight */}
-      <div className="flex justify-center">
-        <button
-          type="button"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="hover:opacity-80 transition-opacity"
-          aria-label="Daisy Foundation - Return to top"
-        >
-          <Image
-            src="/images/Logo.svg"
-            alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-            width={240}
-            height={208}
-            className="h-[270px] w-auto"
-            priority
-            unoptimized
-          />
-        </button>
-      </div>
+    <header className="w-full">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4" aria-label="Global">
+        {/* Logo — left aligned */}
+        <div className="flex-shrink-0">
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="hover:opacity-80 transition-opacity"
+            aria-label="Daisy Foundation - Return to top"
+          >
+            <Image
+              src="/images/Logo.svg"
+              alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
+              width={240}
+              height={208}
+              className="h-[270px] w-auto"
+              priority
+              unoptimized
+            />
+          </button>
+        </div>
 
-      {/* Nav — slim centered bar directly under logo */}
-      <nav className="flex items-center justify-center px-4 pb-3" aria-label="Global">
         {/* Mobile menu button */}
         <div className="flex lg:hidden">
           <button
@@ -73,7 +72,7 @@ export function Header() {
           </button>
         </div>
 
-        {/* Desktop navigation — centered */}
+        {/* Desktop navigation — beside logo, vertically centered */}
         <div className="hidden lg:flex lg:items-center lg:gap-x-8">
           {navigationLinks.map((item) => (
             <a
@@ -102,7 +101,7 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="block rounded-md px-3 py-2 text-base font-semibold text-gray-900 hover:bg-white/50"
+                className="block rounded-md px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
               >
                 {item.name}
               </a>
