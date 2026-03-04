@@ -47,7 +47,7 @@ export function Header() {
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
               width={240}
               height={208}
-              className="h-[270px] w-auto mix-blend-multiply"
+              className="h-[270px] w-auto rounded-3xl"
               priority
               unoptimized
             />
