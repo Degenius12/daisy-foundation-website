@@ -43,13 +43,12 @@ export function Header() {
             aria-label="Daisy Foundation - Return to top"
           >
             <Image
-              src="/images/Logo.svg"
+              src="/images/Logo-transparent.png"
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-              width={240}
-              height={208}
-              className="h-[270px] w-auto rounded-3xl"
+              width={1076}
+              height={717}
+              className="h-[270px] w-auto"
               priority
-              unoptimized
             />
           </button>
         </div>
