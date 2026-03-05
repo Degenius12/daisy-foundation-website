@@ -55,7 +55,8 @@ export function Board() {
                     src="/images/board/founder-portrait.jpeg"
                     alt="Trisha Curtis-Cornelius, Founder and President of Daisy Foundation"
                     fill
-                    className="object-cover object-[center_20%]"
+                    className="object-cover"
+                    style={{ objectPosition: "center 30%" }}
                     quality={85}
                   />
                 </div>
