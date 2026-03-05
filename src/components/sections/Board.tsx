@@ -21,18 +21,6 @@ export function Board() {
       name: "Nya Thomas",
       title: "Community Engagement",
     },
-    {
-      name: "Curtis McFarlane",
-      title: "Officer",
-    },
-    {
-      name: "E'lisa Cornelius",
-      title: "Officer",
-    },
-    {
-      name: "Matthew Johnson",
-      title: "Officer",
-    },
   ];
 
   return (
@@ -67,7 +55,7 @@ export function Board() {
                     src="/images/board/founder-portrait.jpeg"
                     alt="Trisha Curtis-Cornelius, Founder and President of Daisy Foundation"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_20%]"
                     quality={85}
                   />
                 </div>
