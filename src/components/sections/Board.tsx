@@ -62,9 +62,9 @@ export function Board() {
           <div className="mb-16">
             <Card className="border-3 border-daisy-sunshine-400 bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl overflow-hidden">
               <CardContent className="p-10 lg:p-12 text-center">
-                <div className="mx-auto mb-6 relative h-28 w-28 overflow-hidden rounded-full border-4 border-daisy-sunshine-400 shadow-lg">
+                <div className="mx-auto mb-6 relative h-40 w-40 overflow-hidden rounded-full border-4 border-daisy-sunshine-400 shadow-lg">
                   <Image
-                    src="/images/board/founder-portrait.png"
+                    src="/images/board/founder-portrait.jpeg"
                     alt="Trisha Curtis-Cornelius, Founder and President of Daisy Foundation"
                     fill
                     className="object-cover"
