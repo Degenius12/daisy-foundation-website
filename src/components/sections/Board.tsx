@@ -10,10 +10,6 @@ export function Board() {
       isFeatured: true,
     },
     {
-      name: "Shellie Ransom-Jackson",
-      title: "Secretary",
-    },
-    {
       name: "Gary Cornelius",
       title: "Grants/Treasurer",
     },
@@ -74,7 +70,7 @@ export function Board() {
           </div>
 
           {/* Other Board Members */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
             {boardMembers.slice(1).map((member, index) => {
               const borders = [
                 "border-daisy-forest-400",
