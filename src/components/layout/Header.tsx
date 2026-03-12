@@ -32,7 +32,7 @@ export function Header() {
   };
 
   return (
-    <header className="relative z-10 w-full">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center px-4" aria-label="Global">
         {/* Logo — left aligned */}
         <div className="flex-shrink-0">
@@ -47,7 +47,7 @@ export function Header() {
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
               width={1076}
               height={717}
-              className="h-[270px] w-auto"
+              className="h-[100px] w-auto"
               priority
             />
           </button>
