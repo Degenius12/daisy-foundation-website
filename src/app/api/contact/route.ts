@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     // TODO: Send email via Resend
     // const emailResult = await sendContactEmail({
-    //   to: "hello@daisysfoundation.com",
+    //   to: "info@daisysfoundation.com",
     //   from: email,
     //   subject: subject || "Contact Form Submission",
     //   name,

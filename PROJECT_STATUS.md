@@ -127,7 +127,7 @@
 4. Add to `.env.local`:
    ```
    RESEND_API_KEY=re_...
-   RESEND_FROM_EMAIL=hello@daisysfoundation.com
+   RESEND_FROM_EMAIL=info@daisysfoundation.com
    ```
 
 #### 4. Mailchimp (Newsletter)
@@ -313,7 +313,7 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 
 # Resend
 RESEND_API_KEY=re_...
-RESEND_FROM_EMAIL=hello@daisysfoundation.com
+RESEND_FROM_EMAIL=info@daisysfoundation.com
 
 # Mailchimp
 MAILCHIMP_API_KEY=...

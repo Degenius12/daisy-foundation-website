@@ -203,10 +203,10 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a
-                      href="mailto:hello@daisysfoundation.com"
+                      href="mailto:info@daisysfoundation.com"
                       className="text-sm text-gray-600 hover:text-daisy-forest-700"
                     >
-                      hello@daisysfoundation.com
+                      info@daisysfoundation.com
                     </a>
                   </div>
                 </div>
@@ -218,10 +218,10 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-gray-900">Phone</p>
                     <a
-                      href="tel:+1-555-123-4567"
+                      href="tel:+1-904-323-1941"
                       className="text-sm text-gray-600 hover:text-daisy-forest-700"
                     >
-                      (555) 123-4567
+                      (904) 323-1941
                     </a>
                   </div>
                 </div>
@@ -233,9 +233,9 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-gray-900">Office</p>
                     <p className="text-sm text-gray-600">
-                      123 Daisy Lane
+                      14530 E Cherry Lake Dr
                       <br />
-                      Your City, ST 12345
+                      Jacksonville, FL 32258
                     </p>
                   </div>
                 </div>
@@ -245,9 +245,9 @@ export function Contact() {
             <div className="rounded-lg bg-gradient-to-br from-daisy-sunshine-100 to-daisy-forest-100/30 p-6 border-2 border-daisy-sunshine-300 shadow-daisy-md">
               <h4 className="font-semibold text-daisy-forest-700 mb-2">Office Hours</h4>
               <p className="text-sm text-gray-700">
-                Monday - Friday: 9:00 AM - 5:00 PM
+                Monday - Friday: 10:00 AM - 2:00 PM
                 <br />
-                Saturday: 10:00 AM - 2:00 PM
+                Saturday: Apt Only
                 <br />
                 Sunday: Closed
               </p>

@@ -34,7 +34,7 @@
 
 **API Key** (Dashboard > API Keys > Create):
 - Key: `re_...` → `RESEND_API_KEY`
-- From: `hello@daisysfoundation.com` → `RESEND_FROM_EMAIL`
+- From: `info@daisysfoundation.com` → `RESEND_FROM_EMAIL`
 
 **Templates**: `src/lib/email/templates.ts` (contact confirmation, admin notification)
 
@@ -48,7 +48,7 @@
 
 **Audience** (Dashboard > Audience > Create):
 - Name: "Newsletter Subscribers"
-- From: `hello@daisysfoundation.com`
+- From: `info@daisysfoundation.com`
 - Enable double opt-in
 
 **API Key** (Profile > Extras > API keys > Create):
@@ -77,7 +77,7 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 
 # Resend
 RESEND_API_KEY=re_...
-RESEND_FROM_EMAIL=hello@daisysfoundation.com
+RESEND_FROM_EMAIL=info@daisysfoundation.com
 
 # Mailchimp
 MAILCHIMP_API_KEY=...

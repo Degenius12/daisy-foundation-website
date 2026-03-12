@@ -84,7 +84,7 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 ### Resend (Email)
 ```
 RESEND_API_KEY=re_...
-RESEND_FROM_EMAIL=hello@daisysfoundation.com
+RESEND_FROM_EMAIL=info@daisysfoundation.com
 ```
 
 ### Mailchimp (Newsletter)

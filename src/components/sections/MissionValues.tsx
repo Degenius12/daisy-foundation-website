@@ -68,8 +68,8 @@ export function MissionValues() {
           <div className="mt-12 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
             <div className="relative h-64 overflow-hidden rounded-2xl shadow-lg border-3 border-daisy-sunshine-300">
               <Image
-                src="/images/grandmother/grandmother-daisy-portrait.png"
-                alt="Portrait of Grandmother Daisy, a warm and dignified woman whose legacy of love inspires the foundation"
+                src="/images/grandmother/Daisy2.JPG"
+                alt="Portrait of Grandmother Daisy, a warm and dignified woman with silver hair and glasses whose legacy of love inspires the foundation"
                 fill
                 className="object-cover"
                 quality={85}
