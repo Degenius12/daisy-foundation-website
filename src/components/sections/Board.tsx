@@ -23,6 +23,17 @@ Through the Daisy Foundation, Trisha honors the legacy of her grandmother Daisy 
     {
       name: "Gary Cornelius",
       title: "Grants/Treasurer",
+      bio: `Gary Cornelius is a seasoned business professional and operations leader whose diverse career spans retail management, logistics, and early childhood education entrepreneurship.
+
+Born on the Caribbean island of Antigua, Gary was raised in a modest household alongside nine siblings. Though neither parent had formal education beyond age thirteen, they instilled a powerful work ethic and entrepreneurial spirit in their children. Gary's father became a successful building contractor, while his mother grew from dedicated homemaker to business owner. At just thirteen, Gary was entrusted with managing the family's neighborhood convenience store — handling cashiering, inventory, ordering, and financial transactions — experiences that became the bedrock of his business acumen.
+
+A gifted athlete, Gary represented Antigua in the Track and Field CARIFTA Games in Martinique in 1983. In 1986, he was accepted to Nazareth College of Rochester in New York, where he competed in collegiate soccer for three years and graduated in 1990 with a Bachelor of Science in Business Administration.
+
+Gary's professional career took him from managing operations at Wegmans Superstore in Buffalo, New York, to leading store operations at Wendy's International in Jacksonville, Florida. In 2001, he joined UPS as a package loader and was promoted to Part-Time Supervisor within five months. With UPS's support, he earned a Master of Business Administration in Technology Management from the University of Phoenix in 2003, advancing to Full-Time Supervisor where he managed teams of over forty employees.
+
+In 2017, Gary made a pivotal decision — leaving UPS to help his wife, Trisha, grow their family's childcare business. Drawing on his MBA and decades of operational experience, he guided the expansion from a home-based operation to a licensed childcare center that opened in 2018. By the end of 2021, the center served 86 students and generated over one million dollars in annual revenue. In February 2022, they opened a state-of-the-art 10,000-square-foot facility with twelve classrooms and capacity for 184 students.
+
+As Grants/Treasurer of the Daisy Foundation, Gary brings his expertise in business planning, financial projections, bookkeeping, and strategic growth to help expand access to quality early childhood education and family support throughout the Jacksonville community.`,
     },
     {
       name: "Nya Thomas",
@@ -90,7 +101,7 @@ Through the Daisy Foundation, Trisha honors the legacy of her grandmother Daisy 
           </div>
 
           {/* Other Board Members */}
-          <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+          <div className="grid gap-6 max-w-3xl mx-auto">
             {boardMembers.slice(1).map((member, index) => {
               const borders = [
                 "border-daisy-forest-400",
@@ -101,7 +112,7 @@ Through the Daisy Foundation, Trisha honors the legacy of her grandmother Daisy 
                 "border-daisy-sunshine-300",
               ];
               return (
-                <Card key={member.name} className={`${borders[index]} border-2 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-2xl`}>
+                <Card key={member.name} className={`${borders[index]} border-2 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl`}>
                   <CardContent className="p-6 text-center">
                     <h4 className="text-xl font-bold text-gray-900 mb-2">
                       {member.name}
@@ -109,6 +120,15 @@ Through the Daisy Foundation, Trisha honors the legacy of her grandmother Daisy 
                     <p className="text-sm font-semibold text-gray-600">
                       {member.title}
                     </p>
+                    {member.bio && (
+                      <div className="mt-4 text-left space-y-3">
+                        {member.bio.split("\n\n").map((paragraph: string, i: number) => (
+                          <p key={i} className="text-sm leading-relaxed text-gray-700">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
