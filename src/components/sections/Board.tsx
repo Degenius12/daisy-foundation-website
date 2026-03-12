@@ -8,6 +8,17 @@ export function Board() {
       title: "Founder & President",
       quote: "Honoring Daisy's love through family support.",
       isFeatured: true,
+      bio: `Trisha Cornelius is a dedicated childcare professional, community advocate, and entrepreneur whose lifelong passion for nurturing children has shaped every chapter of her career.
+
+Born to Caribbean immigrant parents and raised in South Florida, Trisha discovered her calling early — serving as the go-to caretaker for her nieces, nephews, and cousins throughout her teenage years. Though her parents envisioned a career in pediatric nursing, Trisha's heart remained set on childcare.
+
+After high school, she worked full-time at an insurance company while attending school part-time. But during maternity leave with her second child, everything changed. Struggling to find quality, affordable childcare she could trust with her own infant, Trisha made a life-defining decision: she would open her own childcare business and provide the phenomenal care every family deserves. The very next day she began researching licenses and credentials, and within a week she was enrolled in certification classes.
+
+In 2004, Trisha opened her home-based childcare in Broward County. Within three months she was at full capacity. After relocating to Jacksonville, she founded Lil Voyagers Academy, an intermediate-size child day care that has become one of the most sought-after programs in the community. Operating at capacity year after year with an extensive waiting list, Lil Voyagers provides an affordable, loving "home away from home" where children explore, grow, and develop while their parents work with complete peace of mind.
+
+Trisha's commitment to excellence led her to partner with the Florida Small Business Development Center at UNF, where she worked with consultant Lucy Diala to strategically manage growth, strengthen operations, and position Lil Voyagers for expansion — driven by the very community and returning families she serves.
+
+Through the Daisy Foundation, Trisha honors the legacy of her grandmother Daisy by extending that same spirit of love, patience, and safe spaces to families and children throughout the Jacksonville community.`,
     },
     {
       name: "Gary Cornelius",
@@ -62,9 +73,18 @@ export function Board() {
                 <p className="text-xl font-semibold text-daisy-forest-700 mb-6">
                   {boardMembers[0].title}
                 </p>
-                <blockquote className="text-lg md:text-xl italic text-gray-700">
+                <blockquote className="text-lg md:text-xl italic text-gray-700 mb-8">
                   &ldquo;{boardMembers[0].quote}&rdquo;
                 </blockquote>
+                {boardMembers[0].bio && (
+                  <div className="mt-6 text-left space-y-4 max-w-3xl mx-auto">
+                    {boardMembers[0].bio.split("\n\n").map((paragraph: string, i: number) => (
+                      <p key={i} className="text-base leading-relaxed text-gray-700">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>
