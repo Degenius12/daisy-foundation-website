@@ -77,8 +77,8 @@ export function MissionValues() {
             </div>
             <div className="relative h-64 overflow-hidden rounded-2xl shadow-lg border-3 border-daisy-forest-400">
               <Image
-                src="/images/grandmother/grandmother-teaching.png"
-                alt="Grandmother sitting outdoors with young children, helping them press daisy flowers in a sunny garden"
+                src="/images/grandmother/grandmother-teaching.jpg"
+                alt="Grandmother Daisy and her granddaughter sharing a tender moment together outdoors"
                 fill
                 className="object-cover"
                 quality={80}

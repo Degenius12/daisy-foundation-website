@@ -28,8 +28,8 @@ export function Hero() {
     <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden -mt-[270px]">
       {/* Background daisy photo */}
       <Image
-        src="/images/hero/hero-community.png"
-        alt="African American multigenerational family gathering outdoors in a sunlit community park with daisy wildflowers"
+        src="/images/hero/hero-community.jpg"
+        alt="Daisy surrounded by her loving grandchildren and family gathered together on a couch"
         fill
         className="object-cover"
         priority
