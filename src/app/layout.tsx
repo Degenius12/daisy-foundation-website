@@ -47,8 +47,11 @@ export const metadata: Metadata = {
       "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
   },
   icons: {
-    icon: "/images/favicon1.png",
-    apple: "/images/favicon1.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
   },
   robots: {
     index: true,
