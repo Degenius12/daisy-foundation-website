@@ -1,7 +1,9 @@
 # Daisy Foundation Website
 
 ## Links
-- **Live**: https://daisysfoundation.com
+- **Live**: https://daisysnonprofit.com
+- **Legacy redirect**: https://daisysfoundation.com → daisysnonprofit.com (pending Vercel config)
+- **Campaign shortlink**: https://daisysnonpro.fit (DNS pending)
 - **GitHub**: https://github.com/Degenius12/daisys-foundation-website
 - **Vercel**: https://vercel.com/tony-telemacques-projects/daisy-foundation-web
 
@@ -26,6 +28,7 @@
 - `docs/standards-nonprofit.md` — trust, conversion, performance, security, voice
 - `docs/standards-accessibility.md` — WCAG 2.1 AA rules + checklists
 - `docs/standards-testing.md` — test strategy, commands, coverage config
+- `docs/domain-strategy-2026-04-17.md` — domain migration (daisysfoundation → daisysnonprofit), competitor analysis, DNS setup progress
 
 ## Commands
 ```bash

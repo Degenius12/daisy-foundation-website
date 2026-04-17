@@ -16,7 +16,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Daisy Foundation | Supporting Early Childhood Education",
+  title: "Daisy's Foundation | Supporting Early Childhood Education",
   description:
     "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training. Every child deserves quality education.",
   keywords: [
@@ -25,24 +25,24 @@ export const metadata: Metadata = {
     "pre-K programs",
     "tuition assistance",
     "educational support",
-    "Miami nonprofits",
+    "Jacksonville FL nonprofits",
     "family support services",
   ],
-  authors: [{ name: "Daisy Foundation" }],
-  creator: "Daisy Foundation",
-  publisher: "Daisy Foundation",
+  authors: [{ name: "Daisy's Foundation" }],
+  creator: "Daisy's Foundation",
+  publisher: "Daisy's Foundation",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://daisysfoundation.com",
-    title: "Daisy Foundation | Supporting Early Childhood Education",
+    url: "https://daisysnonprofit.com",
+    title: "Daisy's Foundation | Supporting Early Childhood Education",
     description:
       "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
-    siteName: "Daisy Foundation",
+    siteName: "Daisy's Foundation",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daisy Foundation | Supporting Early Childhood Education",
+    title: "Daisy's Foundation | Supporting Early Childhood Education",
     description:
       "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
   },
@@ -59,6 +59,27 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: "Daisy's Foundation",
+  url: "https://daisysnonprofit.com",
+  logo: "https://daisysnonprofit.com/images/Logo-transparent.png",
+  description:
+    "Jacksonville, FL nonprofit supporting families through early childhood education tuition subsidies, enrichment programs, and job training.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Jacksonville",
+    addressRegion: "FL",
+    addressCountry: "US",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "info@daisysfoundation.com",
+    contactType: "customer support",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +87,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
