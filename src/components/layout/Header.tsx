@@ -45,8 +45,8 @@ export function Header() {
             <Image
               src="/images/Logo-transparent.png"
               alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
-              width={1076}
-              height={717}
+              width={720}
+              height={330}
               className="h-[100px] w-auto"
               priority
             />
