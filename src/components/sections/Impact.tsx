@@ -2,38 +2,36 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Briefcase, Clock, Target } from "lucide-react";
 import { formatNumber } from "@/lib/utils/formatting";
+import { getImpactMetrics, getSuccessStories } from "@/lib/supabase/queries";
 
-export function Impact() {
-  const metrics = [
-    {
-      icon: Users,
-      value: 3200,
-      label: "Families Served",
-      suffix: "+",
-      color: "text-daisy-forest-700",
-    },
-    {
-      icon: Briefcase,
-      value: 85,
-      label: "Local Partners",
-      suffix: "",
-      color: "text-daisy-bloom-600",
-    },
-    {
-      icon: Clock,
-      value: 14500,
-      label: "Volunteer Hours",
-      suffix: "+",
-      color: "text-purple-600",
-    },
-    {
-      icon: Target,
-      value: 12,
-      label: "Active Programs",
-      suffix: "",
-      color: "text-green-600",
-    },
-  ];
+const metricIcons: Record<string, typeof Users> = {
+  "Families Served": Users,
+  "Local Partners": Briefcase,
+  "Volunteer Hours": Clock,
+  "Active Programs": Target,
+};
+
+const metricColors = [
+  "text-daisy-forest-700",
+  "text-daisy-bloom-600",
+  "text-purple-600",
+  "text-green-600",
+];
+
+const bgColors = [
+  "bg-daisy-teal-light/20",
+  "bg-daisy-sunshine-200",
+  "bg-daisy-forest-100",
+  "bg-daisy-forest-200",
+];
+
+export async function Impact() {
+  const [metrics, stories] = await Promise.all([
+    getImpactMetrics(),
+    getSuccessStories(),
+  ]);
+
+  const featuredStory = stories[0];
 
   return (
     <section id="impact" className="py-24 bg-gradient-to-br from-daisy-lavender-light/10 via-white to-daisy-sky-light/10">
@@ -51,23 +49,18 @@ export function Impact() {
         {/* Metrics Grid */}
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric, index) => {
-            const bgColors = [
-              "bg-daisy-teal-light/20",
-              "bg-daisy-sunshine-200",
-              "bg-daisy-forest-100",
-              "bg-daisy-forest-200",
-            ];
+            const Icon = metricIcons[metric.metric_name] || Target;
             return (
-              <Card key={metric.label} className="text-center border-2 hover:shadow-daisy-lg hover:scale-105 transition-all duration-300">
+              <Card key={metric.id} className="text-center border-2 hover:shadow-daisy-lg hover:scale-105 transition-all duration-300">
                 <CardContent className="pt-6">
-                  <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${bgColors[index]} shadow-daisy-sm`}>
-                    <metric.icon className={`h-8 w-8 ${metric.color}`} aria-hidden="true" />
+                  <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${bgColors[index % bgColors.length]} shadow-daisy-sm`}>
+                    <Icon className={`h-8 w-8 ${metricColors[index % metricColors.length]}`} aria-hidden="true" />
                   </div>
                   <p className="mt-4 text-4xl font-bold text-daisy-forest-700">
-                    {formatNumber(metric.value)}
-                    {metric.suffix}
+                    {formatNumber(metric.metric_value)}
+                    {metric.display_suffix || ""}
                   </p>
-                  <p className="mt-2 text-sm font-medium text-gray-700">{metric.label}</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700">{metric.metric_name}</p>
                 </CardContent>
               </Card>
             );
@@ -75,37 +68,36 @@ export function Impact() {
         </div>
 
         {/* Success Story */}
-        <div className="mx-auto mt-20 max-w-4xl">
-          <div className="relative rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 via-daisy-forest-100/30 to-daisy-teal-light/20 p-8 lg:p-12 border-2 border-daisy-sunshine-300 shadow-daisy-lg">
-            <h3 className="text-2xl font-bold text-daisy-forest-700">Success Story</h3>
-            <div className="mt-6 flex flex-col md:flex-row gap-8 items-start">
-              <div className="relative h-32 w-32 flex-shrink-0 mx-auto md:mx-0 overflow-hidden rounded-full border-4 border-daisy-sunshine-300 shadow-lg">
-                <Image
-                  src="/images/impact/success-story-maria.png"
-                  alt="Maria Rodriguez, Bloom Scholarship recipient, standing proudly outside a preschool with her two children"
-                  fill
-                  className="object-cover"
-                  quality={85}
-                />
-              </div>
-              <div>
-                <blockquote>
-                  <p className="text-lg leading-8 text-gray-700">
-                    &ldquo;When I became a single mother, I didn&apos;t know how I would afford quality
-                    childcare while working full-time. The Bloom Scholarship program gave my
-                    children access to an amazing pre-K program at no cost. Today, they&apos;re
-                    thriving in elementary school, and I&apos;ve completed job training to advance
-                    my career. This foundation changed our lives.&rdquo;
-                  </p>
-                </blockquote>
-                <div className="mt-6">
-                  <p className="font-semibold text-gray-900">Maria Rodriguez</p>
-                  <p className="text-sm text-gray-600">Bloom Scholarships, 2023</p>
+        {featuredStory && (
+          <div className="mx-auto mt-20 max-w-4xl">
+            <div className="relative rounded-2xl bg-gradient-to-br from-daisy-sunshine-100 via-daisy-forest-100/30 to-daisy-teal-light/20 p-8 lg:p-12 border-2 border-daisy-sunshine-300 shadow-daisy-lg">
+              <h3 className="text-2xl font-bold text-daisy-forest-700">Success Story</h3>
+              <div className="mt-6 flex flex-col md:flex-row gap-8 items-start">
+                {featuredStory.featured_image && (
+                  <div className="relative h-32 w-32 flex-shrink-0 mx-auto md:mx-0 overflow-hidden rounded-full border-4 border-daisy-sunshine-300 shadow-lg">
+                    <Image
+                      src={featuredStory.featured_image}
+                      alt={`${featuredStory.title} - success story portrait`}
+                      fill
+                      className="object-cover"
+                      quality={85}
+                    />
+                  </div>
+                )}
+                <div>
+                  <blockquote>
+                    <p className="text-lg leading-8 text-gray-700">
+                      &ldquo;{featuredStory.content}&rdquo;
+                    </p>
+                  </blockquote>
+                  <div className="mt-6">
+                    <p className="font-semibold text-gray-900">{featuredStory.title}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Allocation Transparency */}
         <div className="mx-auto mt-20 max-w-3xl">

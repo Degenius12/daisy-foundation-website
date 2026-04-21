@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { MissionValues } from "@/components/sections/MissionValues";
 import { DaisyDivider } from "@/components/sections/DaisyDivider";
 import { Programs } from "@/components/sections/Programs";
+import { Events } from "@/components/sections/Events";
 import { Board } from "@/components/sections/Board";
 import { Donate } from "@/components/sections/Donate";
 import { Contact } from "@/components/sections/Contact";
@@ -26,6 +27,8 @@ export default function Home() {
         <MissionValues />
         <DaisyDivider />
         <Programs />
+        <DaisyDivider />
+        <Events />
         <DaisyDivider />
         <Board />
         <DaisyDivider />

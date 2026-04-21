@@ -4,46 +4,42 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, ExternalLink } from "lucide-react";
 import { formatDate } from "@/lib/utils/formatting";
+import { getEvents } from "@/lib/supabase/queries";
 
-export function Events() {
-  const events = [
-    {
-      id: 1,
-      title: "Family Fun Day",
-      date: new Date("2026-03-20"),
-      location: "Central Park",
-      image: "/images/events/event-family-fun-day.png",
-      imageAlt: "Family enjoying an outdoor community festival with daisy-themed decorations",
-      description:
-        "Join us for games, food, and community fun. Bring the whole family for a day of activities, face painting, and getting to know your neighbors.",
-      rsvpLink: "https://eventbrite.com/family-fun-day",
-      isFeatured: true,
-    },
-    {
-      id: 2,
-      title: "Back to School Drive",
-      date: new Date("2026-08-10"),
-      location: "Community Center",
-      image: "/images/events/event-back-to-school.png",
-      imageAlt: "Volunteers distributing backpacks and school supplies to excited children at a community event",
-      description:
-        "Help us prepare students for the new school year. We're collecting backpacks, school supplies, and volunteers to help distribute them to families.",
-      rsvpLink: "https://eventbrite.com/back-to-school",
-      isFeatured: false,
-    },
-    {
-      id: 3,
-      title: "Community Garden Kickoff",
-      date: new Date("2026-04-15"),
-      location: "Green Daisy Garden Site",
-      image: "/images/events/event-garden-kickoff.png",
-      imageAlt: "Community members of all ages planting daisy seedlings in raised garden beds on a sunny spring day",
-      description:
-        "Launch our spring planting season! Learn about sustainable gardening, get your hands dirty, and help us grow fresh produce for local families.",
-      rsvpLink: "https://eventbrite.com/garden-kickoff",
-      isFeatured: false,
-    },
-  ];
+const eventImages: Record<string, { src: string; alt: string }> = {
+  "Family Fun Day": {
+    src: "/images/events/event-family-fun-day.png",
+    alt: "Family enjoying an outdoor community festival with daisy-themed decorations",
+  },
+  "Back to School Drive": {
+    src: "/images/events/event-back-to-school.png",
+    alt: "Volunteers distributing backpacks and school supplies to excited children at a community event",
+  },
+  "Community Garden Kickoff": {
+    src: "/images/events/event-garden-kickoff.png",
+    alt: "Community members of all ages planting daisy seedlings in raised garden beds on a sunny spring day",
+  },
+};
+
+const defaultEventImage = {
+  src: "/images/events/event-family-fun-day.png",
+  alt: "Daisy Foundation community event",
+};
+
+const cardColors = [
+  "border-daisy-forest-400 hover:border-daisy-forest-600",
+  "border-daisy-sunshine-300 hover:border-daisy-sunshine-500",
+  "border-daisy-teal hover:border-daisy-teal-deep",
+];
+
+const badgeColors = [
+  "bg-daisy-forest-600 text-white",
+  "bg-daisy-sunshine-500 text-white",
+  "bg-daisy-teal text-white",
+];
+
+export async function Events() {
+  const events = await getEvents();
 
   return (
     <section id="events" className="py-24 bg-gradient-to-br from-daisy-forest-100/10 via-daisy-sunshine-50 to-daisy-teal-light/10">
@@ -60,25 +56,16 @@ export function Events() {
 
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 lg:grid-cols-3">
           {events.map((event, index) => {
-            const cardColors = [
-              "border-daisy-forest-400 hover:border-daisy-forest-600",
-              "border-daisy-sunshine-300 hover:border-daisy-sunshine-500",
-              "border-daisy-teal hover:border-daisy-teal-deep",
-            ];
-            const badgeColors = [
-              "bg-daisy-forest-600 text-white",
-              "bg-daisy-sunshine-500 text-white",
-              "bg-daisy-teal text-white",
-            ];
+            const image = eventImages[event.title] || defaultEventImage;
             return (
               <Card
                 key={event.id}
-                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index]} overflow-hidden`}
+                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index % cardColors.length]} overflow-hidden`}
               >
                 <div className="relative h-44 w-full overflow-hidden">
                   <Image
-                    src={event.image}
-                    alt={event.imageAlt}
+                    src={image.src}
+                    alt={image.alt}
                     fill
                     className="object-cover"
                     quality={75}
@@ -87,39 +74,45 @@ export function Events() {
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <Calendar className="h-5 w-5 text-daisy-forest-700" aria-hidden="true" />
-                    {event.isFeatured && (
-                      <Badge className={badgeColors[index]}>Featured</Badge>
+                    {event.is_featured && (
+                      <Badge className={badgeColors[index % badgeColors.length]}>Featured</Badge>
                     )}
                   </div>
                   <CardTitle className="text-xl text-daisy-forest-700" data-testid="event-title">
                     {event.title}
                   </CardTitle>
                 </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <div className="space-y-3 flex-1">
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <Calendar className="h-4 w-4" aria-hidden="true" />
-                    <span>{formatDate(event.date, "long")}</span>
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="space-y-3 flex-1">
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <Calendar className="h-4 w-4" aria-hidden="true" />
+                      <span>{formatDate(new Date(event.date), "long")}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <MapPin className="h-4 w-4" aria-hidden="true" />
+                      <span>{event.location}</span>
+                    </div>
+                    <p className="text-sm text-gray-700">{event.description}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <MapPin className="h-4 w-4" aria-hidden="true" />
-                    <span>{event.location}</span>
-                  </div>
-                  <p className="text-sm text-gray-700">{event.description}</p>
-                </div>
 
-                <Button className="mt-6 w-full" variant="outline" asChild>
-                  <a
-                    href={event.rsvpLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    RSVP Now
-                    <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+                  {event.rsvp_link ? (
+                    <Button className="mt-6 w-full" variant="outline" asChild>
+                      <a
+                        href={event.rsvp_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        RSVP Now
+                        <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button className="mt-6 w-full" variant="outline" asChild>
+                      <a href="#contact">Get Details</a>
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
             );
           })}
         </div>
