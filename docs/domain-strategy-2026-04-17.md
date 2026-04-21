@@ -82,12 +82,14 @@ daisysnonprofit.com A records:
 
 - [x] Delete the 4 old Squarespace A records (198.x.x.x) from daisysnonprofit.com DNS
 - [ ] Verify CNAME www → cname.vercel-dns.com on daisysnonprofit.com
-- [ ] Add A record `@` → `76.76.21.21` on daisysnonpro.fit
-- [ ] Delete Squarespace parking records on daisysnonpro.fit
+- [ ] Add A record `@` → `76.76.21.21` on daisysnonpro.fit in Squarespace DNS ← **Tony: last remaining task**
+- [ ] Delete Squarespace parking records on daisysnonpro.fit ← **Tony: do alongside above**
 - [ ] Add CNAME www → cname.vercel-dns.com on daisysnonpro.fit
-- [ ] Set up redirect: daisysnonpro.fit → daisysnonprofit.com (Vercel dashboard)
-- [ ] Set up redirect: daisysfoundation.com → daisysnonprofit.com (Vercel dashboard, after primary switch)
-- [ ] Change primary domain in Vercel from daisysfoundation.com to daisysnonprofit.com
+- [x] Set up redirect: daisysnonpro.fit → daisysnonprofit.com (301, done via Vercel API 2026-04-17)
+- [x] Set up redirect: www.daisysnonpro.fit → daisysnonprofit.com (301, done via Vercel API 2026-04-17)
+- [x] Set up redirect: daisysfoundation.com → daisysnonprofit.com (301, done via Vercel API 2026-04-17)
+- [x] Set up redirect: www.daisysfoundation.com → daisysnonprofit.com (301, done via Vercel API 2026-04-17)
+- [x] daisysnonprofit.com confirmed as primary domain (200 OK, verified 2026-04-17)
 
 ---
 
