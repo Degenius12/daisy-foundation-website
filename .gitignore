@@ -48,3 +48,6 @@ Thumbs.db
 
 # Dev artifacts
 scripts/screenshots/
+
+# Source photo library (local-only, not for git)
+public/images/Trisha Photos/
