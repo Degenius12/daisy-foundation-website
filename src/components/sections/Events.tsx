@@ -23,7 +23,7 @@ const eventImages: Record<string, { src: string; alt: string }> = {
 
 const defaultEventImage = {
   src: "/images/events/event-family-fun-day.png",
-  alt: "Daisy Foundation community event",
+  alt: "Daisy's Nonprofit community event",
 };
 
 const cardColors = [

@@ -16,7 +16,7 @@ In 2004, Trisha opened her first home-based childcare program, built on compassi
 
 Her vision grew, and in 2018 she opened Lil' Voyagers Academy, expanding her ability to serve even more families. Through every stage of growth—including the challenges of the COVID-19 pandemic—Trisha remained focused on what mattered most: showing up for her community. Whether through innovative learning solutions or simply being a reliable source of care during uncertain times, she led with heart and resilience.
 
-Today, Trisha continues to serve as a dedicated leader, mentor, and advocate for families. Her passion extends beyond the classroom through Daisy's Foundation, a nonprofit she created in honor of her late grandmother. Through this work, she provides support, resources, and encouragement to families—especially single mothers—helping them navigate life's challenges with dignity and hope.
+Today, Trisha continues to serve as a dedicated leader, mentor, and advocate for families. Her passion extends beyond the classroom through Daisy's Nonprofit, an organization she created in honor of her late grandmother. Through this work, she provides support, resources, and encouragement to families—especially single mothers—helping them navigate life's challenges with dignity and hope.
 
 For Trisha, this work is more than a career—it's a calling rooted in love, service, and an unwavering belief that every child and every family deserves to be supported.`,
     },
@@ -33,7 +33,7 @@ Gary's professional career took him from managing operations at Wegmans Supersto
 
 In 2017, Gary made a pivotal decision — leaving UPS to help his wife, Trisha, grow their family's childcare business. Drawing on his MBA and decades of operational experience, he guided the expansion from a home-based operation to a licensed childcare center that opened in 2018. By the end of 2021, the center served 86 students and generated over one million dollars in annual revenue. In February 2022, they opened a state-of-the-art 10,000-square-foot facility with twelve classrooms and capacity for 184 students.
 
-As Grants/Treasurer of the Daisy Foundation, Gary brings his expertise in business planning, financial projections, bookkeeping, and strategic growth to help expand access to quality early childhood education and family support throughout the Jacksonville community.`,
+As Grants/Treasurer of Daisy's Nonprofit, Gary brings his expertise in business planning, financial projections, bookkeeping, and strategic growth to help expand access to quality early childhood education and family support throughout the Jacksonville community.`,
     },
     {
       name: "Nya Thomas",
@@ -71,7 +71,7 @@ As Grants/Treasurer of the Daisy Foundation, Gary brings his expertise in busine
                 <div className="mx-auto mb-6 relative h-40 w-40 overflow-hidden rounded-full border-4 border-daisy-sunshine-400 shadow-lg">
                   <Image
                     src="/images/board/founder-portrait.jpeg"
-                    alt="Trisha Curtis-Cornelius, Founder and President of Daisy Foundation"
+                    alt="Trisha Curtis-Cornelius, Founder and President of Daisy's Nonprofit"
                     fill
                     className="object-cover"
                     style={{ objectPosition: "center 30%" }}

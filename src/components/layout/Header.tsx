@@ -40,11 +40,11 @@ export function Header() {
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="hover:opacity-80 transition-opacity"
-            aria-label="Daisy Foundation - Return to top"
+            aria-label="Daisy's Nonprofit - Return to top"
           >
             <Image
               src="/images/Logo-transparent.png"
-              alt="Daisy Foundation - Honoring Grandmother Daisy's Legacy"
+              alt="Daisy's Nonprofit - Honoring Grandmother Daisy's Legacy"
               width={720}
               height={330}
               className="h-[100px] w-auto"

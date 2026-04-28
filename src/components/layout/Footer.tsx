@@ -58,7 +58,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Daisy Foundation</h3>
+            <h3 className="text-lg font-semibold mb-4">Daisy&apos;s Nonprofit</h3>
             <p className="text-white/90 text-sm mb-4">
               Honoring Grandmother Daisy&apos;s legacy by providing quality early childhood
               education support to families in need.
@@ -148,7 +148,7 @@ export function Footer() {
         <div className="mt-12 border-t border-white/20 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-white/80">
-              © {new Date().getFullYear()} Daisy Foundation. All rights reserved.
+              © {new Date().getFullYear()} Daisy&apos;s Nonprofit. All rights reserved.
             </p>
             <p className="text-xs text-white/70">
               Co-created with{" "}

@@ -1,6 +1,6 @@
 /**
  * Calculate how donation is allocated across programs, operations, and fundraising
- * Based on Daisy Foundation's allocation: 78% programs, 14% operations, 8% fundraising
+ * Based on Daisy's Nonprofit allocation: 78% programs, 14% operations, 8% fundraising
  */
 export interface DonationAllocation {
   programs: number;

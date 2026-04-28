@@ -99,7 +99,7 @@ export async function Programs() {
         <div className="mt-20 text-center max-w-2xl mx-auto">
           <div className="rounded-3xl bg-gradient-to-br from-daisy-sunshine-100 to-daisy-sunshine-200 p-10 border-3 border-daisy-sunshine-400 shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Want to partner with Daisy Foundation?
+              Want to partner with Daisy&apos;s Nonprofit?
             </h3>
             <p className="text-lg text-gray-700 mb-6">
               We collaborate with schools, businesses, and nonprofits. Let&apos;s build something meaningful.

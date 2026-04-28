@@ -16,7 +16,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Daisy's Foundation | Supporting Early Childhood Education",
+  title: "Daisy's Nonprofit | Supporting Early Childhood Education",
   description:
     "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training. Every child deserves quality education.",
   keywords: [
@@ -28,21 +28,21 @@ export const metadata: Metadata = {
     "Jacksonville FL nonprofits",
     "family support services",
   ],
-  authors: [{ name: "Daisy's Foundation" }],
-  creator: "Daisy's Foundation",
-  publisher: "Daisy's Foundation",
+  authors: [{ name: "Daisy's Nonprofit" }],
+  creator: "Daisy's Nonprofit",
+  publisher: "Daisy's Nonprofit",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://daisysnonprofit.com",
-    title: "Daisy's Foundation | Supporting Early Childhood Education",
+    title: "Daisy's Nonprofit | Supporting Early Childhood Education",
     description:
       "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
-    siteName: "Daisy's Foundation",
+    siteName: "Daisy's Nonprofit",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daisy's Foundation | Supporting Early Childhood Education",
+    title: "Daisy's Nonprofit | Supporting Early Childhood Education",
     description:
       "Helping families afford quality pre-kindergarten programs through tuition subsidies, educational enrichment, and job training.",
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NGO",
-  name: "Daisy's Foundation",
+  name: "Daisy's Nonprofit",
   url: "https://daisysnonprofit.com",
   logo: "https://daisysnonprofit.com/images/Logo-transparent.png",
   description:

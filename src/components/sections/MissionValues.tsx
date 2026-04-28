@@ -58,7 +58,7 @@ export function MissionValues() {
               can thrive academically, socially, and emotionally for life.
             </p>
             <p className="text-xl md:text-2xl font-semibold text-daisy-forest-700 mt-8">
-              Daisy Foundation is a nonprofit dedicated to creating safe, healthy, and opportunity-rich
+              Daisy&apos;s Nonprofit is dedicated to creating safe, healthy, and opportunity-rich
               communities. We partner with families, schools, and local organizations to meet urgent
               needs and build long-term pathways for success.
             </p>
