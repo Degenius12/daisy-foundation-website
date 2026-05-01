@@ -14,30 +14,11 @@ Although she initially followed a more traditional path after high school, Trish
 
 In 2004, Trisha opened her first home-based childcare program, built on compassion, trust, and a genuine commitment to every child and family she served. After relocating to Duval County, she continued her work, spending over a decade building strong relationships and creating a space where children felt valued, supported, and inspired.
 
-Her vision grew, and in 2018 she opened Lil' Voyagers Academy, expanding her ability to serve even more families. Through every stage of growth—including the challenges of the COVID-19 pandemic—Trisha remained focused on what mattered most: showing up for her community. Whether through innovative learning solutions or simply being a reliable source of care during uncertain times, she led with heart and resilience.
+Her vision grew, and in 2018 she opened Lil' Voyagers Academy, expanding her ability to serve even more families. She kept her doors open through the COVID-19 pandemic—launching virtual learning and a first-responder drop-in program—and never stopped showing up for her families.
 
-Today, Trisha continues to serve as a dedicated leader, mentor, and advocate for families. Her passion extends beyond the classroom through Daisy's Nonprofit, an organization she created in honor of her late grandmother. Through this work, she provides support, resources, and encouragement to families—especially single mothers—helping them navigate life's challenges with dignity and hope.
+Today, Trisha leads two early-learning centers serving over a hundred families, and her passion extends beyond the classroom through Daisy's Nonprofit, an organization she created in honor of her late grandmother. Through this work, she provides support, resources, and encouragement to families—especially single mothers—helping them navigate life's challenges with dignity and hope.
 
 For Trisha, this work is more than a career—it's a calling rooted in love, service, and an unwavering belief that every child and every family deserves to be supported.`,
-    },
-    {
-      name: "Gary Cornelius",
-      title: "Grants/Treasurer",
-      bio: `Gary Cornelius is a seasoned business professional and operations leader whose diverse career spans retail management, logistics, and early childhood education entrepreneurship.
-
-Born on the Caribbean island of Antigua, Gary was raised in a modest household alongside nine siblings. Though neither parent had formal education beyond age thirteen, they instilled a powerful work ethic and entrepreneurial spirit in their children. Gary's father became a successful building contractor, while his mother grew from dedicated homemaker to business owner. At just thirteen, Gary was entrusted with managing the family's neighborhood convenience store — handling cashiering, inventory, ordering, and financial transactions — experiences that became the bedrock of his business acumen.
-
-A gifted athlete, Gary represented Antigua in the Track and Field CARIFTA Games in Martinique in 1983. In 1986, he was accepted to Nazareth College of Rochester in New York, where he competed in collegiate soccer for three years and graduated in 1990 with a Bachelor of Science in Business Administration.
-
-Gary's professional career took him from managing operations at Wegmans Superstore in Buffalo, New York, to leading store operations at Wendy's International in Jacksonville, Florida. In 2001, he joined UPS as a package loader and was promoted to Part-Time Supervisor within five months. With UPS's support, he earned a Master of Business Administration in Technology Management from the University of Phoenix in 2003, advancing to Full-Time Supervisor where he managed teams of over forty employees.
-
-In 2017, Gary made a pivotal decision — leaving UPS to help his wife, Trisha, grow their family's childcare business. Drawing on his MBA and decades of operational experience, he guided the expansion from a home-based operation to a licensed childcare center that opened in 2018. By the end of 2021, the center served 86 students and generated over one million dollars in annual revenue. In February 2022, they opened a state-of-the-art 10,000-square-foot facility with twelve classrooms and capacity for 184 students.
-
-As Grants/Treasurer of Daisy's Nonprofit, Gary brings his expertise in business planning, financial projections, bookkeeping, and strategic growth to help expand access to quality early childhood education and family support throughout the Jacksonville community.`,
-    },
-    {
-      name: "Nya Thomas",
-      title: "Community Engagement",
     },
   ];
 
