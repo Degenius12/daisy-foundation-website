@@ -6,7 +6,7 @@ import { Calendar, MapPin, ExternalLink } from "lucide-react";
 import { formatDate } from "@/lib/utils/formatting";
 import { getEvents } from "@/lib/supabase/queries";
 
-const eventImages: Record<string, { src: string; alt: string }> = {
+const eventImages: Record<string, { src: string; alt: string; flyer?: string }> = {
   "Family Fun Day": {
     src: "/images/events/event-family-fun-day.png",
     alt: "Family enjoying an outdoor community festival with daisy-themed decorations",
@@ -18,6 +18,11 @@ const eventImages: Record<string, { src: string; alt: string }> = {
   "Community Garden Kickoff": {
     src: "/images/events/event-garden-kickoff.png",
     alt: "Community members of all ages planting daisy seedlings in raised garden beds on a sunny spring day",
+  },
+  "Mother's Day Floral Experience": {
+    src: "/images/events/event-mothers-day-floral.png",
+    alt: "Mother's Day Floral Experience welcome poster with elegant rose floral border, hosted by Hap's House and sponsored by Daisy's Nonprofit",
+    flyer: "/flyers/mothers-day-floral-experience-2026.pdf",
   },
 };
 
@@ -99,7 +104,16 @@ export async function Events() {
                     <p className="text-sm text-gray-700">{event.description}</p>
                   </div>
 
-                  {!isPast && (event.rsvp_link ? (
+                  {isPast ? (
+                    image.flyer && (
+                      <Button className="mt-6 w-full" variant="outline" asChild>
+                        <a href={image.flyer} target="_blank" rel="noopener noreferrer">
+                          View Flyer
+                          <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
+                        </a>
+                      </Button>
+                    )
+                  ) : event.rsvp_link ? (
                     <Button className="mt-6 w-full" variant="outline" asChild>
                       <a
                         href={event.rsvp_link}
@@ -114,7 +128,7 @@ export async function Events() {
                     <Button className="mt-6 w-full" variant="outline" asChild>
                       <a href="#contact">Get Details</a>
                     </Button>
-                  ))}
+                  )}
                 </CardContent>
               </Card>
             );
