@@ -6,7 +6,7 @@ import { Calendar, MapPin, ExternalLink } from "lucide-react";
 import { formatDate } from "@/lib/utils/formatting";
 import { getEvents } from "@/lib/supabase/queries";
 
-const eventImages: Record<string, { src: string; alt: string; flyer?: string }> = {
+const eventImages: Record<string, { src: string; alt: string; flyer?: string; fit?: "cover" | "contain"; bg?: string }> = {
   "Family Fun Day": {
     src: "/images/events/event-family-fun-day.png",
     alt: "Family enjoying an outdoor community festival with daisy-themed decorations",
@@ -23,6 +23,8 @@ const eventImages: Record<string, { src: string; alt: string; flyer?: string }> 
     src: "/images/events/event-mothers-day-floral.png",
     alt: "Mother's Day Floral Experience welcome poster with elegant rose floral border, hosted by Hap's House and sponsored by Daisy's Nonprofit",
     flyer: "/flyers/mothers-day-floral-experience-2026.pdf",
+    fit: "contain",
+    bg: "bg-[#fcf1e2]",
   },
 };
 
@@ -69,12 +71,12 @@ export async function Events() {
                 key={event.id}
                 className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index % cardColors.length]} overflow-hidden ${isPast ? "opacity-80" : ""}`}
               >
-                <div className="relative h-44 w-full overflow-hidden">
+                <div className={`relative h-44 w-full overflow-hidden ${image.bg ?? ""}`}>
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover"
+                    className={image.fit === "contain" ? "object-contain" : "object-cover"}
                     quality={75}
                   />
                 </div>
