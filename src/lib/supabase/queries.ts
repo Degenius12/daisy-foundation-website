@@ -89,6 +89,17 @@ const fallbackEvents: Event[] = [
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
+  {
+    id: "4",
+    title: "Mother's Day Floral Experience",
+    date: "2026-05-10",
+    location: "Hap's House",
+    description: "On Mother's Day, Daisy's Nonprofit was proud to sponsor Hap's House's Mother's Day Floral Experience — a community celebration in partnership with OMU Gallery. Families gathered to celebrate motherhood, create something beautiful, and honor the women who inspire us.",
+    rsvp_link: null,
+    is_featured: false,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
 ];
 
 const fallbackMetrics: ImpactMetric[] = [
