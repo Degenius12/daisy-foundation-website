@@ -40,27 +40,29 @@ const badgeColors = [
 
 export async function Events() {
   const events = await getEvents();
+  const today = new Date().toISOString().split("T")[0];
 
   return (
     <section id="events" className="py-24 bg-gradient-to-br from-daisy-forest-100/10 via-daisy-sunshine-50 to-daisy-teal-light/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-daisy-forest-700 sm:text-4xl">
-            Upcoming Events
+            Community Events
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-700">
-            Join us for volunteer opportunities, fundraising events, and community
-            gatherings. Everyone is welcome!
+            Upcoming opportunities to volunteer, fundraise, and gather — plus
+            recent moments from the community we&apos;ve been proud to be part of.
           </p>
         </div>
 
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 lg:grid-cols-3">
           {events.map((event, index) => {
             const image = eventImages[event.title] || defaultEventImage;
+            const isPast = event.date < today;
             return (
               <Card
                 key={event.id}
-                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index % cardColors.length]} overflow-hidden`}
+                className={`flex flex-col hover:shadow-daisy-lg hover:scale-105 transition-all duration-300 border-2 ${cardColors[index % cardColors.length]} overflow-hidden ${isPast ? "opacity-80" : ""}`}
               >
                 <div className="relative h-44 w-full overflow-hidden">
                   <Image
@@ -74,9 +76,11 @@ export async function Events() {
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <Calendar className="h-5 w-5 text-daisy-forest-700" aria-hidden="true" />
-                    {event.is_featured && (
+                    {isPast ? (
+                      <Badge className="bg-gray-500 text-white">Past Event</Badge>
+                    ) : event.is_featured ? (
                       <Badge className={badgeColors[index % badgeColors.length]}>Featured</Badge>
-                    )}
+                    ) : null}
                   </div>
                   <CardTitle className="text-xl text-daisy-forest-700" data-testid="event-title">
                     {event.title}
@@ -95,7 +99,7 @@ export async function Events() {
                     <p className="text-sm text-gray-700">{event.description}</p>
                   </div>
 
-                  {event.rsvp_link ? (
+                  {!isPast && (event.rsvp_link ? (
                     <Button className="mt-6 w-full" variant="outline" asChild>
                       <a
                         href={event.rsvp_link}
@@ -110,7 +114,7 @@ export async function Events() {
                     <Button className="mt-6 w-full" variant="outline" asChild>
                       <a href="#contact">Get Details</a>
                     </Button>
-                  )}
+                  ))}
                 </CardContent>
               </Card>
             );

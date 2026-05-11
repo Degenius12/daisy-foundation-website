@@ -145,14 +145,22 @@ export async function getEvents(): Promise<Event[]> {
 
   try {
     const supabase = await createClient();
+    const today = new Date().toISOString().split("T")[0];
+    const ninetyDaysAgo = new Date(Date.now() - 90 * 86_400_000).toISOString().split("T")[0];
+
     const { data, error } = await supabase
       .from("events")
       .select("*")
-      .gte("date", new Date().toISOString().split("T")[0])
+      .gte("date", ninetyDaysAgo)
       .order("date");
 
     if (error) throw error;
-    return data && data.length > 0 ? data : fallbackEvents;
+    if (!data || data.length === 0) return fallbackEvents;
+
+    // Upcoming first (closest date first), then past (most recent first).
+    const upcoming = data.filter((e) => e.date >= today);
+    const past = data.filter((e) => e.date < today).reverse();
+    return [...upcoming, ...past];
   } catch {
     return fallbackEvents;
   }
