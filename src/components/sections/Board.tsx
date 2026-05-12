@@ -16,7 +16,7 @@ In 2004, Trisha opened her first home-based childcare program, built on compassi
 
 Her vision grew, and in 2018 she opened Lil' Voyagers Academy, expanding her ability to serve even more families. She kept her doors open through the COVID-19 pandemic—launching virtual learning and a first-responder drop-in program—and never stopped showing up for her families.
 
-Today, Trisha leads two early-learning centers serving over a hundred families, and her passion extends beyond the classroom through Daisy's Nonprofit, an organization she created in honor of her late grandmother. Through this work, she provides support, resources, and encouragement to families—especially single mothers—helping them navigate life's challenges with dignity and hope.
+Today, Trisha leads two early-learning centers serving thousands of families with a team of over 60 employees, and her passion extends beyond the classroom through Daisy's Nonprofit, an organization she created in honor of her late grandmother. Through this work, she provides support, resources, and encouragement to families—especially single mothers—helping them navigate life's challenges with dignity and hope.
 
 For Trisha, this work is more than a career—it's a calling rooted in love, service, and an unwavering belief that every child and every family deserves to be supported.`,
     },
