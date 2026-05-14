@@ -203,10 +203,10 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a
-                      href="mailto:info@daisysfoundation.com"
+                      href="mailto:info@daisysnonprofit.com"
                       className="text-sm text-gray-600 hover:text-daisy-forest-700"
                     >
-                      info@daisysfoundation.com
+                      info@daisysnonprofit.com
                     </a>
                   </div>
                 </div>

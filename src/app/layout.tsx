@@ -75,7 +75,7 @@ const jsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "info@daisysfoundation.com",
+    email: "info@daisysnonprofit.com",
     contactType: "customer support",
   },
 };
