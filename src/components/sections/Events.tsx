@@ -24,6 +24,10 @@ const eventImages: Record<string, { src: string; alt: string; flyer?: string }> 
     alt: "Mother's Day Floral Experience welcome poster with elegant rose floral border, hosted by Hap's House and sponsored by Daisy's Nonprofit",
     flyer: "/flyers/mothers-day-floral-experience-2026.pdf",
   },
+  "Back to School Bash": {
+    src: "/images/events/event-back-to-school-bash.png",
+    alt: "Back to School Bash & Open House poster for Lil' Voyagers Academy, presented in partnership with Daisy's Nonprofit",
+  },
 };
 
 const defaultEventImage = {

@@ -100,6 +100,17 @@ const fallbackEvents: Event[] = [
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
+  {
+    id: "5",
+    title: "Back to School Bash",
+    date: "2026-08-29",
+    location: "175 Fountains Way, Unit 1, St. Johns, FL 32259",
+    description: "Daisy's Nonprofit is proud to partner with Lil' Voyagers Academy for their Back to School Bash & Open House — a free family event with a bounce house, face painting, games, and snacks, open to current and new families.",
+    rsvp_link: null,
+    is_featured: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
 ];
 
 const fallbackMetrics: ImpactMetric[] = [
