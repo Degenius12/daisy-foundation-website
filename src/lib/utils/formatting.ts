@@ -24,18 +24,28 @@ export function formatDate(
 ): string {
   const dateObj = typeof date === "string" ? new Date(date) : date;
 
+  // Plain "YYYY-MM-DD" strings parse as UTC midnight. Formatting them in the
+  // viewer's local timezone can shift the displayed day backward (e.g. an
+  // event on Aug 29 showing as Aug 28 for anyone behind UTC), so pin those
+  // to UTC for display. Full timestamps (with a time component) keep local
+  // formatting.
+  const isDateOnly = typeof date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(date);
+  const timeZone = isDateOnly ? "UTC" : undefined;
+
   switch (format) {
     case "long":
       return new Intl.DateTimeFormat("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric",
+        timeZone,
       }).format(dateObj);
     case "short":
       return new Intl.DateTimeFormat("en-US", {
         month: "short",
         day: "numeric",
         year: "numeric",
+        timeZone,
       }).format(dateObj);
     case "datetime":
       return new Intl.DateTimeFormat("en-US", {
@@ -44,6 +54,7 @@ export function formatDate(
         year: "numeric",
         hour: "numeric",
         minute: "2-digit",
+        timeZone,
       }).format(dateObj);
     default:
       return dateObj.toLocaleDateString("en-US");

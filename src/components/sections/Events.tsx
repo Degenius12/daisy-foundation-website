@@ -95,7 +95,7 @@ export async function Events() {
                   <div className="space-y-3 flex-1">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Calendar className="h-4 w-4" aria-hidden="true" />
-                      <span>{formatDate(new Date(event.date), "long")}</span>
+                      <span>{formatDate(event.date, "long")}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <MapPin className="h-4 w-4" aria-hidden="true" />

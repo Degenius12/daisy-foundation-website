@@ -47,6 +47,11 @@ describe('formatDate', () => {
     expect(result).toContain('2025')
   })
 
+  it('does not shift a plain date string to the previous day in behind-UTC timezones', () => {
+    expect(formatDate('2026-08-29', 'long')).toBe('August 29, 2026')
+    expect(formatDate('2026-08-29', 'short')).toBe('Aug 29, 2026')
+  })
+
   it('formats as datetime', () => {
     const result = formatDate(testDate, 'datetime')
     expect(result).toContain('2025')
